@@ -23,4 +23,4 @@
 hs_err_pid*
 
 # python compiled files
-__pychche__/**
+**/__pycache__
