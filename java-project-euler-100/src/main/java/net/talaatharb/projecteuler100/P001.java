@@ -1,4 +1,4 @@
-package net.talaat.harb.projecteuler100;
+package net.talaatharb.projecteuler100;
 
 /**
  * @author mharb

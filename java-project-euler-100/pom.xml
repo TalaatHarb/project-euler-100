@@ -25,7 +25,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<mainClass>
-								net.talaat.harb.projecteuler100.AllSolutions
+								net.talaatharb.projecteuler100.AllSolutions
 							</mainClass>
 						</manifest>
 					</archive>
