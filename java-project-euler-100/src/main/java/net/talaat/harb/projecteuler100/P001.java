@@ -8,15 +8,19 @@ public class P001 implements Runnable {
 
 	/**
 	 * Problem solution entry point
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		new P001().run();
 	}
 
+	private static final double NANO_TO_S = 100000000.0;
+
 	@Override
 	public void run() {
-		int last = 1000;
+		final long startTime = System.nanoTime();
+		final int last = 1000;
 		int sum = 0;
 
 		for (int i = 1; i < last; i++) {
@@ -24,7 +28,9 @@ public class P001 implements Runnable {
 				sum = sum + i;
 			}
 		}
-		System.out.println("p001: " + sum);
+
+		final double period = (System.nanoTime() - startTime) / NANO_TO_S;
+		System.out.println("p001: " + sum + " -> " + period + " s");
 	}
 
 }
