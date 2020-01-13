@@ -1,4 +1,6 @@
+import time
 def run():
+	start_time = time.time()
 	max = 4000000
 	previous = 1
 	current = 2
@@ -11,6 +13,7 @@ def run():
 		previous = current
 		current = next
 
-	print('p002:', sum)
+	total_time = time.time() - start_time
+	print('p002:', sum , '->', total_time, 's')
 
 run()
