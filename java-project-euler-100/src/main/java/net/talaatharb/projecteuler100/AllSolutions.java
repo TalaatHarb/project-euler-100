@@ -11,6 +11,7 @@ public class AllSolutions {
 	 */
 	public static void main(String[] args) {
 		new P001().run();
+		new P002().run();
 	}
 
 }
