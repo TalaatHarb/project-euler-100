@@ -1,4 +1,7 @@
+import time
+
 def run():
+    start_time = time.time()
     last = 20
     sequence = []
     result = 1
@@ -12,6 +15,8 @@ def run():
         sequence.append(number)
         counter += 1
         number = counter
-    print('p005:', result)
+    
+    total_time = time.time() - start_time
+    print('p005:', result, '->', total_time, 's')
 
 run()
