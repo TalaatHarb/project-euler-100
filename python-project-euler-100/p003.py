@@ -1,4 +1,5 @@
 import math
+import time
 
 def is_prime(number):
     upper_limit = math.floor(math.sqrt(number))
@@ -10,6 +11,7 @@ def is_prime(number):
     return True
 
 def run():
+    start_time = time.time()
     number = 600851475143
     upper_limit = math.floor(math.sqrt(number))
     if upper_limit % 2 == 0:
@@ -22,7 +24,7 @@ def run():
             result = possible_factor
             break
         possible_factor -=2
-
-    print('p003:', result)
+    total_time = time.time() - start_time
+    print('p003:', result, '->', total_time, 's')
 
 run()
