@@ -1,28 +1,33 @@
 import time
 import math
 
-def is_prime(number):
-    if number % 2 == 0:
-        return False
-    upper_limit = math.floor(math.sqrt(number))
-    if upper_limit % 2 == 0:
-        upper_limit -= 1
-    for i in range(upper_limit, 1, -2):
-        if number % i == 0:
-            return False
-    return True
+def sieve_of_eratosthenes(n): 
+      
+    # Create a boolean array "prime[0..n]" and initialize 
+    # all entries it as true. A value in prime[i] will 
+    # finally be false if i is Not a prime, else true. 
+    prime = [True for i in range(n + 1)] 
+    p = 2
+    while (p * p <= n): 
+          
+        # If prime[p] is not changed, then it is a prime 
+        if (prime[p] == True): 
+              
+            # Update all multiples of p 
+            for i in range(p * 2, n + 1, p): 
+                prime[i] = False
+        p += 1
+    prime[0]= False
+    prime[1]= False
+    return [index for index,value in enumerate(prime) if prime[index]]
 
 def run():
     start_time = time.time()
     last = 2000000
-    sum = 2
-
-    for i in range(3, last, 2):
-        if is_prime(i):
-            sum += i
+    sum_of_primes = sum(sieve_of_eratosthenes(last))
 
     total_time = time.time() - start_time
 
-    print('p010:', sum, '->', total_time, 's')
+    print('p010:', sum_of_primes, '->', total_time, 's')
 
 run()
