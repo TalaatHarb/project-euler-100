@@ -13,6 +13,7 @@ public class AllSolutions {
 		new P001().run();
 		new P002().run();
 		new P003().run();
+		new P004().run();
 	}
 
 }
