@@ -4,6 +4,11 @@ public class P003 implements Runnable {
 
 	private static final double NANO_TO_S = 100000000.0;
 
+	/**
+	 * Problem solution entry point
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		new P003().run();
 	}
@@ -20,6 +25,7 @@ public class P003 implements Runnable {
 			// equivalent to n /= 2
 			n >>= 1;
 		}
+
 		for (int i = 3; i <= Math.sqrt(n); i += 2) {
 			while (n % i == 0) {
 				maxPrime = i;
