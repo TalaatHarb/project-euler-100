@@ -1,3 +1,5 @@
+import time
+
 def is_palindromic(number):
     number_as_string = str(number)
     reverse = number_as_string[::-1]
@@ -7,6 +9,7 @@ def is_palindromic(number):
         return False
 
 def run():
+    start_time = time.time()
     start = 99
     finish = 999
     result = 0
@@ -19,6 +22,8 @@ def run():
                 result = number
                 break
         i -= 1
-    print('p004:', result)
+    total_time = time.time() - start_time
+
+    print('p004:', result, '->', total_time, 's')
 
 run()
