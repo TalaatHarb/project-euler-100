@@ -26,8 +26,9 @@ public class P002 implements Runnable {
 		int sum = current;
 		while (current < max) {
 			int next = previous + current;
-			if ((next < max) && (next % 2 == 0))
+			if ((next < max) && (next % 2 == 0)) {
 				sum += next;
+			}
 			previous = current;
 			current = next;
 		}

@@ -23,40 +23,38 @@ public class P004 implements Runnable {
 		int start = 99;
 		int finish = 999;
 		int result = 0;
-		boolean notDone = true;
 		int i = finish;
-		
-		while(notDone && (i>start)) {
-			
-		
+
+		while (i > start) {
+
 			for (int j = finish; j > start; j--) {
-				
+
 				int number = i * j;
-				if (number>result && isPalindromic(number)) {
+				if (number > result && isPalindromic(number)) {
 					result = number;
-			        break;
+					break;
 				}
-				
 			}
 			i--;
-			
 		}
-			    
+
 		final double period = (System.nanoTime() - startTime) / NANO_TO_S;
 		System.out.println("p004: " + result + " -> " + period + " s");
 	}
 
-	public boolean isPalindromic(int number) {
-		String reverse ="";
-		String numberAsString = String.valueOf(number); 
-	      int length = numberAsString.length();   
-	      for ( int i = length - 1; i >= 0; i-- )  
-	         reverse = reverse + numberAsString.charAt(i);  
-	      if (numberAsString.equals(reverse))  
-	         return true;  
-	      else  
-	    	  return false;   
-		
-		
+	private boolean isPalindromic(int number) {
+		final String numberAsString = String.valueOf(number);
+		final int length = numberAsString.length();
+		boolean result = true;
+		int j = 0;
+
+		for (int i = 0; i < length / 2; i++) {
+			j = length - i - 1;
+			if (numberAsString.charAt(i) != numberAsString.charAt(j)) {
+				result = false;
+				break;
+			}
+		}
+		return result;
 	}
 }
