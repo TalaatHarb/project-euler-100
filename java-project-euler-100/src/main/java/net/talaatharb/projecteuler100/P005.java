@@ -39,7 +39,7 @@ public class P005 implements Runnable {
 			number = counter;
 		}
 		double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p003: " + result + " -> " + totalTime + " s");
+		System.out.println("p005: " + result + " -> " + totalTime + " s");
 
 	}
 
