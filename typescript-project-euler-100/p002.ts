@@ -21,4 +21,4 @@ export class P002 {
     }
 }
 
-// new P001().run();
+// new P002().run();
