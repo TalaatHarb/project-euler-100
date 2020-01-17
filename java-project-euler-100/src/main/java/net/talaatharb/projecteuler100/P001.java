@@ -6,6 +6,8 @@ package net.talaatharb.projecteuler100;
  */
 public class P001 implements Runnable {
 
+	private static final double NANO_TO_S = 100000000.0;
+
 	/**
 	 * Problem solution entry point
 	 * 
@@ -14,8 +16,6 @@ public class P001 implements Runnable {
 	public static void main(String[] args) {
 		new P001().run();
 	}
-
-	private static final double NANO_TO_S = 100000000.0;
 
 	@Override
 	public void run() {

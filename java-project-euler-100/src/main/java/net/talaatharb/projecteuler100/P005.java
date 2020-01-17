@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * P005
+ * 
+ * @author mharb
+ *
+ */
 public class P005 implements Runnable {
 
 	private static final double NANO_TO_S = 100000000.0;

@@ -6,6 +6,8 @@ package net.talaatharb.projecteuler100;
  */
 public class P004 implements Runnable {
 
+	private static final double NANO_TO_S = 100000000.0;
+
 	/**
 	 * Problem solution entry point
 	 * 
@@ -15,7 +17,21 @@ public class P004 implements Runnable {
 		new P004().run();
 	}
 
-	private static final double NANO_TO_S = 100000000.0;
+	private boolean isPalindromic(int number) {
+		final String numberAsString = String.valueOf(number);
+		final int length = numberAsString.length();
+		boolean result = true;
+		int j = 0;
+
+		for (int i = 0; i < length / 2; i++) {
+			j = length - i - 1;
+			if (numberAsString.charAt(i) != numberAsString.charAt(j)) {
+				result = false;
+				break;
+			}
+		}
+		return result;
+	}
 
 	@Override
 	public void run() {
@@ -40,21 +56,5 @@ public class P004 implements Runnable {
 
 		final double period = (System.nanoTime() - startTime) / NANO_TO_S;
 		System.out.println("p004: " + result + " -> " + period + " s");
-	}
-
-	private boolean isPalindromic(int number) {
-		final String numberAsString = String.valueOf(number);
-		final int length = numberAsString.length();
-		boolean result = true;
-		int j = 0;
-
-		for (int i = 0; i < length / 2; i++) {
-			j = length - i - 1;
-			if (numberAsString.charAt(i) != numberAsString.charAt(j)) {
-				result = false;
-				break;
-			}
-		}
-		return result;
 	}
 }

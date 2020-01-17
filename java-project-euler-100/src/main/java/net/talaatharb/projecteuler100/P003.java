@@ -1,8 +1,30 @@
 package net.talaatharb.projecteuler100;
 
+/**
+ * P003
+ * 
+ * @author mharb
+ *
+ */
 public class P003 implements Runnable {
 
 	private static final double NANO_TO_S = 100000000.0;
+
+	private static final boolean isPrime(final long number) {
+		if (number % 2 == 0) {
+			return false;
+		}
+		double upperLimit = Math.floor(Math.sqrt(number));
+		if (upperLimit % 2 == 0) {
+			upperLimit--;
+		}
+		for (int i = (int) upperLimit; i > 1; i -= 2) {
+			if (number % i == 0) {
+				return false;
+			}
+		}
+		return true;
+	}
 
 	/**
 	 * Problem solution entry point
@@ -16,27 +38,23 @@ public class P003 implements Runnable {
 	@Override
 	public void run() {
 		long startTime = System.nanoTime();
-		long maxPrime = -1;
-		long n = 600851475143L;
+		long number = 600851475143L;
 
-		while (n % 2 == 0) {
-			maxPrime = 2;
-
-			// equivalent to n /= 2
-			n >>= 1;
+		double upperLimit = Math.floor(Math.sqrt(number));
+		if (upperLimit % 2 == 0) {
+			upperLimit--;
 		}
-
-		for (int i = 3; i <= Math.sqrt(n); i += 2) {
-			while (n % i == 0) {
-				maxPrime = i;
-				n = n / i;
+		long possibleFactor = (long) upperLimit;
+		long result = number;
+		while (possibleFactor > 1) {
+			if ((number % possibleFactor == 0) && isPrime(possibleFactor)) {
+				result = possibleFactor;
+				break;
 			}
-		}
-		if (n > 2) {
-			maxPrime = n;
+			possibleFactor -= 2;
 		}
 		double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p003: " + maxPrime + " -> " + totalTime + " s");
+		System.out.println("p003: " + result + " -> " + totalTime + " s");
 	}
 
 }
