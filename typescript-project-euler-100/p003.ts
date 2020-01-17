@@ -1,32 +1,43 @@
 export class P003 {
-
-    run() {
-        const startTime = +new Date();
-        
-		let  maxPrime = -1;
-		let  n = 600851475143;
-
-		while (n % 2 == 0) {
-			maxPrime = 2;
-
-			// equivalent to n /= 2
-			n >>= 1;
+	isPrime(number: number) {
+		if (number % 2 == 0) {
+			return false;
 		}
-
-		for (let i = 3; i <= Math.sqrt(n); i += 2) {
-			while (n % i == 0) {
-				maxPrime = i;
-				n = n / i;
+		let upperLimit = Math.floor(Math.sqrt(number));
+		if (upperLimit % 2 == 0) {
+			upperLimit--;
+		}
+		for (let i = upperLimit; i > 1; i -= 2) {
+			if (number % i == 0) {
+				return false;
 			}
 		}
-		if (n > 2) {
-			maxPrime = n;
+		return true;
+	}
+
+	run() {
+		const startTime = +new Date();
+
+		const number = 600851475143;
+
+		let upperLimit = Math.floor(Math.sqrt(number));
+		if (upperLimit % 2 == 0) {
+			upperLimit--;
+		}
+		let possibleFactor = upperLimit;
+		let result = number;
+		while (possibleFactor > 1) {
+			if ((number % possibleFactor == 0) && this.isPrime(possibleFactor)) {
+				result = possibleFactor;
+				break;
+			}
+			possibleFactor -= 2;
 		}
 
-        const endTime = +new Date();
-        const period = (endTime - startTime) / 1000.0;
-        console.log("p003: " + maxPrime + " -> " + period + " s");
-    }
+		const endTime = +new Date();
+		const period = (endTime - startTime) / 1000.0;
+		console.log("p003: " + result + " -> " + period + " s");
+	}
 }
 
 // new P003().run();
