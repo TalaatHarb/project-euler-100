@@ -4,7 +4,7 @@ import math
 def sieve_of_eratosthenes(n): 
       
     # Create a boolean array "prime[0..n]" and initialize 
-    # all entries it as true. A value in prime[i] will 
+    # all entries in it as true. A value in prime[i] will 
     # finally be false if i is Not a prime, else true. 
     prime = [True for i in range(n + 1)] 
     p = 2
@@ -12,7 +12,6 @@ def sieve_of_eratosthenes(n):
           
         # If prime[p] is not changed, then it is a prime 
         if (prime[p] == True): 
-              
             # Update all multiples of p 
             for i in range(p * 2, n + 1, p): 
                 prime[i] = False

@@ -2,6 +2,8 @@ import math
 import time
 
 def is_prime(number):
+    if number % 2 == 0:
+        return False
     upper_limit = math.floor(math.sqrt(number))
     if upper_limit % 2 == 0:
         upper_limit -= 1
