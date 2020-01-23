@@ -37,3 +37,6 @@ hs_err_pid*
 
 # javascript files
 **/*.js
+
+# exe files
+**/*.exe
