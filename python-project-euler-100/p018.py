@@ -82,7 +82,7 @@ def run():
     total = graph.longest_path_length_0_end()
 
     total_time = time.time() - start_time
-    print('p017:', total, '->', total_time, 's')
+    print('p018:', total, '->', total_time, 's')
 
 
 run()

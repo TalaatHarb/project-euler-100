@@ -31,6 +31,6 @@ def run():
             max_number = i
 
     total_time = time.time() - start_time
-    print('p015:', max_number, '->', total_time, 's')
+    print('p014:', max_number, '->', total_time, 's')
 
 run()
