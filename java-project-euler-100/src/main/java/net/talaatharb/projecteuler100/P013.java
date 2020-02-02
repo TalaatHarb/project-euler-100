@@ -56,7 +56,7 @@ public class P013 implements Runnable {
 			sum = sum.add(new BigInteger(line));
 		}
 		final long result = Long.parseLong(sum.toString().substring(0, 10));
-		double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
+		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
 		System.out.println("p013: " + result + " -> " + totalTime + " s");
 
 	}

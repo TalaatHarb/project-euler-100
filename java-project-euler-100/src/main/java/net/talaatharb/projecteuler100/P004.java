@@ -54,7 +54,7 @@ public class P004 implements Runnable {
 			i--;
 		}
 
-		final double period = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p004: " + result + " -> " + period + " s");
+		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
+		System.out.println("p004: " + result + " -> " + totalTime + " s");
 	}
 }

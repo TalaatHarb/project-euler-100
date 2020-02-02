@@ -1,12 +1,12 @@
 package net.talaatharb.projecteuler100;
 
 /**
- * P003
+ * P007
  * 
  * @author mharb
  *
  */
-public class P003 implements Runnable {
+public class P007 implements Runnable {
 
 	private static final double NANO_TO_S = 100000000.0;
 
@@ -32,29 +32,27 @@ public class P003 implements Runnable {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		new P003().run();
+		new P007().run();
 	}
 
 	@Override
 	public void run() {
 		final long startTime = System.nanoTime();
-		long number = 600851475143L;
+		final int target = 10001;
+		int counter = 1;
+		int current = 0;
 
-		double upperLimit = Math.floor(Math.sqrt(number));
-		if (upperLimit % 2 == 0) {
-			upperLimit--;
-		}
-		long possibleFactor = (long) upperLimit;
-		long result = number;
-		while (possibleFactor > 1) {
-			if ((number % possibleFactor == 0) && isPrime(possibleFactor)) {
-				result = possibleFactor;
-				break;
+		int i = 1;
+		while (counter <= target) {
+			if (isPrime(i)) {
+				current = i;
+				counter += 1;
 			}
-			possibleFactor -= 2;
+			i += 2;
 		}
+
 		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p003: " + result + " -> " + totalTime + " s");
+		System.out.println("p007: " + current + " -> " + totalTime + " s");
 	}
 
 }
