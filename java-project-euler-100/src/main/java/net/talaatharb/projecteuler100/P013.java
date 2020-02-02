@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * P005
+ * P013
  * 
  * @author mharb
  *
@@ -49,7 +49,7 @@ public class P013 implements Runnable {
 	@Override
 	public void run() {
 		long startTime = System.nanoTime();
-		BigInteger sum = new BigInteger("0");
+		BigInteger sum = BigInteger.valueOf(0);
 		final List<String> numbers = readNumbers("p013.txt");
 
 		for (String line : numbers) {
