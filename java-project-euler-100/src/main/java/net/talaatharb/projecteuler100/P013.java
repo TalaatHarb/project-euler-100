@@ -17,6 +17,15 @@ public class P013 implements Runnable {
 
 	private static final double NANO_TO_S = 100000000.0;
 
+	/**
+	 * Problem solution entry point
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		new P013().run();
+	}
+
 	private List<String> readNumbers(final String fileName) {
 		List<String> numbers = new ArrayList<>();
 
@@ -37,15 +46,6 @@ public class P013 implements Runnable {
 		return numbers;
 	}
 
-	/**
-	 * Problem solution entry point
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		new P013().run();
-	}
-
 	@Override
 	public void run() {
 		long startTime = System.nanoTime();
@@ -56,7 +56,7 @@ public class P013 implements Runnable {
 			sum = sum.add(new BigInteger(line));
 		}
 		final long result = Long.parseLong(sum.toString().substring(0, 10));
-		double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
+		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
 		System.out.println("p013: " + result + " -> " + totalTime + " s");
 
 	}

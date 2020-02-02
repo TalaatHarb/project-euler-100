@@ -25,7 +25,7 @@ public class P005 implements Runnable {
 
 	@Override
 	public void run() {
-		long startTime = System.nanoTime();
+		final long startTime = System.nanoTime();
 		final int last = 20;
 		final List<Integer> sequence = new ArrayList<>();
 		int result = 1;
@@ -44,7 +44,7 @@ public class P005 implements Runnable {
 			counter += 1;
 			number = counter;
 		}
-		double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
+		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
 		System.out.println("p005: " + result + " -> " + totalTime + " s");
 
 	}

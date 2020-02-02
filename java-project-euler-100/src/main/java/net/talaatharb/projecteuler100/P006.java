@@ -21,7 +21,7 @@ public class P006 implements Runnable {
 
 	@Override
 	public void run() {
-		long startTime = System.nanoTime();
+		final long startTime = System.nanoTime();
 		int result = 0;
 		int last = 100;
 		int sum = 0;
@@ -33,7 +33,7 @@ public class P006 implements Runnable {
 		}
 		result = (sum * sum) - sumOfSquares;
 
-		double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
+		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
 		System.out.println("p006: " + result + " -> " + totalTime + " s");
 	}
 
