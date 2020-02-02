@@ -13,6 +13,15 @@ public class P010 implements Runnable {
 
 	private static final double NANO_TO_S = 100000000.0;
 
+	/**
+	 * Problem solution entry point
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		new P010().run();
+	}
+
 	private static final List<Integer> sieve_of_eratosthenes(final int n) {
 		/**
 		 * Create a boolean array "prime[0..n]" and initialize all entries in it as
@@ -46,25 +55,15 @@ public class P010 implements Runnable {
 		return listOfPrimes;
 	}
 
-	/**
-	 * Problem solution entry point
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		new P010().run();
-	}
-
 	@Override
 	public void run() {
 		final long startTime = System.nanoTime();
 		final int last = 2000000;
-		int sum = 0;
+		long sum = 0;
 		final List<Integer> listOfPrimes = sieve_of_eratosthenes(last);
 		for (int i : listOfPrimes) {
 			sum += i;
 		}
-
 		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
 		System.out.println("p010: " + sum + " -> " + totalTime + " s");
 	}

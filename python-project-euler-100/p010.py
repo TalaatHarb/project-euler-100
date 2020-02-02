@@ -23,7 +23,8 @@ def sieve_of_eratosthenes(n):
 def run():
     start_time = time.time()
     last = 2000000
-    sum_of_primes = sum(sieve_of_eratosthenes(last))
+    list_of_primes = sieve_of_eratosthenes(last)
+    sum_of_primes = sum(list_of_primes)
 
     total_time = time.time() - start_time
 

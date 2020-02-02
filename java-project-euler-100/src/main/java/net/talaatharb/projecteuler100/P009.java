@@ -31,7 +31,7 @@ public class P009 implements Runnable {
 				double sum = a + b + c;
 				if (sum == target_sum) {
 					c = Math.floor(c);
-					product = (int)(a * b * c);
+					product = (int) (a * b * c);
 				}
 			}
 		}

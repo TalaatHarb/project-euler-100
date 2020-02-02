@@ -10,8 +10,8 @@ public class P008 implements Runnable {
 
 	private static final double NANO_TO_S = 100000000.0;
 
-	private static final int digitsProduct(final String segment) {
-		int product = 1;
+	private static final long digitsProduct(final String segment) {
+		long product = 1;
 		for (char i : segment.toCharArray()) {
 			product *= Character.getNumericValue(i);
 		}
@@ -31,8 +31,8 @@ public class P008 implements Runnable {
 	public void run() {
 		final long startTime = System.nanoTime();
 		final int segmentLength = 13;
-		int product = 1;
-		
+		long product = 1;
+
 		final String number = "73167176531330624919225119674426574742355349194934"
 				+ "96983520312774506326239578318016984801869478851843"
 				+ "85861560789112949495459501737958331952853208805511"
@@ -53,11 +53,11 @@ public class P008 implements Runnable {
 				+ "84580156166097919133875499200524063689912560717606"
 				+ "05886116467109405077541002256983155200055935729725"
 				+ "71636269561882670428252483600823257530420752963450";
-		
+
 		final int length = number.length();
 		for (int i = 0; i < (length - segmentLength); i++) {
 			final String segment = number.substring(i, i + segmentLength);
-			final int tempProduct = digitsProduct(segment);
+			final long tempProduct = digitsProduct(segment);
 			if (tempProduct > product) {
 				product = tempProduct;
 			}

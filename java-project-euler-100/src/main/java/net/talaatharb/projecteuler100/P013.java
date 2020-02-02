@@ -17,6 +17,15 @@ public class P013 implements Runnable {
 
 	private static final double NANO_TO_S = 100000000.0;
 
+	/**
+	 * Problem solution entry point
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		new P013().run();
+	}
+
 	private List<String> readNumbers(final String fileName) {
 		List<String> numbers = new ArrayList<>();
 
@@ -35,15 +44,6 @@ public class P013 implements Runnable {
 		}
 
 		return numbers;
-	}
-
-	/**
-	 * Problem solution entry point
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		new P013().run();
 	}
 
 	@Override

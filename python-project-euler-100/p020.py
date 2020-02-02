@@ -25,7 +25,7 @@ def run():
     result = digits_sum(str(factorial(n, mem_cache)[0]))
 
     total_time = time.time() - start_time
-    print('p015:', result, '->', total_time, 's')
+    print('p020:', result, '->', total_time, 's')
 
 
 run()
