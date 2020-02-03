@@ -8,7 +8,7 @@ package net.talaatharb.projecteuler100;
  */
 public class P008 implements Runnable {
 
-	private static final double NANO_TO_S = 100000000.0;
+	private static final double NANO_TO_S = 1000000000.0;
 
 	private static final long digitsProduct(final String segment) {
 		long product = 1;

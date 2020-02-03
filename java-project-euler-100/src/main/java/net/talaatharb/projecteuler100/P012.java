@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class P012 implements Runnable {
 
-	private static final double NANO_TO_S = 100000000.0;
+	private static final double NANO_TO_S = 1000000000.0;
 
 	private static final List<Long> sieveOfEratosthenes(final int n) {
 		/**

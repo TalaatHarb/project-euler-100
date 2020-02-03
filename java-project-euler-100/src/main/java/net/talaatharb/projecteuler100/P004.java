@@ -6,7 +6,7 @@ package net.talaatharb.projecteuler100;
  */
 public class P004 implements Runnable {
 
-	private static final double NANO_TO_S = 100000000.0;
+	private static final double NANO_TO_S = 1000000000.0;
 
 	/**
 	 * Problem solution entry point
