@@ -6,7 +6,7 @@ package net.talaatharb.projecteuler100;
  */
 public class AllSolutions {
 
-	private static final double NANO_TO_S = 100000000.0;
+	private static final double NANO_TO_S = 1000000000.0;
 
 	/**
 	 * @param args
@@ -24,6 +24,11 @@ public class AllSolutions {
 		new P008().run();
 		new P009().run();
 		new P010().run();
+		new P011().run();
+		new P012().run();
+		new P013().run();
+		new P014().run();
+		new P015().run();
 
 		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
 		System.out.println("Total time: " + totalTime + " s");

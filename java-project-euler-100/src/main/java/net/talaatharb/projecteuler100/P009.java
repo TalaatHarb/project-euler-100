@@ -8,7 +8,7 @@ package net.talaatharb.projecteuler100;
  */
 public class P009 implements Runnable {
 
-	private static final double NANO_TO_S = 100000000.0;
+	private static final double NANO_TO_S = 1000000000.0;
 
 	/**
 	 * Problem solution entry point
@@ -26,8 +26,8 @@ public class P009 implements Runnable {
 		int product = 0;
 		for (int a = 1; a < (target_sum - 2); a++) {
 			for (int b = a + 1; b < (target_sum - 1); b++) {
-				int sum_of_squares = a * a + b * b;
-				double c = (Math.sqrt(sum_of_squares));
+				int sumOfSquares = a * a + b * b;
+				double c = (Math.sqrt(sumOfSquares));
 				double sum = a + b + c;
 				if (sum == target_sum) {
 					c = Math.floor(c);

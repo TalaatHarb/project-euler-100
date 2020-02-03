@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class P010 implements Runnable {
 
-	private static final double NANO_TO_S = 100000000.0;
+	private static final double NANO_TO_S = 1000000000.0;
 
 	/**
 	 * Problem solution entry point
@@ -22,11 +22,11 @@ public class P010 implements Runnable {
 		new P010().run();
 	}
 
-	private static final List<Integer> sieve_of_eratosthenes(final int n) {
+	private static final List<Integer> sieveOfEratosthenes(final int n) {
 		/**
-		 * Create a boolean array "prime[0..n]" and initialize all entries in it as
-		 * true. A value in prime[i] will finally be false if i is Not a prime, else
-		 * true.
+		 * Create a boolean array "notPrime[0..n]" and initialize all entries in it as
+		 * false. A value in notPrime[i] will finally be true if i is not a prime, else
+		 * false.
 		 */
 		boolean[] notPrime = new boolean[n];
 
@@ -60,7 +60,7 @@ public class P010 implements Runnable {
 		final long startTime = System.nanoTime();
 		final int last = 2000000;
 		long sum = 0;
-		final List<Integer> listOfPrimes = sieve_of_eratosthenes(last);
+		final List<Integer> listOfPrimes = sieveOfEratosthenes(last);
 		for (int i : listOfPrimes) {
 			sum += i;
 		}
