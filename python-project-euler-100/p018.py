@@ -22,7 +22,7 @@ class DAG:
 
     def topological_sort(self):
         # No need to consider the general case using Kahn's algorithm,
-        # since the order of adding edges results in a topolgical sort from source to destination
+        # since the order of adding edges results in a topological sort from source to destination
 
         sort = list(self.adjecency_dict.keys())
         sort.append(len(sort))

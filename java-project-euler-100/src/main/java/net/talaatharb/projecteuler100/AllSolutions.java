@@ -29,6 +29,11 @@ public class AllSolutions {
 		new P013().run();
 		new P014().run();
 		new P015().run();
+		new P016().run();
+		new P017().run();
+		new P018().run();
+		new P019().run();
+		new P020().run();
 
 		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
 		System.out.println("Total time: " + totalTime + " s");
