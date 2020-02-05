@@ -13,7 +13,7 @@ export class P006 {
 		result = (sum * sum) - sumOfSquares;
         const endTime = +new Date();
         const period = (endTime - startTime) / 1000.0;
-        console.log("P006: " + result + " -> " + period + " s");
+        console.log("p006: " + result + " -> " + period + " s");
     }
 }
 

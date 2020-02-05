@@ -33,7 +33,7 @@ export class P007 {
 
         const endTime = +new Date();
         const period = (endTime - startTime) / 1000.0;
-        console.log("P007: " + current + " -> " + period + " s");
+        console.log("p007: " + current + " -> " + period + " s");
     }
 }
 

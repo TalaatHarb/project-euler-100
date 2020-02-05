@@ -5,7 +5,7 @@ export class P009 {
 
         const endTime = +new Date();
         const period = (endTime - startTime) / 1000.0;
-        console.log("P009: " + result + " -> " + period + " s");
+        console.log("p009: " + result + " -> " + period + " s");
     }
 }
 
