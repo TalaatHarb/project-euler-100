@@ -13,22 +13,25 @@ def is_prime(number):
             return False
     return True
 
+class P007:
+    def run(self):
+        start_time = time.time()
+        target = 10001
+        counter = 1
+        current = 0
+    
+        i = 1
+        while counter <= target:
+            if is_prime(i):
+                current = i
+                counter += 1
+            i += 2
+    
+        total_time = time.time() - start_time
+        print('p007:', current, '->', total_time, 's')
 
-def run():
-    start_time = time.time()
-    target = 10001
-    counter = 1
-    current = 0
+def main():
+	P007().run()
 
-    i = 1
-    while counter <= target:
-        if is_prime(i):
-            current = i
-            counter += 1
-        i += 2
-
-    total_time = time.time() - start_time
-    print('p007:', current, '->', total_time, 's')
-
-
-run()
+if __name__ == "__main__":
+	main()

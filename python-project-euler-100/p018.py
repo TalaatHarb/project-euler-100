@@ -45,44 +45,47 @@ class DAG:
                     distances[i] = temp_distance
         return distances[0]
 
+class P018:
+    def read_graph(self, file_name):
+        lines = []
+        with open(file_name) as file_in:
+            for line in file_in:
+                lines.append(line)
 
-def read_graph(file_name):
-    lines = []
-    with open(file_name) as file_in:
-        for line in file_in:
-            lines.append(line)
-    
-    n = len(lines)
-    end_node_index = n * (n + 1) // 2 + 1
-    graph = DAG()
+        n = len(lines)
+        end_node_index = n * (n + 1) // 2 + 1
+        graph = DAG()
 
-    old_line = [0]
-    for i in range(0, n):
-        parts = list(map(lambda part: int(part), lines[i].split(' ')))
-        new_line = range(i*(i+1)//2 + 1, (i+1)*(i+2)//2 + 1)
-        for j in range(0, len(old_line)):
-            if len(parts) == 1:
-                graph.add_edge(old_line[j], new_line[0], parts[0])
-            else:
-                for k in range(j, j + 2):
-                    graph.add_edge(old_line[j], new_line[k], parts[k])
+        old_line = [0]
+        for i in range(0, n):
+            parts = list(map(lambda part: int(part), lines[i].split(' ')))
+            new_line = range(i*(i+1)//2 + 1, (i+1)*(i+2)//2 + 1)
+            for j in range(0, len(old_line)):
+                if len(parts) == 1:
+                    graph.add_edge(old_line[j], new_line[0], parts[0])
+                else:
+                    for k in range(j, j + 2):
+                        graph.add_edge(old_line[j], new_line[k], parts[k])
 
-        old_line = new_line
+            old_line = new_line
 
-    for i in old_line:
-        graph.add_edge(i, end_node_index, 0)
+        for i in old_line:
+            graph.add_edge(i, end_node_index, 0)
 
-    return graph
-
-
-def run():
-    start_time = time.time()
-
-    graph = read_graph('p018.txt')
-    total = graph.longest_path_length_0_end()
-
-    total_time = time.time() - start_time
-    print('p018:', total, '->', total_time, 's')
+        return graph
 
 
-run()
+    def run(self):
+        start_time = time.time()
+
+        graph = self.read_graph('p018.txt')
+        total = graph.longest_path_length_0_end()
+
+        total_time = time.time() - start_time
+        print('p018:', total, '->', total_time, 's')
+
+def main():
+	P018().run()
+
+if __name__ == "__main__":
+	main()

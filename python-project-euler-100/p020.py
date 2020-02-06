@@ -1,31 +1,36 @@
 import time
 import math
 
-def digits_sum(segment):
-	sum = 0
-	for i in segment:
-		sum += int(i)
-	return sum
+class P020:
+    mem_cache = {0: 1}
+        
+    def digits_sum(self, segment):
+        sum = 0
+        for i in segment:
+            sum += int(i)
+        return sum
 
-def factorial(n, mem_cache):
-    if n in mem_cache:
-        return mem_cache[n], mem_cache
-    data, mem_cache = factorial(n - 1, mem_cache)
-    mem_cache[n] = data * n
-    return mem_cache[n], mem_cache 
+    def factorial(self, n):
+        if n in self.mem_cache:
+            return self.mem_cache[n]
+        data = self.factorial(n - 1)
+        self.mem_cache[n] = data * n
+        return self.mem_cache[n] 
 
-def run():
-    start_time = time.time()
-    n = 100
-    mem_cache = {0:1}
-    
-    for i in range(1, n):
-        x, mem_cache = factorial(i, mem_cache)
-    
-    result = digits_sum(str(factorial(n, mem_cache)[0]))
+    def run(self):
+        start_time = time.time()
+        n = 100
 
-    total_time = time.time() - start_time
-    print('p020:', result, '->', total_time, 's')
+        for i in range(1, n):
+            self.factorial(i)
 
+        result = self.digits_sum(str(self.factorial(n)))
 
-run()
+        total_time = time.time() - start_time
+        print('p020:', result, '->', total_time, 's')
+
+def main():
+    P020().run()
+
+if __name__ == "__main__":
+    main()
