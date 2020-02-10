@@ -5,16 +5,12 @@ import (
 	"time"
 )
 
-func main() {
+/*P004Run Entry point*/
+func P004Run() {
 	const NS = 1.0e9
 	startTime := time.Now()
-
-	P001Run()
-	P002Run()
-	P003Run()
-	P004Run()
-	P005Run()
+	result := 0
 
 	period := (time.Since(startTime).Nanoseconds()) / NS
-	fmt.Println("Total time:", period, "s")
+	fmt.Println("p004:", result, "->", period, "s")
 }
