@@ -13,9 +13,7 @@ import java.util.List;
  * @author mharb
  *
  */
-public class P013 implements Runnable {
-
-	private static final double NANO_TO_S = 1000000000.0;
+public class P013 extends Solution {
 
 	/**
 	 * Problem solution entry point
@@ -47,8 +45,8 @@ public class P013 implements Runnable {
 	}
 
 	@Override
-	public void run() {
-		long startTime = System.nanoTime();
+	public Number solve() {
+		problemNumber = 13;
 		BigInteger sum = BigInteger.valueOf(0);
 		final List<String> numbers = readNumbers("p013.txt");
 
@@ -56,9 +54,8 @@ public class P013 implements Runnable {
 			sum = sum.add(new BigInteger(line));
 		}
 		final long result = Long.parseLong(sum.toString().substring(0, 10));
-		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p013: " + result + " -> " + totalTime + " s");
 
+		return result;
 	}
 
 }

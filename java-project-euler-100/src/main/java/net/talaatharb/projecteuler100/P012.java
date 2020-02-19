@@ -9,9 +9,39 @@ import java.util.List;
  * @author mharb
  *
  */
-public class P012 implements Runnable {
+public class P012 extends Solution {
 
-	private static final double NANO_TO_S = 1000000000.0;
+	/**
+	 * Problem solution entry point
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		new P012().run();
+	}
+
+	private static final int numberOfDivisors(long n, final List<Long> primes) {
+		int result = 1;
+		if (primes.contains(n)) {
+			result = 2;
+			return result;
+		}
+		for (long i : primes) {
+			long num = 0;
+			while (n % i == 0) {
+				num += 1;
+				n /= i;
+			}
+
+			if (num > 0) {
+				result *= (num + 1);
+			}
+			if (i > n) {
+				break;
+			}
+		}
+		return result;
+	}
 
 	private static final List<Long> sieveOfEratosthenes(final int n) {
 		/**
@@ -50,41 +80,9 @@ public class P012 implements Runnable {
 		return (n * (n + 1) / 2);
 	}
 
-	private static final int numberOfDivisors(long n, final List<Long> primes) {
-		int result = 1;
-		if (primes.contains(n)) {
-			result = 2;
-			return result;
-		}
-		for (long i : primes) {
-			long num = 0;
-			while (n % i == 0) {
-				num += 1;
-				n /= i;
-			}
-
-			if (num > 0) {
-				result *= (num + 1);
-			}
-			if (i > n) {
-				break;
-			}
-		}
-		return result;
-	}
-
-	/**
-	 * Problem solution entry point
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		new P012().run();
-	}
-
 	@Override
-	public void run() {
-		final long startTime = System.nanoTime();
+	public Number solve() {
+		problemNumber = 12;
 		long result = 1;
 		final int max = 100000;
 		final int target = 500;
@@ -98,8 +96,8 @@ public class P012 implements Runnable {
 			}
 			i += 1;
 		}
-		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p012: " + result + " -> " + totalTime + " s");
+
+		return result;
 	}
 
 }
