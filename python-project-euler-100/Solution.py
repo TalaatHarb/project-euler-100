@@ -14,4 +14,4 @@ class Solution(ABC):
         result = self.solve()
         total_time = time.time() - start_time
 
-        print('p001:', result, '->', total_time, 's')
+        print('p{0:03d}:'.format(self.problem_number), result, '->', total_time, 's')

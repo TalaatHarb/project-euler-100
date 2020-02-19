@@ -1,8 +1,9 @@
 import time
+from Solution import Solution
 
-class P006:
-    def run(self):
-        start_time = time.time()
+class P006(Solution):
+    def solve(self):
+        self.problem_number = 6
         last = 100
         sum = 0
         sum_of_squares = 0
@@ -12,9 +13,7 @@ class P006:
             sum_of_squares += (i * i)
         
         result = (sum * sum) - sum_of_squares
-        total_time = time.time() - start_time
-    
-        print('p006:', result, '->', total_time, 's')
+        return result
 
 def main():
 	P006().run()

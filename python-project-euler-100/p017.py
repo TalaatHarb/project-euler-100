@@ -1,10 +1,12 @@
 import time
 import math
+from Solution import Solution
 
-class P017:
+class P017(Solution):
     mem_cache = {}
 
     def __init__(self):
+        self.problem_number = 17
         self.mem_cache = {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven', 12: 'twelve', 13: 'thirteen', 14: 'fourteen',
                      15: 'fifteen', 16: 'sixteen', 17: 'seventeen', 18: 'eighteen', 19: 'nineteen', 20: 'twenty', 30: 'thirty', 40: 'forty', 50: 'fifty', 60: 'sixty', 70: 'seventy', 80: 'eighty', 90: 'ninety', 1000: 'one thousand'}
 
@@ -34,8 +36,7 @@ class P017:
         return len(string.replace(' ', '').replace('-', ''))
 
 
-    def run(self):
-        start_time = time.time()
+    def solve(self):
         n = 1000
         result = 0
 
@@ -43,8 +44,7 @@ class P017:
             data = self.number_as_letters(i)
             result += self.length_of_string(data)
 
-        total_time = time.time() - start_time
-        print('p017:', result, '->', total_time, 's')
+        return result
 
 def main():
 	P017().run()

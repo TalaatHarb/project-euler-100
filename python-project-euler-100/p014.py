@@ -1,7 +1,8 @@
 import time
 import math
+from Solution import Solution
 
-class P014:
+class P014(Solution):
     mem_cache = {1: 0}
 
     def collatz(self, number):
@@ -18,8 +19,8 @@ class P014:
             self.mem_cache[number] = data + 1
             return (1 + data)
 
-    def run(self):
-        start_time = time.time()
+    def solve(self):
+        self.problem_number = 14
         last = 1000000
         max_number = 1
         max_length = self.mem_cache[max_number];
@@ -30,8 +31,7 @@ class P014:
                 max_length = sequence_length
                 max_number = i
 
-        total_time = time.time() - start_time
-        print('p014:', max_number, '->', total_time, 's')
+        return max_number
 
 def main():
 	P014().run()

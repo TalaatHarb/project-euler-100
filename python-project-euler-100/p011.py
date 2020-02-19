@@ -1,6 +1,7 @@
 import time
+from Solution import Solution
 
-class P011:
+class P011(Solution):
     def read_grid(self, file_name):
         grid = []
         with open(file_name) as file_in:
@@ -45,8 +46,8 @@ class P011:
         
         return max_product
     
-    def run(self):
-        start_time = time.time()
+    def solve(self):
+        self.problem_number = 11
         max_product = 1
         count = 4
     
@@ -58,8 +59,7 @@ class P011:
                 if product > max_product:
                     max_product = product
     
-        total_time = time.time() - start_time
-        print('p011:', max_product, '->', total_time, 's')
+        return max_product
 
 def main():
 	P011().run()

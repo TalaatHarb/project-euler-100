@@ -1,6 +1,7 @@
 import time
+from Solution import Solution
 
-class P004:
+class P004(Solution):
     def is_palindromic(self, number):
         number_as_string = str(number)
         reverse = number_as_string[::-1]
@@ -9,8 +10,8 @@ class P004:
         else:
             return False
 
-    def run(self):
-        start_time = time.time()
+    def solve(self):
+        self.problem_number = 4
         start = 99
         finish = 999
         result = 0
@@ -23,8 +24,7 @@ class P004:
                     result = number
                     break
             i -= 1
-        total_time = time.time() - start_time
-        print('p004:', result, '->', total_time, 's')
+        return result
 
 def main():
 	P004().run()

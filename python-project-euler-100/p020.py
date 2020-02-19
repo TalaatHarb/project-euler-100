@@ -1,7 +1,8 @@
 import time
 import math
+from Solution import Solution
 
-class P020:
+class P020(Solution):
     mem_cache = {0: 1}
         
     def digits_sum(self, segment):
@@ -17,8 +18,8 @@ class P020:
         self.mem_cache[n] = data * n
         return self.mem_cache[n] 
 
-    def run(self):
-        start_time = time.time()
+    def solve(self):
+        self.problem_number = 20
         n = 100
 
         for i in range(1, n):
@@ -26,8 +27,7 @@ class P020:
 
         result = self.digits_sum(str(self.factorial(n)))
 
-        total_time = time.time() - start_time
-        print('p020:', result, '->', total_time, 's')
+        return result
 
 def main():
     P020().run()

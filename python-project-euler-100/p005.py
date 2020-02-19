@@ -1,8 +1,9 @@
 import time
+from Solution import Solution
 
-class P005:
-    def run(self):
-        start_time = time.time()
+class P005(Solution):
+    def solve(self):
+        self.problem_number = 5
         last = 20
         sequence = []
         result = 1
@@ -17,8 +18,7 @@ class P005:
             counter += 1
             number = counter
         
-        total_time = time.time() - start_time
-        print('p005:', result, '->', total_time, 's')
+        return result
 
 def main():
 	P005().run()
