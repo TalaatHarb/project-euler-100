@@ -1,17 +1,17 @@
 import time
+from Solution import Solution
 
-class P001:
-	def run(self):
-		start_time = time.time()
+class P001(Solution):
+	def solve(self):
+		self.problem_number = 1
 		last = 1000
 		sum = 0
 
 		for i in range(1,last):
 			if (i % 3 == 0) or (i % 5 == 0):
 				sum = sum + i
-		total_time = time.time() - start_time
 
-		print('p001:', sum, '->', total_time, 's')
+		return sum
 
 def main():
 	P001().run()
