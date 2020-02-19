@@ -12,15 +12,23 @@ import java.util.Map;
  */
 public class P020 extends Solution {
 
+	/**
+	 * Problem solution entry point
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		new P020().run();
+	}
+
 	private final Map<Integer, BigInteger> memoryCache;
 
-	private BigInteger factorial(final int n) {
-		if (memoryCache.containsKey(n)) {
-			return memoryCache.get(n);
-		}
-		final BigInteger data = BigInteger.valueOf(n).multiply(factorial(n - 1));
-		memoryCache.put(n, data);
-		return data;
+	/**
+	 * Public constructor
+	 */
+	public P020() {
+		memoryCache = new HashMap<>();
+		memoryCache.put(0, BigInteger.valueOf(1));
 	}
 
 	private int digitSum(final String string) {
@@ -33,21 +41,13 @@ public class P020 extends Solution {
 		return result;
 	}
 
-	/**
-	 * Public constructor
-	 */
-	public P020() {
-		memoryCache = new HashMap<>();
-		memoryCache.put(0, BigInteger.valueOf(1));
-	}
-
-	/**
-	 * Problem solution entry point
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		new P020().run();
+	private BigInteger factorial(final int n) {
+		if (memoryCache.containsKey(n)) {
+			return memoryCache.get(n);
+		}
+		final BigInteger data = BigInteger.valueOf(n).multiply(factorial(n - 1));
+		memoryCache.put(n, data);
+		return data;
 	}
 
 	@Override

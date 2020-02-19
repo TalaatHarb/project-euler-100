@@ -10,7 +10,7 @@ import java.util.List;
  * @author mharb
  *
  */
-public class P005  extends Solution {
+public class P005 extends Solution {
 
 	/**
 	 * Problem solution entry point
@@ -42,7 +42,7 @@ public class P005  extends Solution {
 			counter += 1;
 			number = counter;
 		}
-		
+
 		return result;
 	}
 

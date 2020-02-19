@@ -14,31 +14,6 @@ import java.util.List;
  */
 public class P011 extends Solution {
 
-	private List<int[]> readGrid(final String fileName) {
-		List<int[]> grid = new ArrayList<>();
-
-		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-
-		InputStreamReader streamReader = new InputStreamReader(classLoader.getResourceAsStream(fileName));
-		BufferedReader reader = new BufferedReader(streamReader);
-		try {
-			for (String line; (line = reader.readLine()) != null;) {
-				final String[] parts = line.split("\\s+");
-				final int[] row = new int[parts.length];
-				for (int i = 0; i < parts.length; i++) {
-					row[i] = Integer.parseInt(parts[i]);
-				}
-				grid.add(row);
-			}
-			reader.close();
-			streamReader.close();
-		} catch (IOException e) {
-			System.err.println(e.getMessage());
-		}
-
-		return grid;
-	}
-
 	private static final int gridProduct(final List<int[]> grid, final int i, final int j, final int count) {
 		final int n = grid.size();
 		int maxProduct = 1;
@@ -92,6 +67,31 @@ public class P011 extends Solution {
 	 */
 	public static void main(String[] args) {
 		new P011().run();
+	}
+
+	private List<int[]> readGrid(final String fileName) {
+		List<int[]> grid = new ArrayList<>();
+
+		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+
+		InputStreamReader streamReader = new InputStreamReader(classLoader.getResourceAsStream(fileName));
+		BufferedReader reader = new BufferedReader(streamReader);
+		try {
+			for (String line; (line = reader.readLine()) != null;) {
+				final String[] parts = line.split("\\s+");
+				final int[] row = new int[parts.length];
+				for (int i = 0; i < parts.length; i++) {
+					row[i] = Integer.parseInt(parts[i]);
+				}
+				grid.add(row);
+			}
+			reader.close();
+			streamReader.close();
+		} catch (IOException e) {
+			System.err.println(e.getMessage());
+		}
+
+		return grid;
 	}
 
 	@Override

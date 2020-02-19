@@ -11,7 +11,24 @@ import java.util.Map;
  */
 public class P014 extends Solution {
 
+	/**
+	 * Problem solution entry point
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		new P014().run();
+	}
+
 	private final Map<Long, Long> memoryCache;
+
+	/**
+	 * Public constructor
+	 */
+	public P014() {
+		memoryCache = new HashMap<>();
+		memoryCache.put(1L, 0L);
+	}
 
 	private long collatz(final long number) {
 
@@ -28,23 +45,6 @@ public class P014 extends Solution {
 			memoryCache.put(number, data);
 			return data;
 		}
-	}
-
-	/**
-	 * Public constructor
-	 */
-	public P014() {
-		memoryCache = new HashMap<>();
-		memoryCache.put(1L, 0L);
-	}
-
-	/**
-	 * Problem solution entry point
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		new P014().run();
 	}
 
 	@Override

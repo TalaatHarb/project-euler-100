@@ -12,16 +12,16 @@ import java.util.Map;
  */
 public class P015 extends Solution {
 
-	private final Map<Integer, BigInteger> memoryCache;
-
-	private BigInteger factorial(final int n) {
-		if (memoryCache.containsKey(n)) {
-			return memoryCache.get(n);
-		}
-		final BigInteger data = BigInteger.valueOf(n).multiply(factorial(n - 1));
-		memoryCache.put(n, data);
-		return data;
+	/**
+	 * Problem solution entry point
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		new P015().run();
 	}
+
+	private final Map<Integer, BigInteger> memoryCache;
 
 	/**
 	 * Public constructor
@@ -31,13 +31,13 @@ public class P015 extends Solution {
 		memoryCache.put(0, BigInteger.valueOf(1));
 	}
 
-	/**
-	 * Problem solution entry point
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		new P015().run();
+	private BigInteger factorial(final int n) {
+		if (memoryCache.containsKey(n)) {
+			return memoryCache.get(n);
+		}
+		final BigInteger data = BigInteger.valueOf(n).multiply(factorial(n - 1));
+		memoryCache.put(n, data);
+		return data;
 	}
 
 	@Override

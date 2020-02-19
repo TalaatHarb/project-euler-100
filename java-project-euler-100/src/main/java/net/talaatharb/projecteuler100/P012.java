@@ -11,6 +11,38 @@ import java.util.List;
  */
 public class P012 extends Solution {
 
+	/**
+	 * Problem solution entry point
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		new P012().run();
+	}
+
+	private static final int numberOfDivisors(long n, final List<Long> primes) {
+		int result = 1;
+		if (primes.contains(n)) {
+			result = 2;
+			return result;
+		}
+		for (long i : primes) {
+			long num = 0;
+			while (n % i == 0) {
+				num += 1;
+				n /= i;
+			}
+
+			if (num > 0) {
+				result *= (num + 1);
+			}
+			if (i > n) {
+				break;
+			}
+		}
+		return result;
+	}
+
 	private static final List<Long> sieveOfEratosthenes(final int n) {
 		/**
 		 * Create a boolean array "notPrime[0..n]" and initialize all entries in it as
@@ -46,38 +78,6 @@ public class P012 extends Solution {
 
 	private static final long triangularNumber(final long n) {
 		return (n * (n + 1) / 2);
-	}
-
-	private static final int numberOfDivisors(long n, final List<Long> primes) {
-		int result = 1;
-		if (primes.contains(n)) {
-			result = 2;
-			return result;
-		}
-		for (long i : primes) {
-			long num = 0;
-			while (n % i == 0) {
-				num += 1;
-				n /= i;
-			}
-
-			if (num > 0) {
-				result *= (num + 1);
-			}
-			if (i > n) {
-				break;
-			}
-		}
-		return result;
-	}
-
-	/**
-	 * Problem solution entry point
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		new P012().run();
 	}
 
 	@Override

@@ -6,7 +6,7 @@ package net.talaatharb.projecteuler100;
  * @author mharb
  *
  */
-public class P006  extends Solution {
+public class P006 extends Solution {
 
 	/**
 	 * Problem solution entry point

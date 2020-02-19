@@ -11,6 +11,15 @@ import java.util.Map;
  */
 public class P017 extends Solution {
 
+	/**
+	 * Problem solution entry point
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		new P017().run();
+	}
+
 	private final Map<Integer, String> memoryCache;
 
 	/**
@@ -48,6 +57,10 @@ public class P017 extends Solution {
 		memoryCache.put(1000, "one thousand");
 	}
 
+	private int lengthOfString(final String string) {
+		return string.replace(" ", "").replace("-", "").length();
+	}
+
 	private String numberAsLetters(final int n) {
 		if (memoryCache.containsKey(n)) {
 			return memoryCache.get(n);
@@ -69,19 +82,6 @@ public class P017 extends Solution {
 		}
 
 		return memoryCache.get(n);
-	}
-
-	private int lengthOfString(final String string) {
-		return string.replace(" ", "").replace("-", "").length();
-	}
-
-	/**
-	 * Problem solution entry point
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		new P017().run();
 	}
 
 	@Override

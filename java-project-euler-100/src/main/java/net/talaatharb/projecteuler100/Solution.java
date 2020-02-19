@@ -16,6 +16,11 @@ public abstract class Solution implements Solvable, Runnable {
 	protected int problemNumber = 0;
 
 	@Override
+	public final int getProblemNumber() {
+		return problemNumber;
+	}
+
+	@Override
 	public void run() {
 		final long startTime = System.nanoTime();
 
