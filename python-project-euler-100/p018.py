@@ -1,6 +1,6 @@
 import time
 import math
-
+from Solution import Solution
 
 class Edge:
     def __init__(self, to_node, weight):
@@ -45,7 +45,7 @@ class DAG:
                     distances[i] = temp_distance
         return distances[0]
 
-class P018:
+class P018(Solution):
     def read_graph(self, file_name):
         lines = []
         with open(file_name) as file_in:
@@ -75,14 +75,13 @@ class P018:
         return graph
 
 
-    def run(self):
-        start_time = time.time()
+    def solve(self):
+        self.problem_number = 18
 
         graph = self.read_graph('p018.txt')
         total = graph.longest_path_length_0_end()
 
-        total_time = time.time() - start_time
-        print('p018:', total, '->', total_time, 's')
+        return total
 
 def main():
 	P018().run()

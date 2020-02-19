@@ -1,9 +1,10 @@
 import time
 import math
+from Solution import Solution
 
-class P016:
-    def run(self):
-        start_time = time.time()
+class P016(Solution):
+    def solve(self):
+        self.problem_number = 16
         n = 1000
         number = 2 ** n
         number_string = str(number)
@@ -11,8 +12,7 @@ class P016:
         for i in number_string:
             result += int(i)
     
-        total_time = time.time() - start_time
-        print('p016:', result, '->', total_time, 's')
+        return result
 
 def main():
 	P016().run()

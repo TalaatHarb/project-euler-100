@@ -1,7 +1,8 @@
 import time
 import math
+from Solution import Solution
 
-class P015:
+class P015(Solution):
     mem_cache = {0: 1}
     def factorial(self, n):
         if n in self.mem_cache:
@@ -10,8 +11,8 @@ class P015:
         self.mem_cache[n] = data * n
         return self.mem_cache[n] 
 
-    def run(self):
-        start_time = time.time()
+    def solve(self):
+        self.problem_number = 15
         n = 20
 
         for i in range(1, 2 * n):
@@ -19,8 +20,7 @@ class P015:
 
         route_count = self.factorial(2 * n) // (self.factorial(n)**2)
 
-        total_time = time.time() - start_time
-        print('p015:', route_count, '->', total_time, 's')
+        return route_count
 
 def main():
 	P015().run()

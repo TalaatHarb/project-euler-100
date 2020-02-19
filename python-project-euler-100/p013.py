@@ -1,7 +1,8 @@
 import time
 import math
+from Solution import Solution
 
-class P013:
+class P013(Solution):
     def read_numbers(self, file_name):
         numbers = []
         with open(file_name) as file_in:
@@ -9,17 +10,16 @@ class P013:
                 numbers.append(line)
         return numbers
     
-    def run(self):
-        start_time = time.time()
+    def solve(self):
+        self.problem_number = 13
         sum = 0
         numbers = self.read_numbers("p013.txt")
     
         for i in numbers:
             sum += int(i);
     
-        result = str(sum)[0:10]
-        total_time = time.time() - start_time
-        print('p013:', result, '->', total_time, 's')
+        result = int(str(sum)[0:10])
+        return result
 
 def main():
 	P013().run()

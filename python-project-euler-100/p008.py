@@ -1,14 +1,15 @@
 import time
+from Solution import Solution
 
-class P008:
+class P008(Solution):
 	def digits_product(self, segment):
 		product = 1
 		for i in segment:
 			product *= int(i)
 		return product
 	
-	def run(self):
-		start_time = time.time()
+	def solve(self):
+		self.problem_number = 8
 		segment_length = 13
 		product = 1
 		number = "73167176531330624919225119674426574742355349194934\
@@ -38,9 +39,7 @@ class P008:
 			temp_product = self.digits_product(segment)
 			if temp_product > product:
 				product = temp_product
-		total_time = time.time() - start_time
-	
-		print('p008:', product, '->', total_time, 's')
+		return product
 
 def main():
 	P008().run()

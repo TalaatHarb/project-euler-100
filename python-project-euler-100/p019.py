@@ -1,9 +1,10 @@
 import time
 import datetime
+from Solution import Solution
 
-class P019:
-    def run(self):
-        start_time = time.time()
+class P019(Solution):
+    def solve(self):
+        self.problem_number = 19
         result = 0
         first_day = datetime.date(1901,1,1)
         delta = datetime.timedelta(days=5)
@@ -15,8 +16,7 @@ class P019:
             current = current + delta
             if (current.day == 1):
                 result += 1
-        total_time = time.time() - start_time
-        print('p019:', result, '->', total_time, 's')
+        return result
 
 def main():
 	P019().run()

@@ -1,7 +1,8 @@
 import math
 import time
+from Solution import Solution
 
-class P003:
+class P003(Solution):
     def is_prime(self, number):
         if number % 2 == 0:
             return False
@@ -13,8 +14,8 @@ class P003:
                 return False
         return True
 
-    def run(self):
-        start_time = time.time()
+    def solve(self):
+        self.problem_number = 3
         number = 600851475143
         upper_limit = math.floor(math.sqrt(number))
         if upper_limit % 2 == 0:
@@ -27,8 +28,7 @@ class P003:
                 result = possible_factor
                 break
             possible_factor -=2
-        total_time = time.time() - start_time
-        print('p003:', result, '->', total_time, 's')
+        return result
 
 def main():
 	P003().run()

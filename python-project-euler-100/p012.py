@@ -1,5 +1,7 @@
 import time
-class P012:
+from Solution import Solution
+
+class P012(Solution):
     def sieve_of_eratosthenes(self, n): 
           
         # Create a boolean array "prime[0..n]" and initialize 
@@ -41,8 +43,8 @@ class P012:
     
     
     
-    def run(self):
-        start_time = time.time()
+    def solve(self):
+        self.problem_number = 12
         max = 100000
         result = 1
         target = 500
@@ -55,8 +57,7 @@ class P012:
                 result = tn
             i += 1
         
-        total_time = time.time() - start_time
-        print('p012:', result, '->', total_time, 's')
+        return result
 
 def main():
 	P012().run()
