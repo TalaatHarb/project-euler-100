@@ -9,11 +9,26 @@ import java.util.Map;
  * @author mharb
  *
  */
-public class P014 implements Runnable {
+public class P014 extends Solution {
+
+	/**
+	 * Problem solution entry point
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		new P014().run();
+	}
 
 	private final Map<Long, Long> memoryCache;
 
-	private static final double NANO_TO_S = 1000000000.0;
+	/**
+	 * Public constructor
+	 */
+	public P014() {
+		memoryCache = new HashMap<>();
+		memoryCache.put(1L, 0L);
+	}
 
 	private long collatz(final long number) {
 
@@ -32,26 +47,9 @@ public class P014 implements Runnable {
 		}
 	}
 
-	/**
-	 * Public constructor
-	 */
-	public P014() {
-		memoryCache = new HashMap<>();
-		memoryCache.put(1L, 0L);
-	}
-
-	/**
-	 * Problem solution entry point
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		new P014().run();
-	}
-
 	@Override
-	public void run() {
-		final long startTime = System.nanoTime();
+	public Number solve() {
+		problemNumber = 14;
 		long maxNumber = 1;
 		long maxLength = 0;
 		final int last = 1000000;
@@ -63,8 +61,8 @@ public class P014 implements Runnable {
 				maxNumber = i;
 			}
 		}
-		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p014: " + maxNumber + " -> " + totalTime + " s");
+
+		return maxNumber;
 	}
 
 }

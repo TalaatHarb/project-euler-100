@@ -6,9 +6,7 @@ package net.talaatharb.projecteuler100;
  * @author mharb
  *
  */
-public class P009 implements Runnable {
-
-	private static final double NANO_TO_S = 1000000000.0;
+public class P009 extends Solution {
 
 	/**
 	 * Problem solution entry point
@@ -20,8 +18,8 @@ public class P009 implements Runnable {
 	}
 
 	@Override
-	public void run() {
-		final long startTime = System.nanoTime();
+	public Number solve() {
+		problemNumber = 9;
 		final int target_sum = 1000;
 		int product = 0;
 		for (int a = 1; a < (target_sum - 2); a++) {
@@ -36,8 +34,7 @@ public class P009 implements Runnable {
 			}
 		}
 
-		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p009: " + product + " -> " + totalTime + " s");
+		return product;
 	}
 
 }

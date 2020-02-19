@@ -9,9 +9,16 @@ import java.util.Map;
  * @author mharb
  *
  */
-public class P017 implements Runnable {
+public class P017 extends Solution {
 
-	private static final double NANO_TO_S = 1000000000.0;
+	/**
+	 * Problem solution entry point
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		new P017().run();
+	}
 
 	private final Map<Integer, String> memoryCache;
 
@@ -50,6 +57,10 @@ public class P017 implements Runnable {
 		memoryCache.put(1000, "one thousand");
 	}
 
+	private int lengthOfString(final String string) {
+		return string.replace(" ", "").replace("-", "").length();
+	}
+
 	private String numberAsLetters(final int n) {
 		if (memoryCache.containsKey(n)) {
 			return memoryCache.get(n);
@@ -73,30 +84,17 @@ public class P017 implements Runnable {
 		return memoryCache.get(n);
 	}
 
-	private int lengthOfString(final String string) {
-		return string.replace(" ", "").replace("-", "").length();
-	}
-
-	/**
-	 * Problem solution entry point
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		new P017().run();
-	}
-
 	@Override
-	public void run() {
-		final long startTime = System.nanoTime();
+	public Number solve() {
+		problemNumber = 17;
 		int result = 0;
 		final int n = 1000;
 		for (int i = 1; i < (n + 1); i++) {
 			final String data = numberAsLetters(i);
 			result += lengthOfString(data);
 		}
-		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p017: " + result + " -> " + totalTime + " s");
+
+		return result;
 	}
 
 }

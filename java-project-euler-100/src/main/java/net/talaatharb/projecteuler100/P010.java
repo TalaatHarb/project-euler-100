@@ -9,9 +9,7 @@ import java.util.List;
  * @author mharb
  *
  */
-public class P010 implements Runnable {
-
-	private static final double NANO_TO_S = 1000000000.0;
+public class P010 extends Solution {
 
 	/**
 	 * Problem solution entry point
@@ -56,16 +54,16 @@ public class P010 implements Runnable {
 	}
 
 	@Override
-	public void run() {
-		final long startTime = System.nanoTime();
+	public Number solve() {
+		problemNumber = 10;
 		final int last = 2000000;
 		long sum = 0;
 		final List<Integer> listOfPrimes = sieveOfEratosthenes(last);
 		for (int i : listOfPrimes) {
 			sum += i;
 		}
-		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p010: " + sum + " -> " + totalTime + " s");
+
+		return sum;
 	}
 
 }

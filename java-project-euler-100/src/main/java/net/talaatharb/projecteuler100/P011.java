@@ -12,34 +12,7 @@ import java.util.List;
  * @author mharb
  *
  */
-public class P011 implements Runnable {
-
-	private static final double NANO_TO_S = 1000000000.0;
-
-	private List<int[]> readGrid(final String fileName) {
-		List<int[]> grid = new ArrayList<>();
-
-		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-
-		InputStreamReader streamReader = new InputStreamReader(classLoader.getResourceAsStream(fileName));
-		BufferedReader reader = new BufferedReader(streamReader);
-		try {
-			for (String line; (line = reader.readLine()) != null;) {
-				final String[] parts = line.split("\\s+");
-				final int[] row = new int[parts.length];
-				for (int i = 0; i < parts.length; i++) {
-					row[i] = Integer.parseInt(parts[i]);
-				}
-				grid.add(row);
-			}
-			reader.close();
-			streamReader.close();
-		} catch (IOException e) {
-			System.err.println(e.getMessage());
-		}
-
-		return grid;
-	}
+public class P011 extends Solution {
 
 	private static final int gridProduct(final List<int[]> grid, final int i, final int j, final int count) {
 		final int n = grid.size();
@@ -96,10 +69,34 @@ public class P011 implements Runnable {
 		new P011().run();
 	}
 
-	@Override
-	public void run() {
-		final long startTime = System.nanoTime();
+	private List<int[]> readGrid(final String fileName) {
+		List<int[]> grid = new ArrayList<>();
 
+		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+
+		InputStreamReader streamReader = new InputStreamReader(classLoader.getResourceAsStream(fileName));
+		BufferedReader reader = new BufferedReader(streamReader);
+		try {
+			for (String line; (line = reader.readLine()) != null;) {
+				final String[] parts = line.split("\\s+");
+				final int[] row = new int[parts.length];
+				for (int i = 0; i < parts.length; i++) {
+					row[i] = Integer.parseInt(parts[i]);
+				}
+				grid.add(row);
+			}
+			reader.close();
+			streamReader.close();
+		} catch (IOException e) {
+			System.err.println(e.getMessage());
+		}
+
+		return grid;
+	}
+
+	@Override
+	public Number solve() {
+		problemNumber = 11;
 		int maxProduct = 1;
 		int product = 1;
 		int count = 4;
@@ -114,8 +111,8 @@ public class P011 implements Runnable {
 				}
 			}
 		}
-		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p011: " + maxProduct + " -> " + totalTime + " s");
+
+		return maxProduct;
 	}
 
 }

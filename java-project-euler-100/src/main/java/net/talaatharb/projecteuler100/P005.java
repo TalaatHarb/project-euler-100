@@ -10,9 +10,7 @@ import java.util.List;
  * @author mharb
  *
  */
-public class P005 implements Runnable {
-
-	private static final double NANO_TO_S = 1000000000.0;
+public class P005 extends Solution {
 
 	/**
 	 * Problem solution entry point
@@ -24,8 +22,8 @@ public class P005 implements Runnable {
 	}
 
 	@Override
-	public void run() {
-		final long startTime = System.nanoTime();
+	public Number solve() {
+		problemNumber = 5;
 		final int last = 20;
 		final List<Integer> sequence = new ArrayList<>();
 		int result = 1;
@@ -44,9 +42,8 @@ public class P005 implements Runnable {
 			counter += 1;
 			number = counter;
 		}
-		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p005: " + result + " -> " + totalTime + " s");
 
+		return result;
 	}
 
 }
