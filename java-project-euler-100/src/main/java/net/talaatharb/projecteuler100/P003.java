@@ -6,9 +6,7 @@ package net.talaatharb.projecteuler100;
  * @author mharb
  *
  */
-public class P003 implements Runnable {
-
-	private static final double NANO_TO_S = 1000000000.0;
+public class P003 extends Solution {
 
 	private static final boolean isPrime(final long number) {
 		if (number % 2 == 0) {
@@ -36,9 +34,9 @@ public class P003 implements Runnable {
 	}
 
 	@Override
-	public void run() {
-		final long startTime = System.nanoTime();
-		long number = 600851475143L;
+	public Number solve() {
+		problemNumber = 3;
+		final long number = 600851475143L;
 
 		double upperLimit = Math.floor(Math.sqrt(number));
 		if (upperLimit % 2 == 0) {
@@ -53,8 +51,7 @@ public class P003 implements Runnable {
 			}
 			possibleFactor -= 2;
 		}
-		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p003: " + result + " -> " + totalTime + " s");
+		return result;
 	}
 
 }

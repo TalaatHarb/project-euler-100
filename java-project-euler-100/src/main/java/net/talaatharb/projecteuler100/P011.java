@@ -12,9 +12,7 @@ import java.util.List;
  * @author mharb
  *
  */
-public class P011 implements Runnable {
-
-	private static final double NANO_TO_S = 1000000000.0;
+public class P011 extends Solution {
 
 	private List<int[]> readGrid(final String fileName) {
 		List<int[]> grid = new ArrayList<>();
@@ -97,9 +95,8 @@ public class P011 implements Runnable {
 	}
 
 	@Override
-	public void run() {
-		final long startTime = System.nanoTime();
-
+	public Number solve() {
+		problemNumber = 11;
 		int maxProduct = 1;
 		int product = 1;
 		int count = 4;
@@ -114,8 +111,8 @@ public class P011 implements Runnable {
 				}
 			}
 		}
-		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p011: " + maxProduct + " -> " + totalTime + " s");
+
+		return maxProduct;
 	}
 
 }

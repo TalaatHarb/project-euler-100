@@ -9,9 +9,7 @@ import java.util.Map;
  * @author mharb
  *
  */
-public class P017 implements Runnable {
-
-	private static final double NANO_TO_S = 1000000000.0;
+public class P017 extends Solution {
 
 	private final Map<Integer, String> memoryCache;
 
@@ -87,16 +85,16 @@ public class P017 implements Runnable {
 	}
 
 	@Override
-	public void run() {
-		final long startTime = System.nanoTime();
+	public Number solve() {
+		problemNumber = 17;
 		int result = 0;
 		final int n = 1000;
 		for (int i = 1; i < (n + 1); i++) {
 			final String data = numberAsLetters(i);
 			result += lengthOfString(data);
 		}
-		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p017: " + result + " -> " + totalTime + " s");
+
+		return result;
 	}
 
 }

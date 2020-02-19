@@ -4,9 +4,7 @@ package net.talaatharb.projecteuler100;
  * @author mharb
  *
  */
-public class P002 implements Runnable {
-
-	private static final double NANO_TO_S = 1000000000.0;
+public class P002  extends Solution {
 
 	/**
 	 * Problem solution entry point
@@ -18,8 +16,8 @@ public class P002 implements Runnable {
 	}
 
 	@Override
-	public void run() {
-		final long startTime = System.nanoTime();
+	public Number solve() {
+		problemNumber = 2;
 		long max = 4000000;
 		int previous = 1;
 		int current = 2;
@@ -33,8 +31,7 @@ public class P002 implements Runnable {
 			current = next;
 		}
 
-		final double period = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p002: " + sum + " -> " + period + " s");
+		return sum;
 	}
 
 }

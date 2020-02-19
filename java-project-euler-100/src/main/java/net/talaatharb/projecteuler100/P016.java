@@ -8,9 +8,7 @@ import java.math.BigInteger;
  * @author mharb
  *
  */
-public class P016 implements Runnable {
-
-	private static final double NANO_TO_S = 1000000000.0;
+public class P016 extends Solution {
 
 	/**
 	 * Problem solution entry point
@@ -22,8 +20,8 @@ public class P016 implements Runnable {
 	}
 
 	@Override
-	public void run() {
-		final long startTime = System.nanoTime();
+	public Number solve() {
+		problemNumber = 16;
 		int result = 0;
 		final int n = 1000;
 		final BigInteger number = BigInteger.valueOf(2).pow(n);
@@ -31,8 +29,8 @@ public class P016 implements Runnable {
 		for (char i : number_string.toCharArray()) {
 			result += Character.getNumericValue(i);
 		}
-		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p016: " + result + " -> " + totalTime + " s");
+
+		return result;
 	}
 
 }

@@ -10,9 +10,7 @@ import java.util.Map;
  * @author mharb
  *
  */
-public class P020 implements Runnable {
-
-	private static final double NANO_TO_S = 1000000000.0;
+public class P020 extends Solution {
 
 	private final Map<Integer, BigInteger> memoryCache;
 
@@ -53,20 +51,15 @@ public class P020 implements Runnable {
 	}
 
 	@Override
-	public void run() {
-		final long startTime = System.nanoTime();
-		int result = 0;
-
+	public Number solve() {
+		problemNumber = 20;
 		final int n = 100;
 
 		for (int i = 1; i < n; i++) {
 			factorial(i);
 		}
 
-		result = digitSum(factorial(n).toString());
-
-		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p020: " + result + " -> " + totalTime + " s");
+		return digitSum(factorial(n).toString());
 	}
 
 }

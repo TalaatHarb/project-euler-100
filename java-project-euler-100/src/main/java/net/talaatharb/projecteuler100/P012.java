@@ -9,9 +9,7 @@ import java.util.List;
  * @author mharb
  *
  */
-public class P012 implements Runnable {
-
-	private static final double NANO_TO_S = 1000000000.0;
+public class P012 extends Solution {
 
 	private static final List<Long> sieveOfEratosthenes(final int n) {
 		/**
@@ -83,8 +81,8 @@ public class P012 implements Runnable {
 	}
 
 	@Override
-	public void run() {
-		final long startTime = System.nanoTime();
+	public Number solve() {
+		problemNumber = 12;
 		long result = 1;
 		final int max = 100000;
 		final int target = 500;
@@ -98,8 +96,8 @@ public class P012 implements Runnable {
 			}
 			i += 1;
 		}
-		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
-		System.out.println("p012: " + result + " -> " + totalTime + " s");
+
+		return result;
 	}
 
 }
