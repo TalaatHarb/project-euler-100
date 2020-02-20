@@ -1,7 +1,8 @@
 import time
 import math
+from Solution import Solution
 
-class P010:
+class P010(Solution):
     def sieve_of_eratosthenes(self, n): 
           
         # Create a boolean array "prime[0..n]" and initialize 
@@ -21,15 +22,13 @@ class P010:
         prime[1]= False
         return [index for index,value in enumerate(prime) if prime[index]]
     
-    def run(self):
-        start_time = time.time()
+    def solve(self):
+        self.problem_number = 10
         last = 2000000
         list_of_primes = self.sieve_of_eratosthenes(last)
         sum_of_primes = sum(list_of_primes)
     
-        total_time = time.time() - start_time
-    
-        print('p010:', sum_of_primes, '->', total_time, 's')
+        return sum_of_primes
 
 def main():
 	P010().run()

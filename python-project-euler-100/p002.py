@@ -1,8 +1,9 @@
 import time
+from Solution import Solution
 
-class P002:
-	def run(self):
-		start_time = time.time()
+class P002(Solution):
+	def solve(self):
+		self.problem_number = 2
 		max = 4000000
 		previous = 1
 		current = 2
@@ -15,8 +16,7 @@ class P002:
 			previous = current
 			current = next
 
-		total_time = time.time() - start_time
-		print('p002:', sum , '->', total_time, 's')
+		return sum
 
 def main():
 	P002().run()

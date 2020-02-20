@@ -1,5 +1,6 @@
 import time
 import math
+from Solution import Solution
 
 
 def is_prime(number):
@@ -13,9 +14,9 @@ def is_prime(number):
             return False
     return True
 
-class P007:
-    def run(self):
-        start_time = time.time()
+class P007(Solution):
+    def solve(self):
+        self.problem_number = 7
         target = 10001
         counter = 1
         current = 0
@@ -27,8 +28,7 @@ class P007:
                 counter += 1
             i += 2
     
-        total_time = time.time() - start_time
-        print('p007:', current, '->', total_time, 's')
+        return current
 
 def main():
 	P007().run()

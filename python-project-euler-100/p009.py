@@ -1,9 +1,10 @@
 import time
 import math
+from Solution import Solution
 
-class P009:
-	def run(self):
-		start_time = time.time()
+class P009(Solution):
+	def solve(self):
+		self.problem_number = 9
 		target_sum = 1000
 		product = 0
 		for a in range(1, target_sum - 2):
@@ -14,8 +15,7 @@ class P009:
 				if sum == target_sum:
 					c = math.floor(c)
 					product = a * b * c
-		total_time = time.time() - start_time
-		print('p009:', product, '->', total_time, 's')
+		return product
 
 def main():
 	P009().run()
