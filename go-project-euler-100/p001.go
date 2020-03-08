@@ -5,10 +5,8 @@ import (
 	"time"
 )
 
-/*P001Run Entry point*/
-func P001Run() {
-	const NS = 1.0e9
-	startTime := time.Now()
+/*P001Solve solution*/
+func P001Solve() int{
 	sum := 0
 	last := 1000
 	for i := 1; i < last; i++ {
@@ -16,6 +14,14 @@ func P001Run() {
 			sum += i
 		}
 	}
+	return sum
+}
+
+/*P001Run Entry point*/
+func P001Run() {
+	const NS = 1.0e9
+	startTime := time.Now()
+	result := P001Solve()
 	period := (time.Since(startTime).Nanoseconds()) / NS
-	fmt.Println("p001:", sum, "->", period, "s")
+	fmt.Println("p001:", result, "->", period, "s")
 }

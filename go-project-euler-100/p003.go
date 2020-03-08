@@ -22,10 +22,8 @@ func isPrime(number int) bool {
 	return true
 }
 
-/*P003Run Entry point*/
-func P003Run() {
-	const NS = 1.0e9
-	startTime := time.Now()
+/*P003Solve solution*/
+func P003Solve() int{
 	const number = 600851475143
 
 	upperLimit := int(math.Floor(math.Sqrt(float64(number))))
@@ -41,6 +39,16 @@ func P003Run() {
 		}
 		possibleFactor -= 2
 	}
+
+	return result
+}
+
+/*P003Run Entry point*/
+func P003Run() {
+	const NS = 1.0e9
+	startTime := time.Now()
+	
+	result := P003Solve()
 
 	period := (time.Since(startTime).Nanoseconds()) / NS
 	fmt.Println("p003:", result, "->", period, "s")

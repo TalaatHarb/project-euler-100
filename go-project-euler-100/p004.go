@@ -21,10 +21,8 @@ func isPalindromic(number int) bool {
 	return result
 }
 
-/*P004Run Entry point*/
-func P004Run() {
-	const NS = 1.0e9
-	startTime := time.Now()
+/*P004Solve solution*/
+func P004Solve() int{
 	result := 0
 	const finish = 999
 	const start = 99
@@ -41,6 +39,17 @@ func P004Run() {
 			}
 		}
 	}
+	
+	return result
+}
+
+/*P004Run Entry point*/
+func P004Run() {
+	const NS = 1.0e9
+	startTime := time.Now()
+	
+	result := P004Solve()
+
 	period := (time.Since(startTime).Nanoseconds()) / NS
 	fmt.Println("p004:", result, "->", period, "s")
 }
