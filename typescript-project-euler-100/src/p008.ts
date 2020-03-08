@@ -11,6 +11,7 @@ export class P008 extends Solution{
     }
 
     solve() {
+        this.problemNumber = 8;
         const segmentLength = 13;
         let product = 1;
 

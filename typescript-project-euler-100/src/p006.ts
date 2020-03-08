@@ -2,6 +2,7 @@ import { Solution } from "./Solution";
 
 export class P006 extends Solution{
     solve() {
+        this.problemNumber = 6;
         let result = 0;
         const last = 100;
 		let sum = 0;

@@ -18,6 +18,7 @@ export class P003 extends Solution{
 	}
 
 	solve() {
+		this.problemNumber = 3;
 		const number = 600851475143;
 
 		let upperLimit = Math.floor(Math.sqrt(number));

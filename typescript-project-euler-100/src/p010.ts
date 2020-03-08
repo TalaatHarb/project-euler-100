@@ -39,6 +39,7 @@ export class P010 extends Solution{
     }
 
     solve() {
+        this.problemNumber = 10;
         const last = 2000000;
         let sum: number = 0;
         const listOfPrimes = this.sieveOfEratosthenes(last);

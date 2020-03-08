@@ -10,9 +10,11 @@
     "compile": "tsc",
     "build": "run-s lint compile",
     "build:run": "run-s lint compile run",
+    "build:runParallel": "run-s lint compile run:parallel",
     "build:test": "run-s lint compile test",
     "lint": "eslint src/**",
     "run": "node dist/src/AllSolutions.js",
+    "run:parallel": "node dist/src/AllSolutions.js -p",
     "test": "node ./node_modules/jasmine/bin/jasmine.js --config=./jasmine.json"
   },
   "repository": {
@@ -37,5 +39,8 @@
     "jasmine": "^3.5.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@types/node": "^13.9.0"
   }
 }

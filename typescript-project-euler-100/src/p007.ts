@@ -19,6 +19,7 @@ export class P007 extends Solution{
 	}
 
     solve() {
+		this.problemNumber = 7;
         const target = 10001;
 		let counter = 1;
 		let current = 0;

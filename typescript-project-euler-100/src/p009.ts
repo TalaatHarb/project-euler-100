@@ -2,6 +2,7 @@ import { Solution } from "./Solution";
 
 export class P009 extends Solution{
     solve() {
+		this.problemNumber = 9;
         const target_sum = 1000;
 		let product = 0;
 		for (let a = 1; a < (target_sum - 2); a++) {

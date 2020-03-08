@@ -3,6 +3,7 @@ import { Solution } from "./Solution";
 export class P004 extends Solution{
 
 	solve() {
+		this.problemNumber = 4;
 		let start = 99;
 		let finish = 999;
 		let result = 0;

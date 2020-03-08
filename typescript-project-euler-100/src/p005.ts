@@ -2,6 +2,7 @@ import { Solution } from "./Solution";
 
 export class P005 extends Solution{
     solve() {
+		this.problemNumber = 5;
         const last = 20;
 		const sequence: number[] = [];
 		let result = 1;
