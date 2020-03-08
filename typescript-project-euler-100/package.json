@@ -7,9 +7,11 @@
     "test": "test"
   },
   "scripts": {
-    "build": "tsc",
-    "build:run": "run-p build run",
-    "build:test": "run-p build test",
+    "compile": "tsc",
+    "build": "run-s lint compile",
+    "build:run": "run-s lint compile run",
+    "build:test": "run-s lint compile test",
+    "lint": "eslint src/**",
     "run": "node dist/src/AllSolutions.js",
     "test": "node ./node_modules/jasmine/bin/jasmine.js --config=./jasmine.json"
   },
@@ -29,6 +31,8 @@
   "homepage": "https://github.com/TalaatHarb/project-euler-100#readme",
   "devDependencies": {
     "@types/jasmine": "^3.5.8",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
     "eslint": "^6.8.0",
     "jasmine": "^3.5.0",
     "npm-run-all": "^4.1.5",

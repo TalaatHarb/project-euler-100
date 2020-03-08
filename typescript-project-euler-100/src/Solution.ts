@@ -1,6 +1,4 @@
-import { Solvable } from "./Solvable";
-
-export abstract class Solution implements Solvable{
+export abstract class Solution{
 
     protected problemNumber = 0;
 
