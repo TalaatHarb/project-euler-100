@@ -41,8 +41,12 @@ You can also try writing your own solutions (write your own solve function for t
 ## How to run the typescript solutions?
 If you have nodejs and typescript installed and you are in the typescript project folder (*typescript-project-euler-100*), you can run all the solutions using the following commands in terminal/command line:
 
-    tsc
-    node AllSolutions.js
+    npm install
+    npm run build:run
+
+or to test the solutions:
+
+    npm run build:test
 
 ## How to run the go solutions?
 If you have go and the required packages installed and you are in the go project folder (*go-project-euler-100*), you can run all the solutions using the following commands in terminal:
