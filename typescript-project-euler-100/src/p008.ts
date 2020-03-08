@@ -1,4 +1,6 @@
-export class P008 {
+import { Solution } from "./Solution";
+
+export class P008 extends Solution{
 
     digitsProduct(segment: string) {
         let product = 1;
@@ -8,8 +10,7 @@ export class P008 {
         return product;
     }
 
-    run() {
-        const startTime = +new Date();
+    solve() {
         const segmentLength = 13;
         let product = 1;
 
@@ -43,10 +44,6 @@ export class P008 {
             }
         }
 
-        const endTime = +new Date();
-        const period = (endTime - startTime) / 1000.0;
-        console.log("p008: " + product + " -> " + period + " s");
+        return product;
     }
 }
-
-// new P008().run();

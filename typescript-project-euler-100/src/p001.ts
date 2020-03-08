@@ -1,6 +1,8 @@
-export class P001 {
-    run() {
-        const startTime = +new Date();
+import { Solution } from "./Solution";
+
+export class P001 extends Solution{
+    solve() {
+        this.problemNumber = 1;
         const last = 1000;
         let sum = 0;
 
@@ -9,11 +11,6 @@ export class P001 {
                 sum = sum + i;
             }
         }
-
-        const endTime = +new Date();
-        const period = (endTime - startTime) / 1000.0;
-        console.log("p001: " + sum + " -> " + period + " s");
+        return sum;
     }
 }
-
-// new P001().run();

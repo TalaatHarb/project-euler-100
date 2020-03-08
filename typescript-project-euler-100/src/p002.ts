@@ -1,7 +1,8 @@
-export class P002 {
+import { Solution } from "./Solution";
 
-    run() {
-        const startTime = +new Date();
+export class P002 extends Solution{
+
+    solve() {
         const max = 4000000;
         let previous = 1;
         let current = 2;
@@ -15,10 +16,6 @@ export class P002 {
             current = next;
         }
 
-        const endTime = +new Date();
-        const period = (endTime - startTime) / 1000.0;
-        console.log("p002: " + sum + " -> " + period + " s");
+        return sum;
     }
 }
-
-// new P002().run();

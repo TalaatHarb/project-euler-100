@@ -1,6 +1,7 @@
-export class P009 {
-    run() {
-        const startTime = +new Date();
+import { Solution } from "./Solution";
+
+export class P009 extends Solution{
+    solve() {
         const target_sum = 1000;
 		let product = 0;
 		for (let a = 1; a < (target_sum - 2); a++) {
@@ -15,10 +16,6 @@ export class P009 {
 			}
 		}
 
-        const endTime = +new Date();
-        const period = (endTime - startTime) / 1000.0;
-        console.log("p009: " + product + " -> " + period + " s");
+        return product;
     }
 }
-
-// new P009().run();

@@ -1,7 +1,8 @@
-export class P004 {
+import { Solution } from "./Solution";
 
-	run() {
-		const startTime = +new Date();
+export class P004 extends Solution{
+
+	solve() {
 		let start = 99;
 		let finish = 999;
 		let result = 0;
@@ -22,11 +23,9 @@ export class P004 {
 
 		}
 
-		const endTime = +new Date();
-		const period = (endTime - startTime) / 1000.0;
-		console.log("p004: " + result + " -> " + period + " s");
-
+		return result;
 	}
+
 	isPalindromic(number: number): boolean {
 		let reverse = "";
 		let numberAsString = number.toString();
@@ -39,5 +38,3 @@ export class P004 {
 			return false;
 	}
 }
-
-// new P004().run();

@@ -1,0 +1,37 @@
+{
+  "name": "typescript-project-euler-100",
+  "version": "1.0.0",
+  "description": "Type script solutions for the first 100 problems in Project Euler",
+  "main": "dist/AllSolutions.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:run": "run-p build run",
+    "build:test": "run-p build test",
+    "run": "node dist/src/AllSolutions.js",
+    "test": "node ./node_modules/jasmine/bin/jasmine.js --config=./jasmine.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TalaatHarb/project-euler-100.git"
+  },
+  "keywords": [
+    "typescript",
+    "project-euler"
+  ],
+  "author": "M. Talaat Harb",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/TalaatHarb/project-euler-100/issues"
+  },
+  "homepage": "https://github.com/TalaatHarb/project-euler-100#readme",
+  "devDependencies": {
+    "@types/jasmine": "^3.5.8",
+    "eslint": "^6.8.0",
+    "jasmine": "^3.5.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^3.8.3"
+  }
+}

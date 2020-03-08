@@ -1,6 +1,7 @@
-export class P005 {
-    run() {
-        const startTime = +new Date();
+import { Solution } from "./Solution";
+
+export class P005 extends Solution{
+    solve() {
         const last = 20;
 		const sequence: number[] = [];
 		let result = 1;
@@ -22,10 +23,6 @@ export class P005 {
 			number = counter;
 		}
 
-        const endTime = +new Date();
-        const period = (endTime - startTime) / 1000.0;
-        console.log("p005: " + result + " -> " + period + " s");
+        return result;
     }
 }
-
-// new P005().run();

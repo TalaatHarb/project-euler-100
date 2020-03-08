@@ -1,4 +1,6 @@
-export class P010 {
+import { Solution } from "./Solution";
+
+export class P010 extends Solution{
 
     sieveOfEratosthenes(n: number) {
 		/**
@@ -36,8 +38,7 @@ export class P010 {
         return listOfPrimes;
     }
 
-    run() {
-        const startTime = +new Date();
+    solve() {
         const last = 2000000;
         let sum: number = 0;
         const listOfPrimes = this.sieveOfEratosthenes(last);
@@ -45,10 +46,6 @@ export class P010 {
             sum += listOfPrimes[i];
         }
 
-        const endTime = +new Date();
-        const period = (endTime - startTime) / 1000.0;
-        console.log("p010: " + sum + " -> " + period + " s");
+        return sum;
     }
 }
-
-// new P010().run();

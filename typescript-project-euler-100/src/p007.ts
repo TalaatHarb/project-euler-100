@@ -1,4 +1,6 @@
-export class P007 {
+import { Solution } from "./Solution";
+
+export class P007 extends Solution{
 
     isPrime(number: number) {
 		if (number % 2 == 0) {
@@ -16,8 +18,7 @@ export class P007 {
 		return true;
 	}
 
-    run() {
-        const startTime = +new Date();
+    solve() {
         const target = 10001;
 		let counter = 1;
 		let current = 0;
@@ -31,10 +32,6 @@ export class P007 {
 			i += 2;
 		}
 
-        const endTime = +new Date();
-        const period = (endTime - startTime) / 1000.0;
-        console.log("p007: " + current + " -> " + period + " s");
+        return current;
     }
 }
-
-// new P007().run();

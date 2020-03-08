@@ -1,4 +1,6 @@
-export class P003 {
+import { Solution } from "./Solution";
+
+export class P003 extends Solution{
 	isPrime(number: number) {
 		if (number % 2 == 0) {
 			return false;
@@ -15,9 +17,7 @@ export class P003 {
 		return true;
 	}
 
-	run() {
-		const startTime = +new Date();
-
+	solve() {
 		const number = 600851475143;
 
 		let upperLimit = Math.floor(Math.sqrt(number));
@@ -34,10 +34,6 @@ export class P003 {
 			possibleFactor -= 2;
 		}
 
-		const endTime = +new Date();
-		const period = (endTime - startTime) / 1000.0;
-		console.log("p003: " + result + " -> " + period + " s");
+		return result;
 	}
 }
-
-// new P003().run();

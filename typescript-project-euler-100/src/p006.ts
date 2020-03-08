@@ -1,6 +1,7 @@
-export class P006 {
-    run() {
-        const startTime = +new Date();
+import { Solution } from "./Solution";
+
+export class P006 extends Solution{
+    solve() {
         let result = 0;
         const last = 100;
 		let sum = 0;
@@ -10,11 +11,8 @@ export class P006 {
 			sum += i;
 			sumOfSquares += (i * i);
 		}
-		result = (sum * sum) - sumOfSquares;
-        const endTime = +new Date();
-        const period = (endTime - startTime) / 1000.0;
-        console.log("p006: " + result + " -> " + period + " s");
+        result = (sum * sum) - sumOfSquares;
+        
+        return result;
     }
 }
-
-// new P006().run();
