@@ -36,7 +36,8 @@ hs_err_pid*
 **/.vscode
 
 # javascript files
-**/*.js
+**/dist
+**/node_modules
 
 # exe files
 **/*.exe
