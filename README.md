@@ -44,6 +44,9 @@ If you have nodejs and typescript installed and you are in the typescript projec
     npm install
     npm run build:run
 
+or run them in parallel:
+
+    npm run build:runParallel
 or to test the solutions:
 
     npm run build:test
