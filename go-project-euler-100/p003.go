@@ -50,6 +50,6 @@ func P003Run() {
 	
 	result := P003Solve()
 
-	period := (time.Since(startTime).Nanoseconds()) / NS
+	period := float64(time.Since(startTime).Nanoseconds()) / float64(NS)
 	fmt.Println("p003:", result, "->", period, "s")
 }

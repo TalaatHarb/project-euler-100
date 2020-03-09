@@ -11,7 +11,7 @@ func TestP001(t *testing.T) {
     const NS = 1.0e9
 	startTime := time.Now()
 	result := P001Solve()
-	period := (time.Since(startTime).Nanoseconds()) / NS
+	period := float64(time.Since(startTime).Nanoseconds()) / float64(NS)
 	fmt.Println("p001:", result, "->", period, "s")
     const EXPECTED = 233168
     if result != EXPECTED {
@@ -27,7 +27,7 @@ func TestP002(t *testing.T) {
     const NS = 1.0e9
 	startTime := time.Now()
 	result := P002Solve()
-	period := (time.Since(startTime).Nanoseconds()) / NS
+	period := float64(time.Since(startTime).Nanoseconds()) / float64(NS)
 	fmt.Println("p002:", result, "->", period, "s")
     const EXPECTED = 4613732
     if result != EXPECTED {
@@ -43,7 +43,7 @@ func TestP003(t *testing.T) {
     const NS = 1.0e9
 	startTime := time.Now()
 	result := P003Solve()
-	period := (time.Since(startTime).Nanoseconds()) / NS
+	period := float64(time.Since(startTime).Nanoseconds()) / float64(NS)
 	fmt.Println("p003:", result, "->", period, "s")
     const EXPECTED = 6857
     if result != EXPECTED {
@@ -59,7 +59,7 @@ func TestP004(t *testing.T) {
     const NS = 1.0e9
 	startTime := time.Now()
 	result := P004Solve()
-	period := (time.Since(startTime).Nanoseconds()) / NS
+	period := float64(time.Since(startTime).Nanoseconds()) / float64(NS)
 	fmt.Println("p004:", result, "->", period, "s")
     const EXPECTED = 906609
     if result != EXPECTED {
@@ -75,7 +75,7 @@ func TestP005(t *testing.T) {
     const NS = 1.0e9
 	startTime := time.Now()
 	result := P005Solve()
-	period := (time.Since(startTime).Nanoseconds()) / NS
+	period := float64(time.Since(startTime).Nanoseconds()) / float64(NS)
 	fmt.Println("p005:", result, "->", period, "s")
     const EXPECTED = 232792560
     if result != EXPECTED {

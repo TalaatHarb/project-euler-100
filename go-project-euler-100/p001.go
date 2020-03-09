@@ -22,6 +22,6 @@ func P001Run() {
 	const NS = 1.0e9
 	startTime := time.Now()
 	result := P001Solve()
-	period := (time.Since(startTime).Nanoseconds()) / NS
+	period := float64(time.Since(startTime).Nanoseconds()) / float64(NS)
 	fmt.Println("p001:", result, "->", period, "s")
 }
