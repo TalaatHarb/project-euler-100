@@ -53,3 +53,7 @@ If you have go and the required packages installed and you are in the go project
 
     go build
     ./project-euler.exe
+
+or run tests for the solutions:
+
+    go test

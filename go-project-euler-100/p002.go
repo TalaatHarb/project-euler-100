@@ -5,10 +5,8 @@ import (
 	"time"
 )
 
-/*P002Run Entry point*/
-func P002Run() {
-	const NS = 1.0e9
-	startTime := time.Now()
+/*P002Solve solution*/
+func P002Solve() int {
 	const max = 4000000
 	previous := 1
 	current := 2
@@ -21,7 +19,16 @@ func P002Run() {
 		previous = current
 		current = next
 	}
+	return sum
+}
 
-	period := (time.Since(startTime).Nanoseconds()) / NS
-	fmt.Println("p002:", sum, "->", period, "s")
+/*P002Run Entry point*/
+func P002Run() {
+	const NS = 1.0e9
+	startTime := time.Now()
+	
+	result := P002Solve()
+
+	period := float64(time.Since(startTime).Nanoseconds()) / float64(NS)
+	fmt.Println("p002:", result, "->", period, "s")
 }
