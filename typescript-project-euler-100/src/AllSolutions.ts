@@ -8,6 +8,11 @@ import { P007 } from './p007';
 import { P008 } from './p008';
 import { P009 } from './p009';
 import { P010 } from './p010';
+import { P011 } from './p011';
+import { P012 } from './p012';
+import { P013 } from './p013';
+import { P014 } from './p014';
+import { P015 } from './p015';
 
 function solveSequential(): void {
     new P001().run();
@@ -20,6 +25,11 @@ function solveSequential(): void {
     new P008().run();
     new P009().run();
     new P010().run();
+    new P011().run();
+    new P012().run();
+    new P013().run();
+    new P014().run();
+    new P015().run();
 }
 
 async function solveParallel(): Promise<void> {
@@ -34,6 +44,11 @@ async function solveParallel(): Promise<void> {
         (async () => new P008().run())(),
         (async () => new P009().run())(),
         (async () => new P010().run())(),
+        (async () => new P011().run())(),
+        (async () => new P012().run())(),
+        (async () => new P013().run())(),
+        (async () => new P014().run())(),
+        (async () => new P015().run())(),
     ]);
 }
 const args = process.argv.slice(2)
