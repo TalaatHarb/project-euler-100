@@ -2,10 +2,12 @@
 Solutions to the first one hundred problem in project Euler https://projecteuler.net/
 
 ## Why did I make this repository?
-- Practicing algorithms
+- Practicing algorithms and data structures
 - Learning new programming languages
 - Comparing the syntax and performance of different programming languages
-- Practicing writing tests for different programming languages
+- Learning best practices for structuring projects in different programming languages
+- Practice writing tests for different programming languages
+- Practice collabratin on github and using gitflow https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 
 ## How to run the python solutions?
 
