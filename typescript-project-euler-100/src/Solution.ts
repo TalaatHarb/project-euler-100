@@ -1,6 +1,6 @@
 export abstract class Solution{
 
-    protected problemNumber = 0;
+    problemNumber = 0;
 
     run() {
         const startTime = +new Date();
