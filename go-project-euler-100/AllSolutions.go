@@ -15,6 +15,6 @@ func main() {
 	P004Run()
 	P005Run()
 
-	period := (time.Since(startTime).Nanoseconds()) / NS
+	period := float64(time.Since(startTime).Nanoseconds()) / float64(NS)
 	fmt.Println("Total time:", period, "s")
 }
