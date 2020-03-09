@@ -22,9 +22,29 @@ function solveSequential(): void {
     new P010().run();
 }
 
+async function solveParallel(): Promise<void> {
+    await Promise.all([
+        (async () => new P001().run())(),
+        (async () => new P002().run())(),
+        (async () => new P003().run())(),
+        (async () => new P004().run())(),
+        (async () => new P005().run())(),
+        (async () => new P006().run())(),
+        (async () => new P007().run())(),
+        (async () => new P008().run())(),
+        (async () => new P009().run())(),
+        (async () => new P010().run())(),
+    ]);
+}
+const args = process.argv.slice(2)
+
 const startTime = +new Date();
 
-solveSequential();
+if (args.length > 0 && args[0] === '-p') {
+    solveParallel();
+} else {
+    solveSequential();
+}
 
 const endTime = +new Date();
 const period = (endTime - startTime) / 1000.0;
