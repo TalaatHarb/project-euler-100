@@ -25,7 +25,7 @@ or a solution for a specific problem (*as example 'p001'*):
 
 You can also try writing your own solutions (write your own solve function for the problems) and test if they are acceptable using the tests:
 
-    python AllSolutionsTest.py
+    python -m unittest AllSolutionsTest.py -v
 ## How to run the java solutions?
 If you have a JDK with a version higher than or equal to 8, and Maven installed, and you are in the java project folder (*java-project-euler-100*), you can run all the solutions using the following commands in terminal/command line:
 
