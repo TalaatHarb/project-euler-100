@@ -148,7 +148,7 @@ describe('All solutions', () => {
         expect(period).toBeLessThan(60);
     });
 
-    it('should solve p011', () => {
+    xit('should solve p011', () => {
         const problem: Solution = new P011();
         const startTime = +new Date();
 
@@ -161,7 +161,7 @@ describe('All solutions', () => {
         expect(period).toBeLessThan(60);
     });
 
-    it('should solve p012', () => {
+    xit('should solve p012', () => {
         const problem: Solution = new P012();
         const startTime = +new Date();
 
@@ -174,7 +174,7 @@ describe('All solutions', () => {
         expect(period).toBeLessThan(60);
     });
 
-    it('should solve p013', () => {
+    xit('should solve p013', () => {
         const problem: Solution = new P013();
         const startTime = +new Date();
 
@@ -187,7 +187,7 @@ describe('All solutions', () => {
         expect(period).toBeLessThan(60);
     });
 
-    it('should solve p014', () => {
+    xit('should solve p014', () => {
         const problem: Solution = new P014();
         const startTime = +new Date();
 
@@ -200,7 +200,7 @@ describe('All solutions', () => {
         expect(period).toBeLessThan(60);
     });
 
-    it('should solve p015', () => {
+    xit('should solve p015', () => {
         const problem: Solution = new P015();
         const startTime = +new Date();
 
