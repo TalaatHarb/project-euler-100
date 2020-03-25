@@ -62,3 +62,19 @@ If you have go and the required packages installed and you are in the go project
 or run tests for the solutions:
 
     go test
+
+## Jenkins integration
+The project has a Jenkins file that works for multi-branch configuration but it requires your Jenkins instance to have the follwoing plugins installed and configured correctly:
+- git
+- maven
+- nodejs
+- golang
+- shiningpanda
+- jacoco
+- pipeline-maven
+- pyenv-pipeline
+The required configuration is mainly all about getting the run-times configured for the supported languages, for example:
+- Having python3 installed (including pip3 and virtualenv)
+- Having Go runtime
+- Having Maven installation
+- Having node installation
