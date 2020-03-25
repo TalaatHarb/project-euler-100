@@ -24,6 +24,8 @@ hs_err_pid*
 
 # python compiled files
 **/__pycache__
+**/.pytest_cache
+**/test-reports
 
 # eclipse and maven generated files
 **/.settings
