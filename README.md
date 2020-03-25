@@ -25,7 +25,7 @@ or a solution for a specific problem (*as example 'p001'*):
 
 You can also try writing your own solutions (write your own solve function for the problems) and test if they are acceptable using the tests:
 
-    python AllSolutionsTest.py
+    python -m unittest AllSolutionsTest.py -v
 ## How to run the java solutions?
 If you have a JDK with a version higher than or equal to 8, and Maven installed, and you are in the java project folder (*java-project-euler-100*), you can run all the solutions using the following commands in terminal/command line:
 
@@ -62,3 +62,19 @@ If you have go and the required packages installed and you are in the go project
 or run tests for the solutions:
 
     go test
+
+## Jenkins integration
+The project has a Jenkins file that works for multi-branch configuration but it requires your Jenkins instance to have the follwoing plugins installed and configured correctly:
+- git
+- maven
+- nodejs
+- golang
+- shiningpanda
+- jacoco
+- pipeline-maven
+- pyenv-pipeline
+The required configuration is mainly all about getting the run-times configured for the supported languages, for example:
+- Having python3 installed (including pip3 and virtualenv)
+- Having Go runtime
+- Having Maven installation
+- Having node installation
