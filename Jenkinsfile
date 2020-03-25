@@ -23,10 +23,10 @@ timestamps {
 
             // Export environment variables pointing to the directory where Go was installed
             withEnv(["GOROOT=${goRoot}", "PATH+GO=${goRoot}/bin"]) {
-                 sh '
+                 sh """
                  cd go-project-euler-100
                  go test
-                '
+                """
             } // withEnv
         } // stage ('go-test')
 
@@ -49,11 +49,11 @@ timestamps {
 
         stage ('typescript-test') {
 
-        sh '
+        sh """
          cd typescript-project-euler-100
          npm install
          npm run build:test
-        '
+        """
         } // stage('typescript-test')
 
         stage('java-test'){
