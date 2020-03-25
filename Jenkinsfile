@@ -1,3 +1,8 @@
+def goInstallation = 'Go 1.14.1'
+def pythonInstallation = 'python3'
+def nodeInstallation = 'NodeJS 13.11.0'
+def mavenInstallation = 'Maven 3.6.3'
+
 timestamps {
     node () {
         stage ('Checkout') {
@@ -6,7 +11,7 @@ timestamps {
 
         stage ('go-test') {
             // Install the desired Go version
-            def goRoot = tool name: 'Go 1.14.1', type: 'go'
+            def goRoot = tool name: goInstallation, type: 'go'
 
             // Export environment variables pointing to the directory where Go was installed
             withEnv(["GOROOT=${goRoot}", "PATH+GO=${goRoot}/bin"]) {            
@@ -18,7 +23,7 @@ timestamps {
         } // stage ('go-test')
 
         stage ('python-test') {
-            withPythonEnv('python3') {
+            withPythonEnv(pythonInstallation) {
                 // Uses python environment python3
                 sh """
                 cd python-project-euler-100
@@ -28,7 +33,7 @@ timestamps {
         } // stage ('python-test')
 
         stage('typescript-setup'){
-            env.NODEJS_HOME = "${tool 'NodeJS 13.11.0'}"
+            env.NODEJS_HOME = "${tool nodeInstallation}"
     	    // on linux / mac
     	    env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
             sh 'npm --version'
@@ -44,7 +49,7 @@ timestamps {
         } // stage('typescript-test')
 
         stage('java-test'){
-            withMaven(maven : 'Maven 3.6.3', ) {
+            withMaven(maven : mavenInstallation) {
                 // Run the maven build
                 sh """
                 cd java-project-euler-100
