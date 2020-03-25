@@ -4,21 +4,29 @@ def nodeInstallation = 'NodeJS 13.11.0'
 def mavenInstallation = 'Maven 3.6.3'
 
 timestamps {
-    node () {
+    node {
         stage ('Checkout') {
-          checkout([$class: 'GitSCM', branches: [[name: '**']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/TalaatHarb/project-euler-100']]]) 
+            checkout(
+                [
+                    $class: 'GitSCM',
+                    branches: [[name: '**']],
+                    doGenerateSubmoduleConfigurations: false,
+                    extensions: [], submoduleCfg: [],
+                    userRemoteConfigs : [[credentialsId : '', url: 'https://github.com/TalaatHarb/project-euler-100']]
+                ]
+            )
         } // stage ('Checkout')
 
         stage ('go-test') {
             // Install the desired Go version
-            def goRoot = tool name: goInstallation, type: 'go'
+            def goRoot = tool name : goInstallation, type: 'go'
 
             // Export environment variables pointing to the directory where Go was installed
-            withEnv(["GOROOT=${goRoot}", "PATH+GO=${goRoot}/bin"]) {            
-                 sh """
+            withEnv(["GOROOT=${goRoot}", "PATH+GO=${goRoot}/bin"]) {
+                 sh '
                  cd go-project-euler-100
-                 go test 
-                """ 
+                 go test
+                '
             } // withEnv
         } // stage ('go-test')
 
@@ -34,18 +42,18 @@ timestamps {
 
         stage('typescript-setup'){
             env.NODEJS_HOME = "${tool nodeInstallation}"
-    	    // on linux / mac
-    	    env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
+            // on linux / mac
+            env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
             sh 'npm --version'
         } // stage('typescript-setup')
 
         stage ('typescript-test') {
-        
-        sh """ 
+
+        sh '
          cd typescript-project-euler-100
          npm install
-         npm run build:test 
-        """ 
+         npm run build:test
+        '
         } // stage('typescript-test')
 
         stage('java-test'){
