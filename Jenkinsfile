@@ -20,7 +20,7 @@ timestamps {
 
         stage ('go-test') {
             // Install the desired Go version
-            def goRoot = tool name:goInstallation, type:'go',
+            def goRoot = tool name:goInstallation, type:'go'
 
             // Export environment variables pointing to the directory where Go was installed
             withEnv(["GOROOT=${goRoot}", "PATH+GO=${goRoot}/bin"]) {
