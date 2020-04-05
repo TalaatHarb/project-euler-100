@@ -79,3 +79,11 @@ The required configuration is mainly all about getting the run-times configured 
 - Having Go runtime
 - Having Maven installation
 - Having node installation
+
+## Docker
+An alternative build and run process is to use the docker files provided in each project to build the images and run the solutions as docker contianers. The advantage of using this procedure is that you only need to install docker engine to build and run the solution, and there will be no need to install custom dependencies for each project; you also won't have version conflicts.
+To build and run using docker, if you have docker installed and you are inside the project folder:
+
+
+    docker build -t <image-name> .
+    docker run <image-name>
