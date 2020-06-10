@@ -1,7 +1,7 @@
-def goInstallation = 'Go 1.14.1'
-def pythonInstallation = 'python3'
-def nodeInstallation = 'NodeJS 13.11.0'
-def mavenInstallation = 'Maven 3.6.3'
+def goInstallation = 'Go'
+def pythonInstallation = 'Python3'
+def nodeInstallation = 'NodeJS'
+def mavenInstallation = 'Maven'
 
 timestamps {
     node () {
