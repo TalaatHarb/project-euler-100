@@ -1,11 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
-
-/*P002Solve solution*/
+/*P002Solve solution for p002*/
 func P002Solve() int {
 	const max = 4000000
 	previous := 1
@@ -20,15 +15,4 @@ func P002Solve() int {
 		current = next
 	}
 	return sum
-}
-
-/*P002Run Entry point*/
-func P002Run() {
-	const NS = 1.0e9
-	startTime := time.Now()
-	
-	result := P002Solve()
-
-	period := float64(time.Since(startTime).Nanoseconds()) / float64(NS)
-	fmt.Println("p002:", result, "->", period, "s")
 }
