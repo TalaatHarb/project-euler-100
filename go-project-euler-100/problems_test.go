@@ -55,3 +55,27 @@ func TestP006(t *testing.T) {
 	const EXPECTED = 25164150
 	test(P006Solve, "p006", EXPECTED, t)
 }
+
+/*TestP007*/
+func xTestP007(t *testing.T) {
+	const EXPECTED = 104743
+	test(P007Solve, "p007", EXPECTED, t)
+}
+
+/*TestP008*/
+func xTestP008(t *testing.T) {
+	const EXPECTED = 23514624000
+	test(P008Solve, "p008", EXPECTED, t)
+}
+
+/*TestP009*/
+func xTestP009(t *testing.T) {
+	const EXPECTED = 31875000
+	test(P009Solve, "p009", EXPECTED, t)
+}
+
+/*TestP010*/
+func xTestP010(t *testing.T) {
+	const EXPECTED = 142913828922
+	test(P010Solve, "p010", EXPECTED, t)
+}
