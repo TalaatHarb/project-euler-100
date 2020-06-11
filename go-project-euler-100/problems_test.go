@@ -57,7 +57,7 @@ func TestP006(t *testing.T) {
 }
 
 /*TestP007*/
-func xTestP007(t *testing.T) {
+func TestP007(t *testing.T) {
 	const EXPECTED = 104743
 	test(P007Solve, "p007", EXPECTED, t)
 }

@@ -4,7 +4,7 @@ import (
 	"math"
 )
 
-func isPrime(number int) bool {
+func isPrimeP003(number int) bool {
 	if number%2 == 0 {
 		return false
 	}
@@ -31,7 +31,7 @@ func P003Solve() int {
 	possibleFactor := upperLimit
 	result := number
 	for possibleFactor > 1 {
-		if (number%possibleFactor == 0) && isPrime(possibleFactor) {
+		if (number%possibleFactor == 0) && isPrimeP003(possibleFactor) {
 			result = possibleFactor
 			break
 		}
