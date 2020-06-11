@@ -27,6 +27,7 @@ func main() {
 	SolutionRun(P007Solve, "p007")
 	SolutionRun(P008Solve, "p008")
 	SolutionRun(P009Solve, "p009")
+	SolutionRun(P010Solve, "p010")
 
 	period := float64(time.Since(startTime).Nanoseconds()) / float64(NS)
 	fmt.Println("Total time:", period, "s")

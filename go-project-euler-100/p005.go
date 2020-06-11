@@ -3,7 +3,7 @@ package main
 /*P005Solve solution for p005*/
 func P005Solve() int {
 	const last = 20
-	var sequence []int = make([]int, 0, 1)
+	var sequence []int = make([]int, 0, 19)
 	result := 1
 	number := 2
 	counter := number
