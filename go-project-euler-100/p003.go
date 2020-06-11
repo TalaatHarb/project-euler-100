@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
 	"math"
-	"time"
 )
 
 func isPrime(number int) bool {
@@ -22,8 +20,8 @@ func isPrime(number int) bool {
 	return true
 }
 
-/*P003Solve solution*/
-func P003Solve() int{
+/*P003Solve solution for p003*/
+func P003Solve() int {
 	const number = 600851475143
 
 	upperLimit := int(math.Floor(math.Sqrt(float64(number))))
@@ -41,15 +39,4 @@ func P003Solve() int{
 	}
 
 	return result
-}
-
-/*P003Run Entry point*/
-func P003Run() {
-	const NS = 1.0e9
-	startTime := time.Now()
-	
-	result := P003Solve()
-
-	period := float64(time.Since(startTime).Nanoseconds()) / float64(NS)
-	fmt.Println("p003:", result, "->", period, "s")
 }

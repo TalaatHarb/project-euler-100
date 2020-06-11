@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
-	"time"
 )
 
 func isPalindromic(number int) bool {
@@ -21,8 +19,8 @@ func isPalindromic(number int) bool {
 	return result
 }
 
-/*P004Solve solution*/
-func P004Solve() int{
+/*P004Solve solution for p004*/
+func P004Solve() int {
 	result := 0
 	const finish = 999
 	const start = 99
@@ -39,17 +37,6 @@ func P004Solve() int{
 			}
 		}
 	}
-	
+
 	return result
-}
-
-/*P004Run Entry point*/
-func P004Run() {
-	const NS = 1.0e9
-	startTime := time.Now()
-	
-	result := P004Solve()
-
-	period := float64(time.Since(startTime).Nanoseconds()) / float64(NS)
-	fmt.Println("p004:", result, "->", period, "s")
 }
