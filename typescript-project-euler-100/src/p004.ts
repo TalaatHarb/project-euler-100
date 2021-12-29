@@ -4,19 +4,19 @@ export class P004 extends Solution{
 
 	solve() {
 		this.problemNumber = 4;
-		let start = 99;
-		let finish = 999;
+		const start = 99;
+		const finish = 999;
 		let result = 0;
-		var notDone = true;
+		const notDone = true;
 		let i = finish;
 
 		while (notDone && (i > start)) {
 
 			for (let j = finish; j > start; j--) {
 
-				let number = i * j;
-				if (number > result && this.isPalindromic(number)) {
-					result = number;
+				const num = i * j;
+				if (num > result && this.isPalindromic(num)) {
+					result = num;
 					break;
 				}
 			}
@@ -29,8 +29,8 @@ export class P004 extends Solution{
 
 	isPalindromic(number: number): boolean {
 		let reverse = "";
-		let numberAsString = number.toString();
-		let length = numberAsString.length;
+		const numberAsString = number.toString();
+		const length = numberAsString.length;
 		for (let i = length - 1; i >= 0; i--)
 			reverse = reverse + numberAsString.charAt(i);
 		if (numberAsString == reverse)

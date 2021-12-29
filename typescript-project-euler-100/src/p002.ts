@@ -10,7 +10,7 @@ export class P002 extends Solution{
         let sum = current;
 
         while (current < max) {
-            let next = previous + current;
+            const next = previous + current;
             if ((next < max) && (next % 2 == 0))
                 sum += next;
             previous = current;
