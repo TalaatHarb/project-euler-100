@@ -1,5 +1,3 @@
-import time
-import math
 from Solution import Solution
 
 class P016(Solution):

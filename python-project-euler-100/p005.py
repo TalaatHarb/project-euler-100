@@ -1,4 +1,3 @@
-import time
 from Solution import Solution
 
 class P005(Solution):
