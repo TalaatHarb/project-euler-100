@@ -1,4 +1,5 @@
 import 'jasmine';
+import { Solution } from '../src/Solution';
 import { P001 } from '../src/p001';
 import { P002 } from '../src/p002';
 import { P003 } from '../src/p003';
@@ -10,7 +11,6 @@ import { P008 } from '../src/p008';
 import { P009 } from '../src/p009';
 import { P010 } from '../src/p010';
 import { P011 } from '../src/p011';
-import { Solution } from '../src/Solution';
 import { P015 } from '../src/p015';
 import { P014 } from '../src/p014';
 import { P013 } from '../src/p013';
@@ -148,7 +148,7 @@ describe('All solutions', () => {
         expect(period).toBeLessThan(60);
     });
 
-    xit('should solve p011', () => {
+    it('should solve p011', () => {
         const problem: Solution = new P011();
         const startTime = +new Date();
 
