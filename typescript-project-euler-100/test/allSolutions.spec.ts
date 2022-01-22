@@ -161,7 +161,7 @@ describe('All solutions', () => {
         expect(period).toBeLessThan(60);
     });
 
-    xit('should solve p012', () => {
+    it('should solve p012', () => {
         const problem: Solution = new P012();
         const startTime = +new Date();
 
