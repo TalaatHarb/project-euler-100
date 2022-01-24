@@ -36,25 +36,22 @@ class P023(Solution):
         self.problem_number = 23
         n = 28123
         abundant_numbers = []
+        sum_of_abundant = [False for i in range(n)]
         result = 0
 
         for a in range(1, n + 1):
             if self.isAbundant(a):
                 abundant_numbers.append(a)
 
-        for a in range(1, n + 1):
-            add_to_sum = True
-            i = 0
-            n1 = abundant_numbers[i]
-            while n1 < a:
-                n2 = a - n1
-                if n2 in abundant_numbers[i:a]:
-                    add_to_sum = False
-                    break
-                i += 1
-                n1 = abundant_numbers[i]
-            if add_to_sum:
-                result += a  
+        for i in abundant_numbers:
+            for j in abundant_numbers:
+                sum = i + j
+                if(sum < n):
+                    sum_of_abundant[sum] = True
+        
+        for a in range(n):
+            if(not sum_of_abundant[a]):
+                result += a
 
         return result
 
