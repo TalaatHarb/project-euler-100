@@ -1,15 +1,15 @@
 package net.talaatharb.projecteuler100;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author mharb
  *
  */
-public class AllSolutionsTest {
+class AllSolutionsTest {
 
 	private static final double MAX_TIME = 60.0;
 	private static final double NANO_TO_S = 1000000000.0;
@@ -31,7 +31,7 @@ public class AllSolutionsTest {
 	 * Testing P001
 	 */
 	@Test
-	public void testP001() {
+	void testP001() {
 		final Number expectedResult = 233168;
 		solveAndTest(expectedResult, new P001());
 	}
@@ -40,7 +40,7 @@ public class AllSolutionsTest {
 	 * Testing P002
 	 */
 	@Test
-	public void testP002() {
+	void testP002() {
 		final Number expectedResult = 4613732;
 		solveAndTest(expectedResult, new P002());
 	}
@@ -49,7 +49,7 @@ public class AllSolutionsTest {
 	 * Testing P003
 	 */
 	@Test
-	public void testP003() {
+	void testP003() {
 		final Number expectedResult = 6857;
 		solveAndTest(expectedResult, new P003());
 	}
@@ -58,7 +58,7 @@ public class AllSolutionsTest {
 	 * Testing P004
 	 */
 	@Test
-	public void testP004() {
+	void testP004() {
 		final Number expectedResult = 906609;
 		solveAndTest(expectedResult, new P004());
 	}
@@ -67,7 +67,7 @@ public class AllSolutionsTest {
 	 * Testing P005
 	 */
 	@Test
-	public void testP005() {
+	void testP005() {
 		final Number expectedResult = 232792560;
 		solveAndTest(expectedResult, new P005());
 	}
@@ -76,7 +76,7 @@ public class AllSolutionsTest {
 	 * Testing P006
 	 */
 	@Test
-	public void testP006() {
+	void testP006() {
 		final Number expectedResult = 25164150;
 		solveAndTest(expectedResult, new P006());
 	}
@@ -85,7 +85,7 @@ public class AllSolutionsTest {
 	 * Testing P007
 	 */
 	@Test
-	public void testP007() {
+	void testP007() {
 		final Number expectedResult = 104743;
 		solveAndTest(expectedResult, new P007());
 	}
@@ -94,7 +94,7 @@ public class AllSolutionsTest {
 	 * Testing P008
 	 */
 	@Test
-	public void testP008() {
+	void testP008() {
 		final Number expectedResult = 23514624000L;
 		solveAndTest(expectedResult, new P008());
 	}
@@ -103,7 +103,7 @@ public class AllSolutionsTest {
 	 * Testing P009
 	 */
 	@Test
-	public void testP009() {
+	void testP009() {
 		final Number expectedResult = 31875000;
 		solveAndTest(expectedResult, new P009());
 	}
@@ -112,7 +112,7 @@ public class AllSolutionsTest {
 	 * Testing P010
 	 */
 	@Test
-	public void testP010() {
+	void testP010() {
 		final Number expectedResult = 142913828922L;
 		solveAndTest(expectedResult, new P010());
 	}
@@ -121,7 +121,7 @@ public class AllSolutionsTest {
 	 * Testing P011
 	 */
 	@Test
-	public void testP011() {
+	void testP011() {
 		final Number expectedResult = 70600674;
 		solveAndTest(expectedResult, new P011());
 	}
@@ -130,7 +130,7 @@ public class AllSolutionsTest {
 	 * Testing P012
 	 */
 	@Test
-	public void testP012() {
+	void testP012() {
 		final Number expectedResult = 76576500;
 		solveAndTest(expectedResult, new P012());
 	}
@@ -139,7 +139,7 @@ public class AllSolutionsTest {
 	 * Testing P013
 	 */
 	@Test
-	public void testP013() {
+	void testP013() {
 		final Number expectedResult = 5537376230L;
 		solveAndTest(expectedResult, new P013());
 	}
@@ -148,7 +148,7 @@ public class AllSolutionsTest {
 	 * Testing P014
 	 */
 	@Test
-	public void testP014() {
+	void testP014() {
 		final Number expectedResult = 837799;
 		solveAndTest(expectedResult, new P014());
 	}
@@ -157,7 +157,7 @@ public class AllSolutionsTest {
 	 * Testing P015
 	 */
 	@Test
-	public void testP015() {
+	void testP015() {
 		final Number expectedResult = 137846528820L;
 		solveAndTest(expectedResult, new P015());
 	}
@@ -166,7 +166,7 @@ public class AllSolutionsTest {
 	 * Testing P016
 	 */
 	@Test
-	public void testP016() {
+	void testP016() {
 		final Number expectedResult = 1366;
 		solveAndTest(expectedResult, new P016());
 	}
@@ -175,7 +175,7 @@ public class AllSolutionsTest {
 	 * Testing P017
 	 */
 	@Test
-	public void testP017() {
+	void testP017() {
 		final Number expectedResult = 21124;
 		solveAndTest(expectedResult, new P017());
 	}
@@ -184,7 +184,7 @@ public class AllSolutionsTest {
 	 * Testing P018
 	 */
 	@Test
-	public void testP018() {
+	void testP018() {
 		final Number expectedResult = 1074;
 		solveAndTest(expectedResult, new P018());
 	}
@@ -193,7 +193,7 @@ public class AllSolutionsTest {
 	 * Testing P019
 	 */
 	@Test
-	public void testP019() {
+	void testP019() {
 		final Number expectedResult = 171;
 		solveAndTest(expectedResult, new P019());
 	}
@@ -202,7 +202,7 @@ public class AllSolutionsTest {
 	 * Testing P020
 	 */
 	@Test
-	public void testP020() {
+	void testP020() {
 		final Number expectedResult = 648;
 		solveAndTest(expectedResult, new P020());
 	}
