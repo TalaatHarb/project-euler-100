@@ -27,7 +27,7 @@ You can also try writing your own solutions (write your own solve function for t
 
     python -m unittest AllSolutionsTest.py -v
 ## How to run the java solutions?
-If you have a JDK with a version higher than or equal to 8, and Maven installed, and you are in the java project folder (*java-project-euler-100*), you can run all the solutions using the following commands in terminal/command line:
+If you have a JDK 17 or higher (you can actually drop the version in the pom file if you want, anything above JDK 8 should still work), and Maven installed, and you are in the java project folder (*java-project-euler-100*), you can run all the solutions using the following commands in terminal/command line:
 
     mvn clean install
     java -jar target/java-project-euler-100-0.0.1-SNAPSHOT.jar
