@@ -25,6 +25,7 @@ from p021 import P021
 from p022 import P022
 from p023 import P023
 from p024 import P024
+from p025 import P025
 
 class AllSolutionsTest(unittest.TestCase):
 
@@ -136,6 +137,10 @@ class AllSolutionsTest(unittest.TestCase):
     def test_p024(self):
         expected_result = 2783915460
         self.solve_and_test(expected_result, P024())
+
+    def test_p025(self):
+        expected_result = 4782
+        self.solve_and_test(expected_result, P025())
     
 
 if __name__ == '__main__':
