@@ -25,6 +25,7 @@ from p020 import P020
 from p021 import P021
 from p022 import P022
 from p023 import P023
+from p024 import P024
 
 def main(argv):
 	start_time = time.time()
@@ -61,6 +62,7 @@ def solve_sequential():
 	P021().run()
 	P022().run()
 	P023().run()
+	P024().run()
 
 def solve_parallel():
 	processes = []
@@ -88,6 +90,7 @@ def solve_parallel():
 	processes.append(Process(name='p021', target=P021().run))
 	processes.append(Process(name='p022', target=P022().run))
 	processes.append(Process(name='p022', target=P023().run))
+	processes.append(Process(name='p022', target=P024().run))
 
 	for i in processes:
 		i.start()
