@@ -19,7 +19,7 @@ public class P025 extends Solution {
 
 	@Override
 	public Number solve() {
-		problemNumber = 21;
+		problemNumber = 25;
 		final int result = 0;
 
 		return result;
