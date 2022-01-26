@@ -206,5 +206,50 @@ class AllSolutionsTest {
 		final Number expectedResult = 648;
 		solveAndTest(expectedResult, new P020());
 	}
+	
+	/**
+	 * Testing P021
+	 */
+	@Test
+	void testP021() {
+		final Number expectedResult = 31626;
+		solveAndTest(expectedResult, new P021());
+	}
+	
+	/**
+	 * Testing P022
+	 */
+	@Test
+	void testP022() {
+		final Number expectedResult = 871198282;
+		solveAndTest(expectedResult, new P022());
+	}
+	
+	/**
+	 * Testing P023
+	 */
+	@Test
+	void testP023() {
+		final Number expectedResult = 4179871;
+		solveAndTest(expectedResult, new P023());
+	}
+	
+	/**
+	 * Testing P024
+	 */
+	@Test
+	void testP024() {
+		final Number expectedResult = 2783915460L;
+		solveAndTest(expectedResult, new P024());
+	}
+	
+	/**
+	 * Testing P024
+	 */
+	@Test
+	void testP025() {
+		final Number expectedResult = 4782;
+		solveAndTest(expectedResult, new P025());
+	}
 
 }
