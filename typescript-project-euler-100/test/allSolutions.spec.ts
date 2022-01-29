@@ -11,10 +11,20 @@ import { P008 } from '../src/p008';
 import { P009 } from '../src/p009';
 import { P010 } from '../src/p010';
 import { P011 } from '../src/p011';
-import { P015 } from '../src/p015';
-import { P014 } from '../src/p014';
-import { P013 } from '../src/p013';
 import { P012 } from '../src/p012';
+import { P013 } from '../src/p013';
+import { P014 } from '../src/p014';
+import { P015 } from '../src/p015';
+import { P016 } from '../src/p016';
+import { P017 } from '../src/p017';
+import { P018 } from '../src/p018';
+import { P019 } from '../src/p019';
+import { P020 } from '../src/p020';
+import { P021 } from '../src/p021';
+import { P022 } from '../src/p022';
+import { P023 } from '../src/p023';
+import { P024 } from '../src/p024';
+import { P025 } from '../src/p025';
 
 describe('All solutions', () => {
     it('should solve p001', () => {
@@ -26,7 +36,7 @@ describe('All solutions', () => {
         const endTime = +new Date();
         const period = (endTime - startTime) / 1000.0;
         console.log("p" + ('000' + problem.problemNumber).slice(-3) + ': ' + result + ' -> ' + period + ' s');
-        
+
         expect(result).toBe(233168);
         expect(period).toBeLessThan(60);
     });
@@ -212,5 +222,135 @@ describe('All solutions', () => {
         expect(result).toBe(137846528820);
         expect(period).toBeLessThan(60);
     });
-    
+
+    it('should solve p016', () => {
+        const problem: Solution = new P016();
+        const startTime = +new Date();
+
+        const result = problem.solve();
+
+        const endTime = +new Date();
+        const period = (endTime - startTime) / 1000.0;
+        console.log("p" + ('000' + problem.problemNumber).slice(-3) + ': ' + result + ' -> ' + period + ' s');
+        expect(result).toBe(1366);
+        expect(period).toBeLessThan(60);
+    });
+
+    it('should solve p017', () => {
+        const problem: Solution = new P017();
+        const startTime = +new Date();
+
+        const result = problem.solve();
+
+        const endTime = +new Date();
+        const period = (endTime - startTime) / 1000.0;
+        console.log("p" + ('000' + problem.problemNumber).slice(-3) + ': ' + result + ' -> ' + period + ' s');
+        expect(result).toBe(21124);
+        expect(period).toBeLessThan(60);
+    });
+
+    it('should solve p018', () => {
+        const problem: Solution = new P018();
+        const startTime = +new Date();
+
+        const result = problem.solve();
+
+        const endTime = +new Date();
+        const period = (endTime - startTime) / 1000.0;
+        console.log("p" + ('000' + problem.problemNumber).slice(-3) + ': ' + result + ' -> ' + period + ' s');
+        expect(result).toBe(1074);
+        expect(period).toBeLessThan(60);
+    });
+
+    it('should solve p019', () => {
+        const problem: Solution = new P019();
+        const startTime = +new Date();
+
+        const result = problem.solve();
+
+        const endTime = +new Date();
+        const period = (endTime - startTime) / 1000.0;
+        console.log("p" + ('000' + problem.problemNumber).slice(-3) + ': ' + result + ' -> ' + period + ' s');
+        expect(result).toBe(171);
+        expect(period).toBeLessThan(60);
+    });
+
+    it('should solve p020', () => {
+        const problem: Solution = new P020();
+        const startTime = +new Date();
+
+        const result = problem.solve();
+
+        const endTime = +new Date();
+        const period = (endTime - startTime) / 1000.0;
+        console.log("p" + ('000' + problem.problemNumber).slice(-3) + ': ' + result + ' -> ' + period + ' s');
+        expect(result).toBe(648);
+        expect(period).toBeLessThan(60);
+    });
+
+    it('should solve p021', () => {
+        const problem: Solution = new P021();
+        const startTime = +new Date();
+
+        const result = problem.solve();
+
+        const endTime = +new Date();
+        const period = (endTime - startTime) / 1000.0;
+        console.log("p" + ('000' + problem.problemNumber).slice(-3) + ': ' + result + ' -> ' + period + ' s');
+        expect(result).toBe(31626);
+        expect(period).toBeLessThan(60);
+    });
+
+    it('should solve p022', () => {
+        const problem: Solution = new P022();
+        const startTime = +new Date();
+
+        const result = problem.solve();
+
+        const endTime = +new Date();
+        const period = (endTime - startTime) / 1000.0;
+        console.log("p" + ('000' + problem.problemNumber).slice(-3) + ': ' + result + ' -> ' + period + ' s');
+        expect(result).toBe(871198282);
+        expect(period).toBeLessThan(60);
+    });
+
+    it('should solve p023', () => {
+        const problem: Solution = new P023();
+        const startTime = +new Date();
+
+        const result = problem.solve();
+
+        const endTime = +new Date();
+        const period = (endTime - startTime) / 1000.0;
+        console.log("p" + ('000' + problem.problemNumber).slice(-3) + ': ' + result + ' -> ' + period + ' s');
+        expect(result).toBe(4179871);
+        expect(period).toBeLessThan(60);
+    });
+
+    it('should solve p024', () => {
+        const problem: Solution = new P024();
+        const startTime = +new Date();
+
+        const result = problem.solve();
+
+        const endTime = +new Date();
+        const period = (endTime - startTime) / 1000.0;
+        console.log("p" + ('000' + problem.problemNumber).slice(-3) + ': ' + result + ' -> ' + period + ' s');
+        expect(result).toBe(2783915460);
+        expect(period).toBeLessThan(60);
+    });
+
+    it('should solve p025', () => {
+        const problem: Solution = new P025();
+        const startTime = +new Date();
+
+        const result = problem.solve();
+
+        const endTime = +new Date();
+        const period = (endTime - startTime) / 1000.0;
+        console.log("p" + ('000' + problem.problemNumber).slice(-3) + ': ' + result + ' -> ' + period + ' s');
+        expect(result).toBe(4782);
+        expect(period).toBeLessThan(60);
+    });
+
 });
