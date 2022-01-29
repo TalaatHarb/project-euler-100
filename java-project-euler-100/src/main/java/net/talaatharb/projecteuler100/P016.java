@@ -24,9 +24,9 @@ public class P016 extends Solution {
 		problemNumber = 16;
 		int result = 0;
 		final int n = 1000;
-		final BigInteger number = BigInteger.valueOf(2).pow(n);
-		final String number_string = number.toString();
-		for (char i : number_string.toCharArray()) {
+		final BigInteger power = BigInteger.valueOf(2).pow(n);
+		final String powerString = power.toString();
+		for (char i : powerString.toCharArray()) {
 			result += Character.getNumericValue(i);
 		}
 
