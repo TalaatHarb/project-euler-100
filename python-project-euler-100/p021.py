@@ -6,6 +6,9 @@ class P021(Solution):
     sum_of_divisors_cache = {2: 1, 3: 1, 4: 3}
 
     def sumOfDivisors(self, n):
+        if n in self.sum_of_divisors_cache:
+            return self.sum_of_divisors_cache[n]
+        
         self.sum_of_divisors_cache[n] = sum(self.getDivisors(n))
         return self.sum_of_divisors_cache[n]
 

@@ -1,16 +1,17 @@
 from math import trunc
 from Solution import Solution
 
+
 class P025(Solution):
 
-    memory_cache = {1:1, 2:1}
+    memory_cache = {1: 1, 2: 1}
 
     # Factoradic method
     def fib(self, n):
         if n in self.memory_cache:
             return self.memory_cache[n]
-        
-        self.memory_cache[n] = self.memory_cache[n -1] + self.memory_cache[n -2]
+
+        self.memory_cache[n] = self.fib(n - 2) + self.fib(n - 1)
 
         return self.memory_cache[n]
 
@@ -26,8 +27,10 @@ class P025(Solution):
 
         return i
 
+
 def main():
     P025().run()
+
 
 if __name__ == "__main__":
     main()
