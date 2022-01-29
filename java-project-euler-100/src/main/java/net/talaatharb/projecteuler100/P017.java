@@ -66,18 +66,18 @@ public class P017 extends Solution {
 			return memoryCache.get(n);
 		}
 
-		String string = n + "";
+		final String data = n + "";
 		if (n < 100) {
-			memoryCache.put(n, memoryCache.get(10 * Character.getNumericValue(string.charAt(0))) + '-'
-					+ memoryCache.get(Character.getNumericValue(string.charAt(1))));
+			memoryCache.put(n, memoryCache.get(10 * Character.getNumericValue(data.charAt(0))) + '-'
+					+ memoryCache.get(Character.getNumericValue(data.charAt(1))));
 		}
 
 		if ((n < 1000) && (n >= 100)) {
 			if (n % 100 == 0) {
-				memoryCache.put(n, memoryCache.get(Character.getNumericValue(string.charAt(0))) + " hundred");
+				memoryCache.put(n, memoryCache.get(Character.getNumericValue(data.charAt(0))) + " hundred");
 			} else {
-				memoryCache.put(n, memoryCache.get(Character.getNumericValue(string.charAt(0))) + " hundred and "
-						+ memoryCache.get(Integer.parseInt(string.substring(1, 3))));
+				memoryCache.put(n, memoryCache.get(Character.getNumericValue(data.charAt(0))) + " hundred and "
+						+ memoryCache.get(Integer.parseInt(data.substring(1, 3))));
 			}
 		}
 
