@@ -3,11 +3,9 @@ from Solution import Solution
 
 class P023(Solution):
     divisors_cache = {2:[1], 3: [1], 4:[1,2]}
-    sum_of_divisors_cache = {2: 1, 3: 1, 4: 3}
 
     def sumOfDivisors(self, n):
-        self.sum_of_divisors_cache[n] = sum(self.getDivisors(n))
-        return self.sum_of_divisors_cache[n]
+        return sum(self.getDivisors(n))
 
     def getDivisors(self, n):
         if n in self.divisors_cache:
