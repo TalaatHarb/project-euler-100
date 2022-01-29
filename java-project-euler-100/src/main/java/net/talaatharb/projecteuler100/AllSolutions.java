@@ -1,5 +1,7 @@
 package net.talaatharb.projecteuler100;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -11,70 +13,71 @@ public class AllSolutions {
 
 	private static final double NANO_TO_S = 1000000000.0;
 
-	private static void solveParallel() {
+	private static void solveParallel(final List<Solution> problems) {
 		System.out.println("Running in parallel");
-		final int numOfSimultaneousProblems = 20;
+		final int numOfSimultaneousProblems = problems.size();
 		ExecutorService executor = Executors.newFixedThreadPool(numOfSimultaneousProblems);
 
-		executor.execute(new P001());
-		executor.execute(new P002());
-		executor.execute(new P003());
-		executor.execute(new P004());
-		executor.execute(new P005());
-		executor.execute(new P006());
-		executor.execute(new P007());
-		executor.execute(new P008());
-		executor.execute(new P009());
-		executor.execute(new P010());
-		executor.execute(new P011());
-		executor.execute(new P012());
-		executor.execute(new P013());
-		executor.execute(new P014());
-		executor.execute(new P015());
-		executor.execute(new P016());
-		executor.execute(new P017());
-		executor.execute(new P018());
-		executor.execute(new P019());
-		executor.execute(new P020());
+		for (final Solution problem : problems) {
+			executor.execute(problem);
+		}
 
 		executor.shutdown();
 		while (!executor.isTerminated())
 			;
 	}
 
-	private static void solveSequential() {
-		new P001().run();
-		new P002().run();
-		new P003().run();
-		new P004().run();
-		new P005().run();
-		new P006().run();
-		new P007().run();
-		new P008().run();
-		new P009().run();
-		new P010().run();
-		new P011().run();
-		new P012().run();
-		new P013().run();
-		new P014().run();
-		new P015().run();
-		new P016().run();
-		new P017().run();
-		new P018().run();
-		new P019().run();
-		new P020().run();
+	private static void solveSequential(final List<Solution> problems) {
+		for(final Solution problem: problems) {
+			problem.run();
+		}
+	}
+
+	private static List<Solution> getProblems() {
+		final List<Solution> result = new ArrayList<>();
+
+		result.add(new P001());
+		result.add(new P002());
+		result.add(new P003());
+		result.add(new P004());
+		result.add(new P005());
+		result.add(new P006());
+		result.add(new P007());
+		result.add(new P008());
+		result.add(new P009());
+		result.add(new P010());
+		result.add(new P011());
+		result.add(new P012());
+		result.add(new P013());
+		result.add(new P014());
+		result.add(new P015());
+		result.add(new P016());
+		result.add(new P017());
+		result.add(new P018());
+		result.add(new P019());
+		result.add(new P020());
+		result.add(new P021());
+		result.add(new P022());
+		result.add(new P023());
+		result.add(new P024());
+		result.add(new P025());
+
+		return result;
 	}
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
+
+		final List<Solution> problems = getProblems();
+
 		final long startTime = System.nanoTime();
 
 		if (args != null && args.length > 0 && args[0].equals("-p")) {
-			solveParallel();
+			solveParallel(problems);
 		} else {
-			solveSequential();
+			solveSequential(problems);
 		}
 
 		final double totalTime = (System.nanoTime() - startTime) / NANO_TO_S;
