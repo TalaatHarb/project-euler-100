@@ -43,3 +43,6 @@ hs_err_pid*
 
 # exe files
 **/*.exe
+**/*.dll
+csharp-project-euler-100/bin
+csharp-project-euler-100/obj
