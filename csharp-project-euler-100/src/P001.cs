@@ -15,12 +15,12 @@ namespace net.talaatharb.projecteuler100
          * 
          * @param args
          */
-        public static void main(String[] args)
+        public static void Main(String[] args)
         {
             new P001().run();
         }
 
-        public override int solve()
+        public override long solve()
         {
             problemNumber = 1;
             const int last = 1000;

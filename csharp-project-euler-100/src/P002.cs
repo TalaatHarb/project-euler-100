@@ -15,12 +15,12 @@ namespace net.talaatharb.projecteuler100
          * 
          * @param args
          */
-        public static void main(String[] args)
+        public static void Main(String[] args)
         {
             new P002().run();
         }
 
-        public override int solve()
+        public override long solve()
         {
             problemNumber = 2;
             long max = 4000000;

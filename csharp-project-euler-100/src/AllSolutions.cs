@@ -24,6 +24,7 @@
             // Add solutions to list
             problems.Add(new P001());
             problems.Add(new P002());
+            problems.Add(new P003());
 
             solveSequential(problems);
         }
