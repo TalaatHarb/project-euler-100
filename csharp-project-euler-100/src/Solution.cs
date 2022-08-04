@@ -19,14 +19,14 @@ namespace net.talaatharb.projecteuler100
             return problemNumber;
         }
 
-        public abstract int solve();
+        public abstract long solve();
 
         public void run()
         {
             // code to caclulate the time of the solution
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            int result = solve();
+            long result = solve();
             stopwatch.Stop();
             // code to print the result
             Console.WriteLine("Problem #{0}", problemNumber);

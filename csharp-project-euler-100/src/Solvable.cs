@@ -23,7 +23,7 @@ namespace net.talaatharb.projecteuler100
          * 
          * @return The solution to the problem
          */
-        public abstract int solve();
+        public abstract long solve();
 
         /**
         * Run the solution and the timing code
