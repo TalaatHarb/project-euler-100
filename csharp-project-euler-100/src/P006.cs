@@ -23,7 +23,19 @@ namespace net.talaatharb.projecteuler100
         public override long solve()
         {
             problemNumber = 6;
-            return problemNumber;
+            int result = 0;
+            int last = 100;
+            int sum = 0;
+            int sumOfSquares = 0;
+
+            for (int i = 1; i < last + 1; i++)
+            {
+                sum += i;
+                sumOfSquares += (i * i);
+            }
+            result = (sum * sum) - sumOfSquares;
+
+            return result;
         }
     }
 }

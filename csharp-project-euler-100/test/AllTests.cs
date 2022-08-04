@@ -1,4 +1,5 @@
 using Xunit;
+using System.Diagnostics;
 
 namespace net.talaatharb.projecteuler100
 {
@@ -6,7 +7,14 @@ namespace net.talaatharb.projecteuler100
     {
         private void solveAndTest(long expectedResult, Solvable problem)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             long result = problem.solve();
+            stopwatch.Stop();
+            double period = stopwatch.Elapsed.TotalSeconds;
+
+            Console.WriteLine("p" + ("000" + problem.getProblemNumber()).Substring((problem.getProblemNumber() + "").Length) + ": " + result
+                + " -> " + period + " s");
             Assert.Equal(expectedResult, result);
         }
 

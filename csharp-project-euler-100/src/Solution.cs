@@ -23,17 +23,14 @@ namespace net.talaatharb.projecteuler100
 
         public void run()
         {
-            // code to caclulate the time of the solution
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             long result = solve();
             stopwatch.Stop();
-            // code to print the result
-            Console.WriteLine("Problem #{0}", problemNumber);
+            double period = stopwatch.Elapsed.TotalSeconds;
 
-            Console.WriteLine("Result: {0}", result);
-
-            Console.WriteLine("Time: {0}", stopwatch.Elapsed);
+            Console.WriteLine("p" + ("000" + problemNumber).Substring((problemNumber + "").Length) + ": " + result
+                + " -> " + period + " s");
         }
     }
 }
