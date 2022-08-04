@@ -15,7 +15,7 @@ namespace net.talaatharb.projecteuler100
          * 
          * @param args
          */
-        public static void Main(String[] args)
+        public static void Main(string[] args)
         {
             new P002().run();
         }

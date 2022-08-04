@@ -244,7 +244,7 @@ class AllSolutionsTest {
 	}
 	
 	/**
-	 * Testing P024
+	 * Testing P025
 	 */
 	@Test
 	void testP025() {
