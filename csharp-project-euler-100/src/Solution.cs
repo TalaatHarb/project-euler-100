@@ -21,7 +21,7 @@ namespace net.talaatharb.projecteuler100
 
         public abstract long Solve();
 
-        public void run()
+        public void Run()
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();

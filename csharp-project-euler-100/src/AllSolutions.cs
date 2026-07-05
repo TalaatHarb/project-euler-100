@@ -12,7 +12,7 @@
         {
             foreach (Solution problem in problems)
             {
-                problem.run();
+                problem.Run();
             }
         }
 

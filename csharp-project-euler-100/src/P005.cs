@@ -17,7 +17,7 @@ namespace net.talaatharb.projecteuler100
          */
         public static void Main(string[] args)
         {
-            new P005().run();
+            new P005().Run();
         }
 
         public override long Solve()

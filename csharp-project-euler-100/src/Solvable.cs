@@ -28,7 +28,7 @@ namespace net.talaatharb.projecteuler100
         /**
         * Run the solution and the timing code
 		*/
-        public abstract void run();
+        public abstract void Run();
     }
 }
 
