@@ -44,6 +44,11 @@ hs_err_pid*
 # exe files
 **/*.exe
 **/*.dll
-csharp-project-euler-100/bin
-csharp-project-euler-100/obj
 go-project-euler-100/project-euler
+/csharp-project-euler-100/.vs
+/csharp-project-euler-100/net.talaatharb.projecteuler100.Console/obj
+/csharp-project-euler-100/net.talaatharb.projecteuler100.Console/bin
+/csharp-project-euler-100/net.talaatharb.projecteuler100.Core/obj
+/csharp-project-euler-100/net.talaatharb.projecteuler100.Core/bin
+/csharp-project-euler-100/net.talaatharb.projecteuler100.Tests/bin
+/csharp-project-euler-100/net.talaatharb.projecteuler100.Tests/obj
