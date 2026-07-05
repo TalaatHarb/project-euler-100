@@ -1,13 +1,13 @@
 
 
-namespace net.talaatharb.projecteuler100
+namespace net.talaatharb.projecteuler100.Core
 {
 
     /**
     * @author mharb
     *
     */
-    public class P022 : Solution
+    public class P025 : Solution
     {
 
         /**
@@ -17,12 +17,12 @@ namespace net.talaatharb.projecteuler100
          */
         public static void Main(string[] args)
         {
-            new P022().Run();
+            new P025().Run();
         }
 
         public override long Solve()
         {
-            problemNumber = 22;
+            problemNumber = 25;
             return problemNumber;
         }
     }

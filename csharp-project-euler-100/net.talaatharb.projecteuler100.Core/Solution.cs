@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace net.talaatharb.projecteuler100
+namespace net.talaatharb.projecteuler100.Core
 {
 
     /**
