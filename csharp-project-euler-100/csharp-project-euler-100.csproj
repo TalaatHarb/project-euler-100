@@ -10,6 +10,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="net.talaatharb.projecteuler100.Console\**" />
+    <Compile Remove="net.talaatharb.projecteuler100.Core\**" />
+    <EmbeddedResource Remove="net.talaatharb.projecteuler100.Console\**" />
+    <EmbeddedResource Remove="net.talaatharb.projecteuler100.Core\**" />
+    <None Remove="net.talaatharb.projecteuler100.Console\**" />
+    <None Remove="net.talaatharb.projecteuler100.Core\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.7.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="3.1.5">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -20,6 +29,10 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="xunit.v3" Version="3.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="src\" />
   </ItemGroup>
 
 </Project>

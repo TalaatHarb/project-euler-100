@@ -51,3 +51,5 @@ go-project-euler-100/project-euler
 /csharp-project-euler-100/net.talaatharb.projecteuler100.Core/obj
 /net.talaatharb.projecteuler100.core/obj
 /csharp-project-euler-100/.vs/net.talaatharb.projecteuler100.slnx/v18
+/csharp-project-euler-100/.vs
+/csharp-project-euler-100/net.talaatharb.projecteuler100.Console/obj

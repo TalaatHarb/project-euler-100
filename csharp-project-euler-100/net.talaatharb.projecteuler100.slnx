@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="csharp-project-euler-100.csproj" />
+  <Project Path="net.talaatharb.projecteuler100.Console/net.talaatharb.projecteuler100.Console.csproj" Id="700dd15a-b16c-4516-9f5d-2a44d6bba2b6" />
   <Project Path="net.talaatharb.projecteuler100.Core/net.talaatharb.projecteuler100.Core.csproj" Id="d83d218d-f492-41b0-89d0-2c91bcd1d4b8" />
 </Solution>

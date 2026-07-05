@@ -1,28 +1,27 @@
-﻿namespace net.talaatharb.projecteuler100.Core
+﻿using net.talaatharb.projecteuler100.Core;
+
+internal class Program
 {
-    public class AllSolutions
+    private static void SolveParallel(List<Solution> problems)
     {
+        Console.WriteLine("Running in parallel");
+    }
 
-        private static void SolveParallel(List<Solution> problems)
+    private static void SolveSequential(List<Solution> problems)
+    {
+        foreach (Solution problem in problems)
         {
-            Console.WriteLine("Running in parallel");
+            problem.Run();
         }
+    }
 
-        private static void SolveSequential(List<Solution> problems)
-        {
-            foreach (Solution problem in problems)
-            {
-                problem.Run();
-            }
-        }
-
-        public static void Main(string[] args)
-        {
-            // Create list of solutions
-            List<Solution> problems =
-            [
-                // Add solutions to list
-                new P001(),
+    public static void Main(string[] args)
+    {
+        // Create list of solutions
+        List<Solution> problems =
+        [
+            // Add solutions to list
+            new P001(),
                 new P002(),
                 new P003(),
                 new P004(),
@@ -48,9 +47,8 @@
                 new P024(),
                 new P025(),
             ];
-            
-            
-            SolveSequential(problems);
-        }
+
+
+        SolveSequential(problems);
     }
 }
