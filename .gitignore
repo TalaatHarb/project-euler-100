@@ -47,3 +47,4 @@ hs_err_pid*
 csharp-project-euler-100/bin
 csharp-project-euler-100/obj
 go-project-euler-100/project-euler
+/csharp-project-euler-100/.vs/csharp-project-euler-100.slnx
