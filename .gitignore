@@ -53,3 +53,4 @@ go-project-euler-100/project-euler
 /csharp-project-euler-100/net.talaatharb.projecteuler100.Tests/bin
 /csharp-project-euler-100/net.talaatharb.projecteuler100.Tests/obj
 /.vs
+/csharp-project-euler-100/obj
