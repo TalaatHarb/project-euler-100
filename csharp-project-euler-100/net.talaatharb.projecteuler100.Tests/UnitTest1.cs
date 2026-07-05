@@ -1,9 +1,9 @@
-using Xunit;
+﻿using net.talaatharb.projecteuler100.Core;
 using System.Diagnostics;
 
-namespace net.talaatharb.projecteuler100
+namespace net.talaatharb.projecteuler100.Tests
 {
-    public class AllTests
+    public class UnitTest1
     {
         private static void SolveAndTest(long expectedResult, ISolvable problem)
         {
@@ -17,7 +17,6 @@ namespace net.talaatharb.projecteuler100
                 + " -> " + period + " s");
             Assert.Equal(expectedResult, result);
         }
-
         /**
         * Testing P001
         */
