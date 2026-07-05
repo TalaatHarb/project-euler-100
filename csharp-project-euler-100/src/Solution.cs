@@ -23,13 +23,13 @@ namespace net.talaatharb.projecteuler100
 
         public void Run()
         {
-            Stopwatch stopwatch = new Stopwatch();
+            Stopwatch stopwatch = new();
             stopwatch.Start();
             long result = Solve();
             stopwatch.Stop();
             double period = stopwatch.Elapsed.TotalSeconds;
 
-            Console.WriteLine("p" + ("000" + problemNumber).Substring((problemNumber + "").Length) + ": " + result
+            Console.WriteLine("p" + ("000" + problemNumber)[(problemNumber + "").Length..] + ": " + result
                 + " -> " + period + " s");
         }
     }
