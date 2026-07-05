@@ -5,15 +5,15 @@ namespace net.talaatharb.projecteuler100
 {
     public class AllTests
     {
-        private void solveAndTest(long expectedResult, Solvable problem)
+        private static void SolveAndTest(long expectedResult, Solvable problem)
         {
-            Stopwatch stopwatch = new Stopwatch();
+            Stopwatch stopwatch = new();
             stopwatch.Start();
             long result = problem.solve();
             stopwatch.Stop();
             double period = stopwatch.Elapsed.TotalSeconds;
 
-            Console.WriteLine("p" + ("000" + problem.getProblemNumber()).Substring((problem.getProblemNumber() + "").Length) + ": " + result
+            Console.WriteLine("p" + ("000" + problem.getProblemNumber())[(problem.getProblemNumber() + "").Length..] + ": " + result
                 + " -> " + period + " s");
             Assert.Equal(expectedResult, result);
         }
@@ -22,250 +22,250 @@ namespace net.talaatharb.projecteuler100
         * Testing P001
         */
         [Fact]
-        public void testP001()
+        public void TestP001()
         {
             const long expectedResult = 233168;
-            solveAndTest(expectedResult, new P001());
+            SolveAndTest(expectedResult, new P001());
         }
 
         /**
         * Testing P002
         */
         [Fact]
-        public void testP002()
+        public void TestP002()
         {
             const long expectedResult = 4613732;
-            solveAndTest(expectedResult, new P002());
+            SolveAndTest(expectedResult, new P002());
         }
 
         /**
         * Testing P003
         */
         [Fact]
-        public void testP003()
+        public void TestP003()
         {
             const long expectedResult = 6857;
-            solveAndTest(expectedResult, new P003());
+            SolveAndTest(expectedResult, new P003());
         }
 
         /**
 	    * Testing P004
 	    */
         [Fact]
-        void testP004()
+        public void TestP004()
         {
             const long expectedResult = 906609;
-            solveAndTest(expectedResult, new P004());
+            SolveAndTest(expectedResult, new P004());
         }
 
         /**
          * Testing P005
          */
         [Fact]
-        void testP005()
+        public void TestP005()
         {
             const long expectedResult = 232792560;
-            solveAndTest(expectedResult, new P005());
+            SolveAndTest(expectedResult, new P005());
         }
 
         /**
          * Testing P006
          */
         [Fact]
-        void testP006()
+        public void TestP006()
         {
             const long expectedResult = 25164150;
-            solveAndTest(expectedResult, new P006());
+            SolveAndTest(expectedResult, new P006());
         }
 
         /**
          * Testing P007
          */
         [Fact]
-        void testP007()
+        public void TestP007()
         {
             const long expectedResult = 104743;
-            solveAndTest(expectedResult, new P007());
+            SolveAndTest(expectedResult, new P007());
         }
 
         /**
          * Testing P008
          */
         [Fact]
-        void testP008()
+        public void TestP008()
         {
             const long expectedResult = 23514624000L;
-            solveAndTest(expectedResult, new P008());
+            SolveAndTest(expectedResult, new P008());
         }
 
         /**
          * Testing P009
          */
         [Fact]
-        void testP009()
+        public void TestP009()
         {
             const long expectedResult = 31875000;
-            solveAndTest(expectedResult, new P009());
+            SolveAndTest(expectedResult, new P009());
         }
 
         /**
          * Testing P010
          */
         [Fact]
-        void testP010()
+        public void TestP010()
         {
             const long expectedResult = 142913828922L;
-            solveAndTest(expectedResult, new P010());
+            SolveAndTest(expectedResult, new P010());
         }
 
         /**
          * Testing P011
          */
         [Fact]
-        void testP011()
+        public void TestP011()
         {
             const long expectedResult = 70600674;
-            solveAndTest(expectedResult, new P011());
+            SolveAndTest(expectedResult, new P011());
         }
 
         /**
          * Testing P012
          */
         [Fact]
-        void testP012()
+        public void TestP012()
         {
             const long expectedResult = 76576500;
-            solveAndTest(expectedResult, new P012());
+            SolveAndTest(expectedResult, new P012());
         }
 
         /**
          * Testing P013
          */
         [Fact]
-        void testP013()
+        public void TestP013()
         {
             const long expectedResult = 5537376230L;
-            solveAndTest(expectedResult, new P013());
+            SolveAndTest(expectedResult, new P013());
         }
 
         /**
          * Testing P014
          */
         [Fact]
-        void testP014()
+        public void TestP014()
         {
             const long expectedResult = 837799;
-            solveAndTest(expectedResult, new P014());
+            SolveAndTest(expectedResult, new P014());
         }
 
         /**
          * Testing P015
          */
         [Fact]
-        void testP015()
+        public void TestP015()
         {
             const long expectedResult = 137846528820L;
-            solveAndTest(expectedResult, new P015());
+            SolveAndTest(expectedResult, new P015());
         }
 
         /**
          * Testing P016
          */
         [Fact]
-        void testP016()
+        public void TestP016()
         {
             const long expectedResult = 1366;
-            solveAndTest(expectedResult, new P016());
+            SolveAndTest(expectedResult, new P016());
         }
 
         /**
          * Testing P017
          */
         [Fact]
-        void testP017()
+        public void TestP017()
         {
             const long expectedResult = 21124;
-            solveAndTest(expectedResult, new P017());
+            SolveAndTest(expectedResult, new P017());
         }
 
         /**
          * Testing P018
          */
         [Fact]
-        void testP018()
+        public void TestP018()
         {
             const long expectedResult = 1074;
-            solveAndTest(expectedResult, new P018());
+            SolveAndTest(expectedResult, new P018());
         }
 
         /**
          * Testing P019
          */
         [Fact]
-        void testP019()
+        public void TestP019()
         {
             const long expectedResult = 171;
-            solveAndTest(expectedResult, new P019());
+            SolveAndTest(expectedResult, new P019());
         }
 
         /**
          * Testing P020
          */
         [Fact]
-        void testP020()
+        public void TestP020()
         {
             const long expectedResult = 648;
-            solveAndTest(expectedResult, new P020());
+            SolveAndTest(expectedResult, new P020());
         }
 
         /**
          * Testing P021
          */
         [Fact]
-        void testP021()
+        public void TestP021()
         {
             const long expectedResult = 31626;
-            solveAndTest(expectedResult, new P021());
+            SolveAndTest(expectedResult, new P021());
         }
 
         /**
          * Testing P022
          */
         [Fact]
-        void testP022()
+        public void TestP022()
         {
             const long expectedResult = 871198282;
-            solveAndTest(expectedResult, new P022());
+            SolveAndTest(expectedResult, new P022());
         }
 
         /**
          * Testing P023
          */
         [Fact]
-        void testP023()
+        public void TestP023()
         {
             const long expectedResult = 4179871;
-            solveAndTest(expectedResult, new P023());
+            SolveAndTest(expectedResult, new P023());
         }
 
         /**
          * Testing P024
          */
         [Fact]
-        void testP024()
+        public void TestP024()
         {
             const long expectedResult = 2783915460L;
-            solveAndTest(expectedResult, new P024());
+            SolveAndTest(expectedResult, new P024());
         }
 
         /**
          * Testing P025
          */
         [Fact]
-        void testP025()
+        public void TestP025()
         {
             const long expectedResult = 4782;
-            solveAndTest(expectedResult, new P025());
+            SolveAndTest(expectedResult, new P025());
         }
 
     }
