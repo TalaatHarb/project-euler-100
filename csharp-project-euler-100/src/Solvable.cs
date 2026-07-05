@@ -16,7 +16,7 @@ namespace net.talaatharb.projecteuler100
          * 
          * @return The problem number
          */
-        public abstract int getProblemNumber();
+        public abstract int GetProblemNumber();
 
         /**
          * Solve a problem and provide the solution

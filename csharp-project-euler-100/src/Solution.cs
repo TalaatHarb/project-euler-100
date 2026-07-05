@@ -14,7 +14,7 @@ namespace net.talaatharb.projecteuler100
 
         protected int problemNumber = 0;
 
-        public int getProblemNumber()
+        public int GetProblemNumber()
         {
             return problemNumber;
         }

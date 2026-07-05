@@ -13,7 +13,7 @@ namespace net.talaatharb.projecteuler100
             stopwatch.Stop();
             double period = stopwatch.Elapsed.TotalSeconds;
 
-            Console.WriteLine("p" + ("000" + problem.getProblemNumber())[(problem.getProblemNumber() + "").Length..] + ": " + result
+            Console.WriteLine("p" + ("000" + problem.GetProblemNumber())[(problem.GetProblemNumber() + "").Length..] + ": " + result
                 + " -> " + period + " s");
             Assert.Equal(expectedResult, result);
         }
