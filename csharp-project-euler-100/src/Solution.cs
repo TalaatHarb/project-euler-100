@@ -9,7 +9,7 @@ namespace net.talaatharb.projecteuler100
      * @author mharb
      *
      */
-    public abstract class Solution : Solvable
+    public abstract class Solution : ISolvable
     {
 
         protected int problemNumber = 0;

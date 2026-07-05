@@ -8,7 +8,7 @@ namespace net.talaatharb.projecteuler100
      * @author mharb
      *
      */
-    public interface Solvable
+    public interface ISolvable
     {
 
         /**

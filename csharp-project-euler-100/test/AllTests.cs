@@ -5,7 +5,7 @@ namespace net.talaatharb.projecteuler100
 {
     public class AllTests
     {
-        private static void SolveAndTest(long expectedResult, Solvable problem)
+        private static void SolveAndTest(long expectedResult, ISolvable problem)
         {
             Stopwatch stopwatch = new();
             stopwatch.Start();
