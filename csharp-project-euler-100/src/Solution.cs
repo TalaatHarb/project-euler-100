@@ -19,13 +19,13 @@ namespace net.talaatharb.projecteuler100
             return problemNumber;
         }
 
-        public abstract long solve();
+        public abstract long Solve();
 
         public void run()
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            long result = solve();
+            long result = Solve();
             stopwatch.Stop();
             double period = stopwatch.Elapsed.TotalSeconds;
 

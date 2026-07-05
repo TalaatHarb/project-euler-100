@@ -9,7 +9,7 @@ namespace net.talaatharb.projecteuler100
         {
             Stopwatch stopwatch = new();
             stopwatch.Start();
-            long result = problem.solve();
+            long result = problem.Solve();
             stopwatch.Stop();
             double period = stopwatch.Elapsed.TotalSeconds;
 

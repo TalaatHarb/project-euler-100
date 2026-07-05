@@ -40,7 +40,7 @@ namespace net.talaatharb.projecteuler100
             new P003().run();
         }
 
-        public override long solve()
+        public override long Solve()
         {
             problemNumber = 3;
             const long number = 600851475143L;

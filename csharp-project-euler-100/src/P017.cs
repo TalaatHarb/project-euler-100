@@ -20,7 +20,7 @@ namespace net.talaatharb.projecteuler100
             new P017().run();
         }
 
-        public override long solve()
+        public override long Solve()
         {
             problemNumber = 17;
             return problemNumber;

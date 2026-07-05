@@ -30,7 +30,7 @@ namespace net.talaatharb.projecteuler100
             new P008().run();
         }
 
-        public override long solve()
+        public override long Solve()
         {
             problemNumber = 8;
             const int segmentLength = 13;

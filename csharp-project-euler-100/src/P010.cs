@@ -60,7 +60,7 @@ namespace net.talaatharb.projecteuler100
             new P010().run();
         }
 
-        public override long solve()
+        public override long Solve()
         {
             problemNumber = 10;
             const int last = 2000000;

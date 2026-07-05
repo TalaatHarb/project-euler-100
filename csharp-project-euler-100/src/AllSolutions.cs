@@ -3,12 +3,12 @@
     public class AllSolutions
     {
 
-        private static void solveParallel(List<Solution> problems)
+        private static void SolveParallel(List<Solution> problems)
         {
             Console.WriteLine("Running in parallel");
         }
 
-        private static void solveSequential(List<Solution> problems)
+        private static void SolveSequential(List<Solution> problems)
         {
             foreach (Solution problem in problems)
             {
@@ -19,37 +19,38 @@
         public static void Main(string[] args)
         {
             // Create list of solutions
-            List<Solution> problems = new List<Solution>();
-
-            // Add solutions to list
-            problems.Add(new P001());
-            problems.Add(new P002());
-            problems.Add(new P003());
-            problems.Add(new P004());
-            problems.Add(new P005());
-            problems.Add(new P006());
-            problems.Add(new P007());
-            problems.Add(new P008());
-            problems.Add(new P009());
-            problems.Add(new P010());
-            problems.Add(new P011());
-            problems.Add(new P012());
-            problems.Add(new P013());
-            problems.Add(new P014());
-            problems.Add(new P015());
-            problems.Add(new P016());
-            problems.Add(new P017());
-            problems.Add(new P018());
-            problems.Add(new P019());
-            problems.Add(new P020());
-            problems.Add(new P021());
-            problems.Add(new P022());
-            problems.Add(new P023());
-            problems.Add(new P024());
-            problems.Add(new P025());
+            List<Solution> problems =
+            [
+                // Add solutions to list
+                new P001(),
+                new P002(),
+                new P003(),
+                new P004(),
+                new P005(),
+                new P006(),
+                new P007(),
+                new P008(),
+                new P009(),
+                new P010(),
+                new P011(),
+                new P012(),
+                new P013(),
+                new P014(),
+                new P015(),
+                new P016(),
+                new P017(),
+                new P018(),
+                new P019(),
+                new P020(),
+                new P021(),
+                new P022(),
+                new P023(),
+                new P024(),
+                new P025(),
+            ];
             
             
-            solveSequential(problems);
+            SolveSequential(problems);
         }
     }
 }

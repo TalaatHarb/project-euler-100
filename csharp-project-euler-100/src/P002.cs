@@ -20,7 +20,7 @@ namespace net.talaatharb.projecteuler100
             new P002().run();
         }
 
-        public override long solve()
+        public override long Solve()
         {
             problemNumber = 2;
             long max = 4000000;
