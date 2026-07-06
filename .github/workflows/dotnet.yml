@@ -21,8 +21,8 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: cd csharp-project-euler-100 && dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: cd csharp-project-euler-100 && dotnet build --no-restore
     - name: Test
       run: cd csharp-project-euler-100 && dotnet test --no-build --verbosity normal
