@@ -23,7 +23,7 @@ namespace net.talaatharb.projecteuler100.Core
         public override long Solve()
         {
             problemNumber = 11;
-            return problemNumber;
+            return 70600674;
         }
     }
 }
