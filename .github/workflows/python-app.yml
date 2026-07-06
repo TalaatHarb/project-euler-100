@@ -6,8 +6,14 @@ name: Python application
 on:
   push:
     branches: [ develop ]
+    paths:
+      - 'python-project-euler-100/**'
+      - '.github/workflows/python-app.yml'
   pull_request:
     branches: [ develop ]
+    paths:
+      - 'python-project-euler-100/**'
+      - '.github/workflows/python-app.yml'
 
 jobs:
   build:
