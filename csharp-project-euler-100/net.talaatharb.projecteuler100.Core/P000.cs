@@ -29,7 +29,7 @@ namespace net.talaatharb.projecteuler100.Core
             {
                 sum += i * i;
             }
-            return (long)sum; //57658067999883000
+            return (long)sum;
         }
     }
 }
