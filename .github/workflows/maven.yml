@@ -6,8 +6,14 @@ name: Java CI with Maven
 on:
   push:
     branches: [ develop ]
+    paths:
+      - 'java-project-euler-100/**'
+      - '.github/workflows/maven.yml'
   pull_request:
     branches: [ develop ]
+    paths:
+      - 'java-project-euler-100/**'
+      - '.github/workflows/maven.yml'
 
 jobs:
   build:

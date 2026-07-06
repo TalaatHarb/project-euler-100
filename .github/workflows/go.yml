@@ -3,8 +3,14 @@ name: Go
 on:
   push:
     branches: [ develop ]
+    paths:
+      - 'go-project-euler-100/**'
+      - '.github/workflows/go.yml'
   pull_request:
     branches: [ develop ]
+    paths:
+      - 'go-project-euler-100/**'
+      - '.github/workflows/go.yml'
 
 jobs:
 
