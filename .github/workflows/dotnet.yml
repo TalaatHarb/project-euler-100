@@ -1,0 +1,28 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
+
+on:
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: Restore dependencies
+      run: cd csharp-project-euler-100 && dotnet restore
+    - name: Build
+      run: cd csharp-project-euler-100 && dotnet build --no-restore
+    - name: Test
+      run: cd csharp-project-euler-100 && dotnet test --no-build --verbosity normal
