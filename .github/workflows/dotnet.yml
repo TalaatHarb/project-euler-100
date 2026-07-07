@@ -6,9 +6,14 @@ name: .NET
 on:
   push:
     branches: [ "develop" ]
+    paths:
+      - 'csharp-project-euler-100/**'
+      - '.github/workflows/dotnet.yml'
   pull_request:
     branches: [ "develop" ]
-
+    paths:
+      - 'csharp-project-euler-100/**'
+      - '.github/workflows/dotnet.yml'
 jobs:
   build:
 
