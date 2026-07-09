@@ -16,9 +16,6 @@ func p015Factorial(n int) *big.Int {
 /*P015Solve solution for p015*/
 func P015Solve() int {
 	n := 20
-	for i := 1; i < 2*n; i++ {
-		p015Factorial(i)
-	}
 	result := new(big.Int).Div(
 		p015Factorial(2*n),
 		new(big.Int).Mul(p015Factorial(n), p015Factorial(n)),

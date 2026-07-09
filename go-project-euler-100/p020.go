@@ -16,9 +16,6 @@ func p020Factorial(n int) *big.Int {
 /*P020Solve solution for p020*/
 func P020Solve() int {
 	n := 100
-	for i := 1; i < n; i++ {
-		p020Factorial(i)
-	}
 	result := 0
 	for _, ch := range p020Factorial(n).String() {
 		result += int(ch - '0')

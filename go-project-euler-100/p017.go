@@ -1,7 +1,5 @@
 package main
 
-import "strconv"
-
 var p017Words = map[int]string{
 	1: "one", 2: "two", 3: "three", 4: "four", 5: "five",
 	6: "six", 7: "seven", 8: "eight", 9: "nine", 10: "ten",
@@ -16,16 +14,15 @@ func p017NumberAsLetters(n int) string {
 	if v, ok := p017Words[n]; ok {
 		return v
 	}
-	data := strconv.Itoa(n)
 	if n < 100 {
-		tens := 10 * int(data[0]-'0')
-		ones := int(data[1] - '0')
+		tens := (n / 10) * 10
+		ones := n % 10
 		result := p017Words[tens] + "-" + p017Words[ones]
 		p017Words[n] = result
 		return result
 	}
 	if n < 1000 {
-		hundreds := int(data[0] - '0')
+		hundreds := n / 100
 		rest := n % 100
 		if rest == 0 {
 			result := p017Words[hundreds] + " hundred"

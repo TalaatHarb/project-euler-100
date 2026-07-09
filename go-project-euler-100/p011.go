@@ -14,8 +14,8 @@ func p011GridProduct(grid [][]int, i, j, count int) int {
 	maxProduct := 1
 
 	product := 1
-	if count <= (n - i) {
-		for k := i; k < (i + count); k++ {
+	if count <= n-i {
+		for k := i; k < i+count; k++ {
 			product *= grid[j][k]
 		}
 		if product > maxProduct {
@@ -24,8 +24,8 @@ func p011GridProduct(grid [][]int, i, j, count int) int {
 	}
 
 	product = 1
-	if count <= (n - j) {
-		for k := j; k < (j + count); k++ {
+	if count <= n-j {
+		for k := j; k < j+count; k++ {
 			product *= grid[k][i]
 		}
 		if product > maxProduct {
@@ -34,7 +34,7 @@ func p011GridProduct(grid [][]int, i, j, count int) int {
 	}
 
 	product = 1
-	if (count <= (n - i)) && (count <= (n - j)) {
+	if count <= n-i && count <= n-j {
 		for k := 0; k < count; k++ {
 			product *= grid[j+k][i+k]
 		}
@@ -44,7 +44,7 @@ func p011GridProduct(grid [][]int, i, j, count int) int {
 	}
 
 	product = 1
-	if (count <= (n - i)) && (j > (count - 1)) {
+	if count <= n-i && j > count-1 {
 		for k := 0; k < count; k++ {
 			product *= grid[j-k][i+k]
 		}
