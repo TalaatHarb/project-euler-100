@@ -45,12 +45,12 @@ export class P023 extends Solution {
 		}
 
 		for (let i = 0; i < abundantNumbers.length; i++) {
-			if ((abundantNumbers[i] * 2) >= n) {
+			if ((abundantNumbers[i] * 2) > n) {
 				break;
 			}
 			for (let j = i; j < abundantNumbers.length; j++) {
 				const sum = abundantNumbers[i] + abundantNumbers[j];
-				if (sum < n) {
+				if (sum <= n) {
 					sumOfAbundant[sum] = true;
 				} else {
 					break;
@@ -58,7 +58,7 @@ export class P023 extends Solution {
 			}
 		}
 
-		for (let i = 0; i < n; i++) {
+		for (let i = 0; i <= n; i++) {
 			if (!sumOfAbundant[i]) {
 				result += i;
 			}
