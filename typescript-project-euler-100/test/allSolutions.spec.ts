@@ -262,7 +262,7 @@ describe('All solutions', () => {
         expect(period).toBeLessThan(60);
     });
 
-    xit('should solve p019', () => {
+    it('should solve p019', () => {
         const problem: Solution = new P019();
         const startTime = +new Date();
 
@@ -275,7 +275,7 @@ describe('All solutions', () => {
         expect(period).toBeLessThan(60);
     });
 
-    xit('should solve p020', () => {
+    it('should solve p020', () => {
         const problem: Solution = new P020();
         const startTime = +new Date();
 
@@ -288,7 +288,7 @@ describe('All solutions', () => {
         expect(period).toBeLessThan(60);
     });
 
-    xit('should solve p021', () => {
+    it('should solve p021', () => {
         const problem: Solution = new P021();
         const startTime = +new Date();
 
@@ -301,7 +301,7 @@ describe('All solutions', () => {
         expect(period).toBeLessThan(60);
     });
 
-    xit('should solve p022', () => {
+    it('should solve p022', () => {
         const problem: Solution = new P022();
         const startTime = +new Date();
 
@@ -314,7 +314,7 @@ describe('All solutions', () => {
         expect(period).toBeLessThan(60);
     });
 
-    xit('should solve p023', () => {
+    it('should solve p023', () => {
         const problem: Solution = new P023();
         const startTime = +new Date();
 
@@ -327,7 +327,7 @@ describe('All solutions', () => {
         expect(period).toBeLessThan(60);
     });
 
-    xit('should solve p024', () => {
+    it('should solve p024', () => {
         const problem: Solution = new P024();
         const startTime = +new Date();
 
@@ -340,7 +340,7 @@ describe('All solutions', () => {
         expect(period).toBeLessThan(60);
     });
 
-    xit('should solve p025', () => {
+    it('should solve p025', () => {
         const problem: Solution = new P025();
         const startTime = +new Date();
 
