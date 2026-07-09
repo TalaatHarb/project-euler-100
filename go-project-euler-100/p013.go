@@ -3,7 +3,6 @@ package main
 import (
 	_ "embed"
 	"math/big"
-	"strconv"
 	"strings"
 )
 
@@ -19,6 +18,9 @@ func P013Solve() int {
 		n.SetString(strings.TrimSpace(line), 10)
 		sum.Add(sum, n)
 	}
-	result, _ := strconv.ParseInt(sum.String()[:10], 10, 64)
-	return int(result)
+	result := 0
+	for _, ch := range sum.String()[:10] {
+		result = result*10 + int(ch-'0')
+	}
+	return result
 }

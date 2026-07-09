@@ -1,6 +1,6 @@
 package main
 
-func numberOfDivisors(n int, primes []int) int {
+func p012NumberOfDivisors(n int, primes []int) int {
 	for _, p := range primes {
 		if p == n {
 			return 2
@@ -36,7 +36,7 @@ func P012Solve() int {
 	i := 1
 	for {
 		tn := i * (i + 1) / 2
-		n := numberOfDivisors(tn, primes)
+		n := p012NumberOfDivisors(tn, primes)
 		if n > target {
 			return tn
 		}

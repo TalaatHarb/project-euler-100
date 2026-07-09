@@ -2,15 +2,15 @@ package main
 
 var p014Cache = map[int]int{1: 0}
 
-func collatz(n int) int {
+func p014Collatz(n int) int {
 	if v, ok := p014Cache[n]; ok {
 		return v
 	}
 	var data int
 	if n%2 == 0 {
-		data = collatz(n/2) + 1
+		data = p014Collatz(n/2) + 1
 	} else {
-		data = collatz(3*n+1) + 1
+		data = p014Collatz(3*n+1) + 1
 	}
 	p014Cache[n] = data
 	return data
@@ -23,7 +23,7 @@ func P014Solve() int {
 	last := 1000000
 
 	for i := 2; i < last; i++ {
-		seqLen := collatz(i)
+		seqLen := p014Collatz(i)
 		if seqLen > maxLength {
 			maxLength = seqLen
 			maxNumber = i

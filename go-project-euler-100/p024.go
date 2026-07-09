@@ -1,7 +1,5 @@
 package main
 
-import "strconv"
-
 func p024StringPermutation(n int, str string) string {
 	// Convert to 0-indexed
 	n = n - 1
@@ -29,6 +27,9 @@ func p024StringPermutation(n int, str string) string {
 func P024Solve() int {
 	n := 1000000
 	data := "0123456789"
-	result, _ := strconv.ParseInt(p024StringPermutation(n, data), 10, 64)
-	return int(result)
+	result := 0
+	for _, ch := range p024StringPermutation(n, data) {
+		result = result*10 + int(ch-'0')
+	}
+	return result
 }
