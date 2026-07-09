@@ -6,7 +6,7 @@ export class P020 extends Solution {
 
 	constructor() {
 		super();
-		this.memoryCache.set(0, 1n);
+		this.memoryCache.set(0, BigInt(1));
 	}
 
 	digitSum(data: string): number {

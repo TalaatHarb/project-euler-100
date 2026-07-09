@@ -9,7 +9,7 @@ export class P021 extends Solution {
 			return this.sumOfDivisorCache.get(n) as number;
 		}
 
-		if (n === 1) {
+		if (n <= 1) {
 			return 0;
 		}
 

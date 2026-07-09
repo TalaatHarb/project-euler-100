@@ -6,8 +6,8 @@ export class P025 extends Solution {
 
 	constructor() {
 		super();
-		this.memoryCache.set(1, 1n);
-		this.memoryCache.set(2, 1n);
+		this.memoryCache.set(1, BigInt(1));
+		this.memoryCache.set(2, BigInt(1));
 	}
 
 	fib(n: number): bigint {
