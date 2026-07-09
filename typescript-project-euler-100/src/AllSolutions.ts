@@ -64,6 +64,7 @@ function solveSequential(problems: Solution[]): void {
 }
 
 async function solveParallel(problems: Solution[]): Promise<void> {
+    console.log("Running in parallel");
 
     const jobs: Promise<void>[] = [];
     
@@ -74,17 +75,20 @@ async function solveParallel(problems: Solution[]): Promise<void> {
     await Promise.all(jobs);
 }
 
-const args = process.argv.slice(2)
-const problems = getProblems();
+async function main(): Promise<void> {
+    const args = process.argv.slice(2);
+    const problems = getProblems();
+    const startTime = +new Date();
 
-const startTime = +new Date();
+    if (args.length > 0 && args[0] === '-p') {
+        await solveParallel(problems);
+    } else {
+        solveSequential(problems);
+    }
 
-if (args.length > 0 && args[0] === '-p') {
-    solveParallel(problems);
-} else {
-    solveSequential(problems);
+    const endTime = +new Date();
+    const period = (endTime - startTime) / 1000.0;
+    console.log("Total time: " + period + " s");
 }
 
-const endTime = +new Date();
-const period = (endTime - startTime) / 1000.0;
-console.log("Total time: " + period + " s");
+void main();

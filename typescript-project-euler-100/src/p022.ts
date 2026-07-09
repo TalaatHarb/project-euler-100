@@ -1,11 +1,32 @@
+import { readFileSync } from "fs";
 import { Solution } from "./Solution";
 
 export class P022 extends Solution {
 
+	readNames(fileName: string): string[] {
+		const data = readFileSync(fileName, "utf-8");
+		const names = data.split(",").map(quotedName => quotedName.slice(1, -1));
+		names.sort();
+		return names;
+	}
+
+	calculateNameValue(name: string): number {
+		let value = 0;
+		for (const letter of name) {
+			value += letter.charCodeAt(0) - "A".charCodeAt(0) + 1;
+		}
+		return value;
+	}
+
     solve() {
         this.problemNumber = 22;
-
-		const result = 0;
+		// Set P022_INPUT_FILE to override the default input file location.
+		const fileName = process.env.P022_INPUT_FILE ?? "p022.txt";
+		const names = this.readNames(fileName);
+		let result = 0;
+		for (let i = 0; i < names.length; i++) {
+			result += this.calculateNameValue(names[i]) * (i + 1);
+		}
 
 		return result;
     }
