@@ -79,3 +79,93 @@ func TestP010(t *testing.T) {
 	const EXPECTED = 142913828922
 	test(P010Solve, "p010", EXPECTED, t)
 }
+
+/*TestP011*/
+func TestP011(t *testing.T) {
+	const EXPECTED = 70600674
+	test(P011Solve, "p011", EXPECTED, t)
+}
+
+/*TestP012*/
+func TestP012(t *testing.T) {
+	const EXPECTED = 76576500
+	test(P012Solve, "p012", EXPECTED, t)
+}
+
+/*TestP013*/
+func TestP013(t *testing.T) {
+	const EXPECTED = 5537376230
+	test(P013Solve, "p013", EXPECTED, t)
+}
+
+/*TestP014*/
+func TestP014(t *testing.T) {
+	const EXPECTED = 837799
+	test(P014Solve, "p014", EXPECTED, t)
+}
+
+/*TestP015*/
+func TestP015(t *testing.T) {
+	const EXPECTED = 137846528820
+	test(P015Solve, "p015", EXPECTED, t)
+}
+
+/*TestP016*/
+func TestP016(t *testing.T) {
+	const EXPECTED = 1366
+	test(P016Solve, "p016", EXPECTED, t)
+}
+
+/*TestP017*/
+func TestP017(t *testing.T) {
+	const EXPECTED = 21124
+	test(P017Solve, "p017", EXPECTED, t)
+}
+
+/*TestP018*/
+func TestP018(t *testing.T) {
+	const EXPECTED = 1074
+	test(P018Solve, "p018", EXPECTED, t)
+}
+
+/*TestP019*/
+func TestP019(t *testing.T) {
+	const EXPECTED = 171
+	test(P019Solve, "p019", EXPECTED, t)
+}
+
+/*TestP020*/
+func TestP020(t *testing.T) {
+	const EXPECTED = 648
+	test(P020Solve, "p020", EXPECTED, t)
+}
+
+/*TestP021*/
+func TestP021(t *testing.T) {
+	const EXPECTED = 31626
+	test(P021Solve, "p021", EXPECTED, t)
+}
+
+/*TestP022*/
+func TestP022(t *testing.T) {
+	const EXPECTED = 871198282
+	test(P022Solve, "p022", EXPECTED, t)
+}
+
+/*TestP023*/
+func TestP023(t *testing.T) {
+	const EXPECTED = 4179871
+	test(P023Solve, "p023", EXPECTED, t)
+}
+
+/*TestP024*/
+func TestP024(t *testing.T) {
+	const EXPECTED = 2783915460
+	test(P024Solve, "p024", EXPECTED, t)
+}
+
+/*TestP025*/
+func TestP025(t *testing.T) {
+	const EXPECTED = 4782
+	test(P025Solve, "p025", EXPECTED, t)
+}
