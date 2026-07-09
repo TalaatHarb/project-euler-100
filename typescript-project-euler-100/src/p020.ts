@@ -2,13 +2,6 @@ import { Solution } from "./Solution";
 
 export class P020 extends Solution {
 
-	memoryCache: Map<number, bigint> = new Map<number, bigint>();
-
-	constructor() {
-		super();
-		this.memoryCache.set(0, BigInt(1));
-	}
-
 	digitSum(data: string): number {
 		let result = 0;
 		for (const digit of data) {
@@ -18,12 +11,11 @@ export class P020 extends Solution {
 	}
 
 	factorial(n: number): bigint {
-		if (this.memoryCache.has(n)) {
-			return this.memoryCache.get(n) as bigint;
+		let result = BigInt(1);
+		for (let i = 2; i <= n; i++) {
+			result *= BigInt(i);
 		}
-		const value = BigInt(n) * this.factorial(n - 1);
-		this.memoryCache.set(n, value);
-		return value;
+		return result;
 	}
 
     solve() {

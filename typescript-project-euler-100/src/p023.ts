@@ -35,7 +35,7 @@ export class P023 extends Solution {
         this.problemNumber = 23;
 		const n = 28123;
 		const abundantNumbers: number[] = [];
-		const sumOfAbundant: boolean[] = new Array<boolean>(n).fill(false);
+		const sumOfAbundant: boolean[] = new Array<boolean>(n + 1).fill(false);
 		let result = 0;
 
 		for (let i = 1; i <= n; i++) {
