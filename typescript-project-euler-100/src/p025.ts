@@ -4,18 +4,18 @@ export class P025 extends Solution {
 
     solve() {
         this.problemNumber = 25;
-		const digits = 1000;
-		let i = 2;
-		let a = BigInt(1);
-		let value = BigInt(1);
+		const targetDigits = 1000;
+		let fibonacciIndex = 2;
+		let previousFibonacci = BigInt(1);
+		let currentFibonacci = BigInt(1);
 
-		while (value.toString().length < digits) {
-			const next = a + value;
-			a = value;
-			value = next;
-			i++;
+		while (currentFibonacci.toString().length < targetDigits) {
+			const nextFibonacci = previousFibonacci + currentFibonacci;
+			previousFibonacci = currentFibonacci;
+			currentFibonacci = nextFibonacci;
+			fibonacciIndex++;
 		}
 
-		return i;
+		return fibonacciIndex;
     }
 }

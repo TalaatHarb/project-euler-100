@@ -5,7 +5,7 @@ export class P022 extends Solution {
 
 	readNames(fileName: string): string[] {
 		const data = readFileSync(fileName, "utf-8");
-		const names = data.split(",").map(part => part.slice(1, -1));
+		const names = data.split(",").map(quotedName => quotedName.slice(1, -1));
 		names.sort();
 		return names;
 	}
