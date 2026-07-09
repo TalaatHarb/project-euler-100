@@ -20,6 +20,7 @@ export class P022 extends Solution {
 
     solve() {
         this.problemNumber = 22;
+		// Set P022_INPUT_FILE to override the default input file location.
 		const fileName = process.env.P022_INPUT_FILE ?? "p022.txt";
 		const names = this.readNames(fileName);
 		let result = 0;
