@@ -63,6 +63,15 @@ or run tests for the solutions:
 
     go test
 
+## How to run the c# solutions?
+If you have .NET 10 SDK installed and you are in the c# project folder (*csharp-project-euler-100*), you can run all the solutions using the following commands in terminal:
+
+    dotnet run --project net.talaatharb.projecteuler100.Console/net.talaatharb.projecteuler100.Console.csproj
+
+or run tests for the solutions:
+
+    dotnet test net.talaatharb.projecteuler100.slnx
+
 ## Jenkins integration
 The project has a Jenkins file that works for multi-branch configuration but it requires your Jenkins instance to have the follwoing plugins installed and configured correctly:
 - git
