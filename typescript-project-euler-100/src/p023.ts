@@ -45,6 +45,9 @@ export class P023 extends Solution {
 		}
 
 		for (let i = 0; i < abundantNumbers.length; i++) {
+			if ((abundantNumbers[i] * 2) >= n) {
+				break;
+			}
 			for (let j = i; j < abundantNumbers.length; j++) {
 				const sum = abundantNumbers[i] + abundantNumbers[j];
 				if (sum < n) {

@@ -69,7 +69,7 @@ async function solveParallel(problems: Solution[]): Promise<void> {
     const jobs: Promise<void>[] = [];
     
     for(const problem of problems){
-        jobs.push(Promise.resolve().then(() => problem.run()));
+        jobs.push(Promise.resolve(problem.run()));
     }
     
     await Promise.all(jobs);

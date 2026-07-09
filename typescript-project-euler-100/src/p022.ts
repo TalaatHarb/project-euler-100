@@ -20,7 +20,8 @@ export class P022 extends Solution {
 
     solve() {
         this.problemNumber = 22;
-		const names = this.readNames("p022.txt");
+		const fileName = process.env.P022_INPUT_FILE ?? "p022.txt";
+		const names = this.readNames(fileName);
 		let result = 0;
 		for (let i = 0; i < names.length; i++) {
 			result += this.calculateNameValue(names[i]) * (i + 1);
