@@ -1,0 +1,28 @@
+name: Rust
+
+on:
+  push:
+    branches: [ develop ]
+    paths:
+      - 'rust-project-euler-100/**'
+      - '.github/workflows/rust.yml'
+  pull_request:
+    branches: [ develop ]
+    paths:
+      - 'rust-project-euler-100/**'
+      - '.github/workflows/rust.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+
+      - name: Test
+        run: cd rust-project-euler-100 && cargo test
