@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 use std::collections::HashMap;
 
 fn collatz(n: u64, cache: &mut HashMap<u64, u64>) -> u64 {
@@ -28,5 +28,4 @@ impl Solvable for P014 {
         }
         max_number as i64
     }
-}
-impl Runable for P014 {}
+}

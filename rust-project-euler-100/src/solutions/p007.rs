@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 
 fn is_prime(n: u64) -> bool {
     if n < 2 { return false; }
@@ -30,5 +30,4 @@ impl Solvable for P007 {
         }
         current as i64
     }
-}
-impl Runable for P007 {}
+}

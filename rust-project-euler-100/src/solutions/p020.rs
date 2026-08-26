@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 use num_bigint::BigUint;
 use num_traits::One;
 use std::collections::HashMap;
@@ -19,5 +19,4 @@ impl Solvable for P020 {
         let mut cache = HashMap::new();
         factorial(100, &mut cache).to_string().bytes().map(|b| (b - b'0') as i64).sum()
     }
-}
-impl Runable for P020 {}
+}

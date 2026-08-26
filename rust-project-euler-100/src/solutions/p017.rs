@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 use std::collections::HashMap;
 
 fn number_as_letters(n: i64, words: &mut HashMap<i64, String>) -> String {
@@ -45,5 +45,4 @@ impl Solvable for P017 {
         let mut words = HashMap::new();
         (1..=1000).map(|i| letter_count(&number_as_letters(i, &mut words)) as i64).sum()
     }
-}
-impl Runable for P017 {}
+}

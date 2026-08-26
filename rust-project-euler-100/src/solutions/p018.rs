@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 
 const P018_DATA: &str = include_str!("p018.txt");
 
@@ -18,5 +18,4 @@ impl Solvable for P018 {
         }
         triangle[0][0]
     }
-}
-impl Runable for P018 {}
+}

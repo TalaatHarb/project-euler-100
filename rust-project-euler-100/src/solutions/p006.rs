@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 
 pub struct P006;
 impl Solvable for P006 {
@@ -9,5 +9,4 @@ impl Solvable for P006 {
         let sum_of_squares: i64 = (1..=last).map(|i| i * i).sum();
         sum * sum - sum_of_squares
     }
-}
-impl Runable for P006 {}
+}

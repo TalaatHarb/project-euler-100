@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 
 pub struct P008;
 impl Solvable for P008 {
@@ -14,5 +14,4 @@ impl Solvable for P008 {
         }
         max_product as i64
     }
-}
-impl Runable for P008 {}
+}

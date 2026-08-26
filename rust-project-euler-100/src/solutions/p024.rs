@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 
 fn nth_permutation(n: usize, digits: &str) -> String {
     let mut n = n - 1; // 0-indexed
@@ -23,5 +23,4 @@ impl Solvable for P024 {
     fn solve(&self) -> i64 {
         nth_permutation(1_000_000, "0123456789").parse().unwrap()
     }
-}
-impl Runable for P024 {}
+}

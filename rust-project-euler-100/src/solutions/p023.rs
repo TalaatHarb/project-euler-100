@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 
 fn sum_of_divisors(n: u64) -> u64 {
     let mut sum = 1u64;
@@ -32,5 +32,4 @@ impl Solvable for P023 {
 
         (0..=limit).filter(|&i| !sum_of_two[i]).map(|i| i as i64).sum()
     }
-}
-impl Runable for P023 {}
+}

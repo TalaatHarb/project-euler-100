@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 
 fn sieve(n: usize) -> Vec<usize> {
     let mut not_prime = vec![false; n];
@@ -21,8 +21,7 @@ impl Solvable for P010 {
     fn solve(&self) -> i64 {
         sieve(2_000_000).iter().map(|&p| p as i64).sum()
     }
-}
-impl Runable for P010 {}
+}
 
 pub fn sieve_of_eratosthenes(n: usize) -> Vec<usize> {
     sieve(n)

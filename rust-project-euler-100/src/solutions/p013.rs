@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 use num_bigint::BigUint;
 use num_traits::Zero;
 
@@ -14,5 +14,4 @@ impl Solvable for P013 {
         let s = sum.to_string();
         s[..10].parse().unwrap()
     }
-}
-impl Runable for P013 {}
+}

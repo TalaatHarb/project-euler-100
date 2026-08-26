@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 use num_bigint::BigUint;
 use num_traits::One;
 use std::collections::HashMap;
@@ -22,5 +22,4 @@ impl Solvable for P015 {
         let den = factorial(n, &mut cache).pow(2);
         (num / den).try_into().unwrap()
     }
-}
-impl Runable for P015 {}
+}

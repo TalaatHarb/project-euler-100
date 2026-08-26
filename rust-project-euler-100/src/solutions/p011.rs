@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 
 const P011_DATA: &str = include_str!("p011.txt");
 
@@ -43,5 +43,4 @@ impl Solvable for P011 {
         }
         max
     }
-}
-impl Runable for P011 {}
+}

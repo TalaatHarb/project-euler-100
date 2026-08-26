@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 
 fn days_in_month(month: u32, year: u32) -> u32 {
     match month {
@@ -26,5 +26,4 @@ impl Solvable for P019 {
         }
         result
     }
-}
-impl Runable for P019 {}
+}

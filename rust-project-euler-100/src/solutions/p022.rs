@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 
 const P022_DATA: &str = include_str!("p022.txt");
 
@@ -15,5 +15,4 @@ impl Solvable for P022 {
         names.sort_unstable();
         names.iter().enumerate().map(|(i, name)| name_value(name) * (i as i64 + 1)).sum()
     }
-}
-impl Runable for P022 {}
+}

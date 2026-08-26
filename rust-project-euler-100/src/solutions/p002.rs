@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 
 pub struct P002;
 impl Solvable for P002 {
@@ -17,5 +17,4 @@ impl Solvable for P002 {
         }
         sum
     }
-}
-impl Runable for P002 {}
+}

@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 
 fn is_palindromic(n: i64) -> bool {
     let s = n.to_string();
@@ -23,5 +23,4 @@ impl Solvable for P004 {
         }
         result
     }
-}
-impl Runable for P004 {}
+}

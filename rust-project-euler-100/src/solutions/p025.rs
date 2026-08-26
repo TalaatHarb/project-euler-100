@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 use num_bigint::BigUint;
 use num_traits::One;
 use std::collections::HashMap;
@@ -25,5 +25,4 @@ impl Solvable for P025 {
         }
         i as i64
     }
-}
-impl Runable for P025 {}
+}

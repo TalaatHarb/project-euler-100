@@ -1,4 +1,4 @@
-use crate::{Runable, Solvable};
+use crate::Solvable;
 use crate::solutions::p010::sieve_of_eratosthenes;
 
 fn number_of_divisors(mut n: usize, primes: &[usize]) -> usize {
@@ -31,5 +31,4 @@ impl Solvable for P012 {
             i += 1;
         }
     }
-}
-impl Runable for P012 {}
+}
