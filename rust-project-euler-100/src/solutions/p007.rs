@@ -1,14 +1,13 @@
 use crate::Solvable;
 
 fn is_prime(n: u64) -> bool {
-    if n < 2 { return false; }
-    if n == 2 { return true; }
-    if n % 2 == 0 { return false; }
-    let limit = (n as f64).sqrt() as u64;
-    let mut i = 3u64;
-    while i <= limit {
+    if n % 2 == 0 {
+        return false;
+    }
+    let mut i = ((n as f64).sqrt().floor() as u64) | 1;
+    while i > 1 {
         if n % i == 0 { return false; }
-        i += 2;
+        i -= 2;
     }
     true
 }
