@@ -1,79 +1,151 @@
 # project-euler-100
-Solutions to the first one hundred problem in project Euler https://projecteuler.net/
 
-## Why did I make this repository?
-- Practicing algorithms and data structures
-- Learning new programming languages
-- Comparing the syntax and performance of different programming languages
-- Learning best practices for structuring projects in different programming languages
-- Practice writing tests for different programming languages
-- Practice collabratin on github and using gitflow https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+Comprehensive solutions to the first 100 problems from [Project Euler](https://projecteuler.net/), implemented in multiple programming languages with consistent patterns, tests, and best practices.
 
-## How to run the python solutions?
+## Project Goals
 
-If you have python 3 installed and you are in the python project folder (*python-project-euler-100*), you can run all the solutions sequentially using the following command in the terminal/command line:
+- 🎯 Practice algorithms and data structures
+- 🚀 Learn new programming languages and paradigms
+- 📊 Compare syntax, performance, and design patterns across languages
+- ✅ Maintain best practices for project structuring and testing in different ecosystems
+- 🤝 Demonstrate collaboration and professional git workflows using [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
-    python AllSolutions.py
+## Running Solutions
 
-or to run all of them in parallel in the terminal/command line:
+### Language Implementations
 
-    python AllSolutions.py -p
+This project includes solutions in **7 programming languages**:
 
-or a solution for a specific problem (*as example 'p001'*):
+- **Python** - Fast prototyping and clean algorithm implementations
+- **Java** - Enterprise-scale with Maven build system
+- **TypeScript** - Type-safe JavaScript solutions with npm tooling
+- **Go** - Efficient, compiled implementations with goroutine support for parallel execution
+- **C#** - Modern .NET implementations with comprehensive testing
+- **Rust** - High-performance, memory-safe solutions
 
-    python p001.py
+Each language folder follows the same structure and naming conventions (e.g., `p001.py`, `P001.java`, etc.), making it easy to compare implementations across languages.
 
-You can also try writing your own solutions (write your own solve function for the problems) and test if they are acceptable using the tests:
+### Python (`python-project-euler-100`)
 
-    python -m unittest AllSolutionsTest.py -v
-## How to run the java solutions?
-If you have a JDK 17 or higher (you can actually drop the version in the pom file if you want, anything above JDK 8 should still work), and Maven installed, and you are in the java project folder (*java-project-euler-100*), you can run all the solutions using the following commands in terminal/command line:
+**Requirements:** Python 3
 
-    mvn clean install
-    java -jar target/java-project-euler-100-0.0.1-SNAPSHOT.jar
+**Run all solutions:**
+```bash
+cd python-project-euler-100
+python AllSolutions.py
+```
 
-or to run all of them in parallel in the terminal/command line:
+**Run in parallel:**
+```bash
+python AllSolutions.py -p
+```
 
-    java -jar target/java-project-euler-100-0.0.1-SNAPSHOT.jar -p
-You can also run specific problems from your IDE directly or through the command line by compiling specific problem files and running them instead.
+**Run specific problem:**
+```bash
+python p001.py
+```
 
-You can also try writing your own solutions (write your own solve function for the problems) and test if they are acceptable using the tests:
+**Run tests:**
+```bash
+python -m unittest AllSolutionsTest.py -v
+```
 
-    mvn clean test
-## How to run the typescript solutions?
-If you have nodejs and typescript installed and you are in the typescript project folder (*typescript-project-euler-100*), you can run all the solutions using the following commands in terminal/command line:
+---
 
-    npm install
-    npm run build:run
+### Java (`java-project-euler-100`)
 
-or run them in parallel:
+**Requirements:** JDK 17+ and Maven
 
-    npm run build:runParallel
-or to test the solutions:
+**Build and run:**
+```bash
+cd java-project-euler-100
+mvn clean install
+java -jar target/java-project-euler-100-0.0.1-SNAPSHOT.jar
+```
 
-    npm run build:test
+**Run in parallel:**
+```bash
+java -jar target/java-project-euler-100-0.0.1-SNAPSHOT.jar -p
+```
 
-## How to run the go solutions?
-If you have go and the required packages installed and you are in the go project folder (*go-project-euler-100*), you can run all the solutions using the following commands in terminal:
+**Run tests:**
+```bash
+mvn clean test
+```
 
-    go build
-    ./project-euler.exe
+---
 
-or run tests for the solutions:
+### TypeScript (`typescript-project-euler-100`)
 
-    go test
+**Requirements:** Node.js and npm
 
-## How to run the C# solutions?
-If you have .NET 10 SDK installed and you are in the C# project folder (*csharp-project-euler-100*), you can run all the solutions using the following commands in terminal:
+**Setup and run:**
+```bash
+cd typescript-project-euler-100
+npm install
+npm run build:run
+```
 
-    dotnet run --project net.talaatharb.projecteuler100.Console/net.talaatharb.projecteuler100.Console.csproj
+**Run in parallel:**
+```bash
+npm run build:runParallel
+```
 
-or run tests for the solutions:
+**Run tests:**
+```bash
+npm run build:test
+```
 
-    dotnet test net.talaatharb.projecteuler100.slnx
+---
 
-## Jenkins integration
-The project has a Jenkins file that works for multi-branch configuration but it requires your Jenkins instance to have the following plugins installed and configured correctly:
+### Go (`go-project-euler-100`)
+
+**Requirements:** Go runtime
+
+**Build and run:**
+```bash
+cd go-project-euler-100
+go build
+./project-euler.exe
+```
+
+**Run tests:**
+```bash
+go test
+```
+
+---
+
+### C# (`csharp-project-euler-100`)
+
+**Requirements:** .NET 10 SDK
+
+**Run:**
+```bash
+cd csharp-project-euler-100
+dotnet run --project net.talaatharb.projecteuler100.Console/net.talaatharb.projecteuler100.Console.csproj
+```
+
+**Run tests:**
+```bash
+dotnet test net.talaatharb.projecteuler100.slnx
+```
+
+---
+
+### Rust (`rust-project-euler-100`)
+
+**Requirements:** Rust toolchain (rustc and cargo)
+
+See the `rust-project-euler-100` directory for Rust-specific build and run instructions.
+
+## CI/CD and Deployment
+
+### Jenkins Integration
+
+This project includes a `Jenkinsfile` configured for multi-branch pipeline support. To use Jenkins, ensure your instance has the following plugins installed and configured:
+
+**Required Plugins:**
 - git
 - maven
 - nodejs
@@ -83,16 +155,26 @@ The project has a Jenkins file that works for multi-branch configuration but it 
 - pipeline-maven
 - pyenv-pipeline
 
-The required configuration is mainly all about getting the run-times configured for the supported languages, for example:
-- Having python3 installed (including pip3 and virtualenv)
-- Having Go runtime
-- Having Maven installation
-- Having node installation
+**Required Runtime Environments:**
+- Python 3 (with pip and virtualenv)
+- JDK 17+ with Maven
+- Node.js and npm
+- Go runtime
+- .NET SDK
 
-## Docker
-An alternative build and run process is to use the docker files provided in each project to build the images and run the solutions as docker contianers. The advantage of using this procedure is that you only need to install docker engine to build and run the solution, and there will be no need to install custom dependencies for each project; you also won't have version conflicts.
-To build and run using docker, if you have docker installed and you are inside the project folder:
+### Docker
 
+An alternative to installing all language runtimes is to use Docker. Each language folder includes a `Dockerfile` for containerized builds and execution.
 
-    docker build -t <image-name> .
-    docker run <image-name>
+**Quick start:**
+```bash
+cd <language-project-folder>
+docker build -t project-euler-<language> .
+docker run project-euler-<language>
+```
+
+**Benefits:**
+- Single dependency: Docker engine only
+- No version conflicts between language runtimes
+- Consistent environment across different machines
+- Isolated execution environments
